@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CamControl : MonoBehaviour
 {
+
+    public float speed = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,7 @@ public class CamControl : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
 
-        transform.position += (Vector3.right * horizontal) * Time.deltaTime;
+        transform.position += (Vector3.right * horizontal) * speed * Time.deltaTime;
 
     }
 }
