@@ -36,7 +36,7 @@ public class Parallax : MonoBehaviour
 
         if (cameraTransform.position.x < (layers[leftIndex].transform.position.x + viewZone))
         {
-            ScrollLeft();
+            //ScrollLeft();
         }
 
         if (cameraTransform.position.x > (layers[rightIndex].transform.position.x - viewZone))
@@ -45,7 +45,7 @@ public class Parallax : MonoBehaviour
         }
     }
 
-    private void ScrollLeft()
+    /*private void ScrollLeft()
     {
         int lastRight = rightIndex;
         layers[rightIndex].position = Vector3.right * (layers[leftIndex].position.x - backgroundSize);
@@ -55,7 +55,7 @@ public class Parallax : MonoBehaviour
         {
             rightIndex = layers.Length - 1;
         }
-    }
+    }*/
 
     private void ScrollRight()
     {
