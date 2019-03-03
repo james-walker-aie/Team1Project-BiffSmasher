@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1568489957}
+  m_Follow: {fileID: 1827971383}
   m_Lens:
     FieldOfView: 40
     OrthographicSize: 10
@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0.19217944, y: -0.00025690076, z: 0.000050308812, w: 0.98135984}
-  m_LocalPosition: {x: -7.196132, y: -2.9706976, z: -7.5200353}
+  m_LocalPosition: {x: -5.395132, y: 0.5443017, z: -8.947034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -678,7 +678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &144767613
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -837,7 +837,7 @@ SpriteShapeRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144767612}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
@@ -1501,7 +1501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0.19217944, y: -0.00025690076, z: 0.000050308812, w: 0.98135984}
-  m_LocalPosition: {x: -7.196132, y: -2.9706976, z: -7.5200353}
+  m_LocalPosition: {x: -5.395132, y: 0.5443017, z: -8.947034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3126,7 +3126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &634634038
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3285,7 +3285,7 @@ SpriteShapeRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634634037}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 0
@@ -4251,7 +4251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &729923484
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6735,7 +6735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1314412557}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: CeilingCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8657,7 +8657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1734229108}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -9396,9 +9396,11 @@ GameObject:
   - component: {fileID: 1827971379}
   - component: {fileID: 1827971378}
   - component: {fileID: 1827971377}
-  m_Layer: 9
+  - component: {fileID: 1827971384}
+  - component: {fileID: 1827971385}
+  m_Layer: 0
   m_Name: Player (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9570,6 +9572,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827971384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827971376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b7e1ecb9df3d6e4697d0a76421adfba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  moveSpeedZ: 3
+--- !u!114 &1827971385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827971376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2418a2a4b92488e488b34bc1180b0238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1834931084
 GameObject:
   m_ObjectHideFlags: 0
@@ -10227,7 +10255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1944138334
 MeshCollider:
   m_ObjectHideFlags: 0
