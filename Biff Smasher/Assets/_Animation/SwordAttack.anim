@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerPunch
+  m_Name: SwordAttack
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -30,7 +30,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.125
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -48,16 +48,14 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: cb848732246118e4789f93277997fd1b, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: 5f911a87cbf195045861595afe146a21, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: f55a43c799d08ea42b24f25d5a893e84, type: 3}
+      value: {fileID: 21300000, guid: d2752ba2fe9c8a747a73bfcb7f7d1049, type: 3}
+    - time: 0.125
+      value: {fileID: 21300000, guid: 31ea9f192f90f2941be49d0432b1f859, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 4
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -79,20 +77,19 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: cb848732246118e4789f93277997fd1b, type: 3}
-    - {fileID: 21300000, guid: 5f911a87cbf195045861595afe146a21, type: 3}
-    - {fileID: 21300000, guid: f55a43c799d08ea42b24f25d5a893e84, type: 3}
+    - {fileID: 21300000, guid: d2752ba2fe9c8a747a73bfcb7f7d1049, type: 3}
+    - {fileID: 21300000, guid: 31ea9f192f90f2941be49d0432b1f859, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.75
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -116,7 +113,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.125
         value: 1
         inSlope: Infinity
         outSlope: Infinity
