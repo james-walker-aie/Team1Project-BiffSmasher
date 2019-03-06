@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.26112294, z: -10}
+  m_LocalPosition: {x: -5.316667, y: -0.2611177, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -1071,10 +1071,10 @@ MonoBehaviour:
   m_YDamping: 1
   m_ZDamping: 0
   m_ScreenX: 0.49765626
-  m_ScreenY: 0.63144386
+  m_ScreenY: 0.6314441
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.21368748
-  m_DeadZoneHeight: 0.17044413
+  m_DeadZoneHeight: 0.8871111
   m_DeadZoneDepth: 2
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 1
@@ -1501,7 +1501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.26112294, z: -10}
+  m_LocalPosition: {x: -5.316667, y: -0.2611177, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4825,7 +4825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766218569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.8, y: -2.9706976, z: -7.5}
+  m_LocalPosition: {x: 48.8, y: -0.2611177, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1083658635}
@@ -7592,7 +7592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552339757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.22, y: -2.9706976, z: -7.5}
+  m_LocalPosition: {x: 25.22, y: -0.2611177, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 55790378}
@@ -8198,7 +8198,7 @@ MonoBehaviour:
   playerCam: {fileID: 58666483}
   FightZoneCam: {fileID: 1552339757}
   w1: 0
-  w2: 1
+  w2: 0
   w3: 0
   w4: 0
 --- !u!61 &1611150951
@@ -8225,7 +8225,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 4.41}
   m_EdgeRadius: 0
 --- !u!23 &1611150952
 MeshRenderer:
@@ -8281,7 +8281,7 @@ Transform:
   m_GameObject: {fileID: 1611150949}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 25.35, y: -5.5, z: 1.5999999}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 5.11, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -8689,7 +8689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649557388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.2, y: -2.9706976, z: -7.5}
+  m_LocalPosition: {x: 72.2, y: -0.2611177, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1065562947}
@@ -8860,7 +8860,7 @@ MonoBehaviour:
   w1: 0
   w2: 0
   w3: 0
-  w4: 1
+  w4: 0
 --- !u!61 &1700747815
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9604,7 +9604,7 @@ MonoBehaviour:
   FightZoneCam: {fileID: 766218569}
   w1: 0
   w2: 0
-  w3: 1
+  w3: 0
   w4: 0
 --- !u!61 &1797776398
 BoxCollider2D:
@@ -11044,7 +11044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964788905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: -2.9706976, z: -7.51}
+  m_LocalPosition: {x: 1.02, y: -0.2611177, z: -7.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 128114845}

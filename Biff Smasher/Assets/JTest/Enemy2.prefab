@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 9d88c7ca22812fb4eb4f7bfb28c64e14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 8.51, y: 7}
@@ -198,7 +198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   startDirection: {x: -1, y: 0}
-  health: 2
+  isDead: 0
+  health: 10
   moveDir: {x: 0, y: 0, z: 0}
 --- !u!50 &6499830839699898945
 Rigidbody2D:
