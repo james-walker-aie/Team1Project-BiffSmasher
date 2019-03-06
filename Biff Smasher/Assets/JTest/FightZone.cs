@@ -42,9 +42,9 @@ public class FightZone : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        
+        Debug.Log("OnCollisionEnter2D");
         if (other.gameObject.tag == "Player" && wave1 ==true)
         {
             Debug.Log("FightZone1 collider Active");
@@ -119,5 +119,7 @@ public class FightZone : MonoBehaviour
          
             Destroy(gameObject);
         }
+        
+        
     }
 }

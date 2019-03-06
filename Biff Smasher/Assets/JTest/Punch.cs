@@ -6,7 +6,7 @@ public class Punch : MonoBehaviour
 {
   
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if(other != null)
         {
@@ -20,7 +20,7 @@ public class Punch : MonoBehaviour
                     // knockback direction
                     Vector3 hitDir = other.transform.position - this.transform.position;
                    // hitDir = hitDir.normalized;
-                    other.gameObject.GetComponent<EnemyMovement>().Knockback(hitDir);
+                 //   other.gameObject.GetComponent<EnemyMovement>().Knockback(hitDir);
                     
                 }
 

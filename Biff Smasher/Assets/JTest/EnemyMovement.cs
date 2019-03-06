@@ -5,26 +5,29 @@ using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
+    // simple move left script
+    public float moveSpeed;
+
+    public Vector2 startDirection;
+
+    
 
     // Navmesh
-    NavMeshAgent agent;
+    // NavMeshAgent agent;
 
     // Player
-    public Transform target;
+  //  public Transform target;
 
     //Health
     public float health = 2;
 
-    //knockback
-    public float knockbackForce;
-    public float knockbackTime;
-    private float knockbackCounter;
+
 
     public Vector3 moveDir;
    //  public float[] myArray;
 
     // rigidbody
-    public Rigidbody rb;
+  //  public Rigidbody2D rb;
 
 
 
@@ -33,29 +36,17 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         // AI find navmesh
-        agent = this.GetComponent<NavMeshAgent>();
+       // agent = this.GetComponent<NavMeshAgent>();
         // on Instantiation Ai will find player and Set as target
-       target = GameObject.Find("Capsule").transform;
+     //  target = GameObject.Find("Capsule").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (knockbackCounter <= 0)
-        {
-            rb.velocity = Vector3.zero;
-            // use navagent and go to player
-            agent.enabled = true;
-            agent.SetDestination(target.position);
-           
-        }
-        else
-        {
-            // knockbackCounter down knockback timer
-            knockbackCounter -= Time.deltaTime;
-            // move enemy while agent is disbled
-            Movement();
-        }
+        // simple move script
+        transform.position += new Vector3(startDirection.x * moveSpeed * Time.deltaTime, startDirection.y * moveSpeed * Time.deltaTime, 0f);
+      
     }
 
 
@@ -63,24 +54,27 @@ public class EnemyMovement : MonoBehaviour
     {
         // move the enemy get values from array
         //  this.transform.forward = new Vector3(myArray[0], myArray[1], myArray[2])  * 1000f;
-        rb.AddForce(moveDir.x, moveDir.y,moveDir.z, ForceMode.Impulse);
+      //  rb.AddForce(moveDir.x, moveDir.y,moveDir.z, ForceMode.Impulse);
 
     }
-
+    /*
     public void Health()
     {
         health--;
     }
-
+    */
+    /*
     public void Knockback(Vector3 dir)
     {
         knockbackCounter = knockbackTime;
         //turn off NavAgent script
-        agent.enabled = false;
+     //   agent.enabled = false;
+
         //calculate move enemy values
        moveDir = dir * knockbackForce;
         moveDir.y = knockbackForce;
         moveDir.z = 0;
 
     }
+    */
 }
