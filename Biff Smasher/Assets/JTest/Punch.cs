@@ -12,7 +12,7 @@ public class Punch : MonoBehaviour
         {
             if (other.gameObject.tag == "Enemy")
             {
-                if (other.gameObject.GetComponent<EnemyMovement>().health > 0)
+                if (other.gameObject.GetComponent<EnemyMovement>().health > 0 && other.gameObject.GetComponent<EnemyMovement>().isDead == false)
                 {
                     Debug.Log("current health " + other.gameObject.GetComponent<EnemyMovement>().health);
                     other.gameObject.GetComponent<EnemyMovement>().health--;
@@ -24,33 +24,37 @@ public class Punch : MonoBehaviour
                     
                 }
 
-                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave1)
+                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave1 && other.gameObject.GetComponent<EnemyMovement>().isDead == false)
                 {
                     Debug.Log("destroy enemy");
+                    other.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     GameManager.fightZone1Enemies--;
                     Destroy(other.gameObject, .1f);
                    
                 }
 
-                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave2)
+                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave2 && other.gameObject.GetComponent<EnemyMovement>().isDead == false)
                 {
                     Debug.Log("destroy enemy");
+                    other.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     Destroy(other.gameObject, .1f);
                     GameManager.fightZone2Enemies--;
 
 
                 }
-                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave3)
+                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave3 && other.gameObject.GetComponent<EnemyMovement>().isDead == false)
                 {
                     Debug.Log("destroy enemy");
+                    other.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     Destroy(other.gameObject, .1f);
                     GameManager.fightZone3Enemies--;
 
 
                 }
-                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave4)
+                if (other.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave4 && other.gameObject.GetComponent<EnemyMovement>().isDead == false)
                 {
                     Debug.Log("destroy enemy");
+                    other.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     Destroy(other.gameObject, .1f);
                     GameManager.fightZone4Enemies--;
 

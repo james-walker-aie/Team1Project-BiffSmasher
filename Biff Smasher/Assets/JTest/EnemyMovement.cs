@@ -10,7 +10,8 @@ public class EnemyMovement : MonoBehaviour
 
     public Vector2 startDirection;
 
-    
+    // is the enemy dead? if so don't worry about it.
+    public bool isDead;
 
     // Navmesh
     // NavMeshAgent agent;

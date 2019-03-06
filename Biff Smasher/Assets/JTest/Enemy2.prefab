@@ -198,7 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   startDirection: {x: -1, y: 0}
-  health: 0
+  health: 2
   moveDir: {x: 0, y: 0, z: 0}
 --- !u!50 &6499830839699898945
 Rigidbody2D:

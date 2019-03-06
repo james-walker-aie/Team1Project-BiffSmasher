@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.51112294, z: -10}
+  m_LocalPosition: {x: -5.316667, y: -0.26112294, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -886,7 +886,7 @@ Transform:
   m_LocalScale: {x: 0.78844, y: 7.63645, z: 2.4619}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &160705997
 GameObject:
@@ -1422,7 +1422,7 @@ Transform:
   - {fileID: 468366586}
   - {fileID: 73748340}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &299755443
 GameObject:
@@ -1501,7 +1501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.51112294, z: -10}
+  m_LocalPosition: {x: -5.316667, y: -0.26112294, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1694,7 +1694,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: -24.77, z: 0}
 --- !u!1 &343246432
 GameObject:
@@ -2184,7 +2184,7 @@ GameObject:
   - component: {fileID: 446806091}
   - component: {fileID: 446806090}
   m_Layer: 10
-  m_Name: FightZone3 wall2
+  m_Name: FightZone3 wall2w
   m_TagString: FightZoneWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -2273,7 +2273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 28.9, z: 0}
 --- !u!4 &468366586 stripped
 Transform:
@@ -3130,7 +3130,7 @@ Transform:
   m_LocalScale: {x: 114.2, y: 0.63369, z: 2.4619}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634634037
 GameObject:
@@ -3360,7 +3360,7 @@ Transform:
   m_LocalScale: {x: 0.78844, y: 7.63645, z: 2.4619}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640246263
 GameObject:
@@ -3874,7 +3874,7 @@ Transform:
   - {fileID: 835592144}
   - {fileID: 277152984}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &684693561
 GameObject:
@@ -3900,11 +3900,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684693561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 59.2, y: -4.84, z: 0}
+  m_LocalPosition: {x: 59.2, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &689447085
 PrefabInstance:
@@ -5246,6 +5246,63 @@ Transform:
   m_Father: {fileID: 710503889}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &892536602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892536604}
+  - component: {fileID: 892536603}
+  m_Layer: 10
+  m_Name: FightZone4 wall2
+  m_TagString: FightZoneWall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!61 &892536603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892536602}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &892536604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892536602}
+  m_LocalRotation: {x: -0, y: 0.24953501, z: -0, w: 0.9683658}
+  m_LocalPosition: {x: 78.729996, y: -5.5, z: 1.8}
+  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912036919
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,7 +5527,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950358810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.2, y: -5.25, z: 0}
+  m_LocalPosition: {x: 36.2, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6710,7 +6767,6 @@ GameObject:
   - component: {fileID: 1226589533}
   - component: {fileID: 1226589532}
   - component: {fileID: 1226589531}
-  - component: {fileID: 1226589534}
   m_Layer: 10
   m_Name: FightZone1 wall1
   m_TagString: FightZoneWall
@@ -6803,20 +6859,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226589529}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1226589534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1226589529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80bffab7af3eae4596466f44734b250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  wall: {fileID: 0}
 --- !u!1 &1253875628
 GameObject:
   m_ObjectHideFlags: 0
@@ -6827,7 +6869,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1253875630}
   - component: {fileID: 1253875629}
-  - component: {fileID: 1253875631}
   m_Layer: 10
   m_Name: FightZone1 wall2
   m_TagString: FightZoneWall
@@ -6875,20 +6916,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1253875631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253875628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80bffab7af3eae4596466f44734b250, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  wall: {fileID: 0}
 --- !u!1 &1284618426
 GameObject:
   m_ObjectHideFlags: 0
@@ -6922,10 +6949,10 @@ MonoBehaviour:
   zone2Trigger: {fileID: 1611150949}
   zone3Trigger: {fileID: 1797776396}
   zone4Trigger: {fileID: 1700747813}
-  zone1wall: {fileID: 1849481074}
-  zone2wall: {fileID: 1408079928}
-  zone3wall: {fileID: 446806089}
-  zone4wall: {fileID: 1858790215}
+  zone1wall: {fileID: 1253875628}
+  zone2wall: {fileID: 1572225627}
+  zone3wall: {fileID: 1631622908}
+  zone4wall: {fileID: 892536602}
   playerCam: {fileID: 58666483}
 --- !u!4 &1284618428
 Transform:
@@ -6939,7 +6966,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298987793
 GameObject:
@@ -7195,12 +7222,12 @@ GameObject:
   - component: {fileID: 1408079930}
   - component: {fileID: 1408079929}
   m_Layer: 10
-  m_Name: FightZone2 wall2
+  m_Name: FightZone2 wall2w
   m_TagString: FightZoneWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1408079929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7234,7 +7261,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408079928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7284,7 +7311,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 28.9, z: 0}
 --- !u!1 &1415250539
 GameObject:
@@ -7810,6 +7837,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1572225627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1572225629}
+  - component: {fileID: 1572225628}
+  m_Layer: 10
+  m_Name: FightZone2 wall2
+  m_TagString: FightZoneWall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!61 &1572225628
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572225627}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1572225629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572225627}
+  m_LocalRotation: {x: -0, y: 0.24953501, z: -0, w: 0.9683658}
+  m_LocalPosition: {x: 36.59, y: -5.5, z: -0.74}
+  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1584510842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8109,7 +8193,7 @@ MonoBehaviour:
   enemySpawn: {fileID: 950358810}
   enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 1611150949}
-  zoneWallFront: {fileID: 1408079928}
+  zoneWallFront: {fileID: 1572225627}
   zoneWallBehind: {fileID: 1041091732}
   playerCam: {fileID: 58666483}
   FightZoneCam: {fileID: 1552339757}
@@ -8200,7 +8284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1614885362
 GameObject:
@@ -8318,6 +8402,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1631622908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1631622910}
+  - component: {fileID: 1631622909}
+  m_Layer: 10
+  m_Name: FightZone3 wall2
+  m_TagString: FightZoneWall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!61 &1631622909
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631622908}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1631622910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631622908}
+  m_LocalRotation: {x: -0, y: 0.24953501, z: -0, w: 0.9683658}
+  m_LocalPosition: {x: 55.329998, y: -5.5, z: 1.8}
+  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1635931062
 Transform:
   m_ObjectHideFlags: 0
@@ -8712,7 +8853,7 @@ MonoBehaviour:
   enemySpawn: {fileID: 2074210712}
   enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 1700747813}
-  zoneWallFront: {fileID: 1858790215}
+  zoneWallFront: {fileID: 892536602}
   zoneWallBehind: {fileID: 2061414459}
   playerCam: {fileID: 58666483}
   FightZoneCam: {fileID: 1649557388}
@@ -8803,7 +8944,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705910073
 GameObject:
@@ -9177,7 +9318,7 @@ Transform:
   m_LocalScale: {x: 0.731, y: 0.49, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759648413
 GameObject:
@@ -9457,7 +9598,7 @@ MonoBehaviour:
   enemySpawn: {fileID: 684693561}
   enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 1797776396}
-  zoneWallFront: {fileID: 446806089}
+  zoneWallFront: {fileID: 1631622908}
   zoneWallBehind: {fileID: 337739293}
   playerCam: {fileID: 58666483}
   FightZoneCam: {fileID: 766218569}
@@ -9548,7 +9689,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1809280492
 PrefabInstance:
@@ -9817,14 +9958,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827971376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.4, y: -3.14, z: 0}
+  m_LocalPosition: {x: -5.4, y: -2.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1314412557}
   - {fileID: 1734229108}
   - {fileID: 676225441}
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1827971384
 MonoBehaviour:
@@ -10079,7 +10220,7 @@ GameObject:
   - component: {fileID: 1858790217}
   - component: {fileID: 1858790216}
   m_Layer: 10
-  m_Name: FightZone4 wall2
+  m_Name: FightZone4 wall2w
   m_TagString: FightZoneWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
@@ -10168,7 +10309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 28.9, z: 0}
 --- !u!1001 &1858957171
 PrefabInstance:
@@ -10281,6 +10422,7 @@ GameObject:
   - component: {fileID: 1879296784}
   - component: {fileID: 1879296783}
   - component: {fileID: 1879296782}
+  - component: {fileID: 1879296785}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -10393,8 +10535,34 @@ Transform:
   m_LocalScale: {x: 3.591, y: 3.591, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1879296785
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879296781}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 20.84367, y: 0.0000002831221}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 58.31267, y: 0.19}
+  m_EdgeRadius: 0
 --- !u!1 &1880299380
 GameObject:
   m_ObjectHideFlags: 0
@@ -11209,7 +11377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: -24.77, z: 0}
 --- !u!1 &2072416458
 GameObject:
@@ -11251,11 +11419,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074210712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 82.7, y: -3.4, z: 0}
+  m_LocalPosition: {x: 82.7, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077355921
 GameObject:

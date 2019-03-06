@@ -29,9 +29,9 @@ public class FightZone : MonoBehaviour
     void Awake()
     {
         wave1 = w1;
-        wave2 = w2;
-        wave3 = w3;
-        wave4 = w4;
+      //  wave2 = w2;
+      //  wave3 = w3;
+      // wave4 = w4;
         
     }
 
