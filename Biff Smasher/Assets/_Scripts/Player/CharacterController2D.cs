@@ -11,7 +11,8 @@ public class CharacterController2D : MonoBehaviour
     public float checkRadius;
             
     private bool isGrounded;        // determine if player is standing on ground.
-    private bool attack;
+    private bool slashAttack;
+    private bool thrustAttack;
     private bool jump;
     private bool facingRight;     // set default look direction to right.
     private Rigidbody2D rb;
@@ -25,7 +26,8 @@ public class CharacterController2D : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        attack = false;
+        slashAttack = false;
+        thrustAttack = false;
         jump = false;
         facingRight = true;
     }
@@ -53,11 +55,11 @@ public class CharacterController2D : MonoBehaviour
 
     private void HandleMovement(float horizontal)
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))  
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))  
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
-        else if(animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))  // to stop player from moving when attack is pressed
+        else if(animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))  // to stop player from moving when attack is pressed
         {
             rb.velocity = new Vector2(0, 0);
         }
@@ -65,14 +67,21 @@ public class CharacterController2D : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
+    
 
 
     private void HandleAttacks()
     {
-        if (attack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))   
+        if (slashAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))   
         {
-            animator.SetTrigger("attack");
+            animator.SetTrigger("slashAttack");
             
+        }
+
+        if (thrustAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("ThrustAttack"))
+        {
+            animator.SetTrigger("thrustAttack");
+
         }
     }
 
@@ -81,8 +90,15 @@ public class CharacterController2D : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            attack = true;
+            slashAttack = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            thrustAttack = true;
+        }
+
+
 
         if (Input.GetKeyDown(KeyCode.Space))                     // player jump.
         {
@@ -110,7 +126,8 @@ public class CharacterController2D : MonoBehaviour
 
     private void ResetValues()  // function used to reset all values of attack, jump etc.
     {
-        attack = false;
+        slashAttack = false;
+        thrustAttack = false;
         jump = false;
 
     }
