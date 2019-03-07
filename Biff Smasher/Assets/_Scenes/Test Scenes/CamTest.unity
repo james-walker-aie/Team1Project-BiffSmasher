@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.2611177, z: -10}
+  m_LocalPosition: {x: -5.324978, y: -0.2611177, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -1501,7 +1501,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.2611177, z: -10}
+  m_LocalPosition: {x: -5.324978, y: -0.2611177, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3460,6 +3460,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 976234084800064093, guid: 2bbe7254412276047a97e25563a31c1c,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 299755446}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbe7254412276047a97e25563a31c1c, type: 3}
 --- !u!1001 &652406180
@@ -7961,6 +7966,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4567959870202959469, guid: e28509b31d2940141989296e3da019a7,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 299755446}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28509b31d2940141989296e3da019a7, type: 3}
 --- !u!1 &1590522592
@@ -8541,6 +8551,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5056214019735387498, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 299755446}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa, type: 3}
 --- !u!1001 &1646765902
@@ -9832,9 +9847,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   jumpForce: 27
+  checkRadius: 0.5
   sr: {fileID: 1827971382}
   groundCheck: {fileID: 1734229108}
-  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
