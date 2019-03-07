@@ -240,7 +240,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2185714}
+  m_Offset: {x: 0, y: -0.20377871}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -251,7 +251,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.58, y: 4.3871427}
+  m_Size: {x: 3.58, y: 1.5424418}
   m_EdgeRadius: 0
 --- !u!1 &415104616
 GameObject:
@@ -2238,7 +2238,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 9d88c7ca22812fb4eb4f7bfb28c64e14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2661,7 +2661,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraTransform
       value: 
-      objectReference: {fileID: 903766207}
+      objectReference: {fileID: 1663034848}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbe7254412276047a97e25563a31c1c, type: 3}
 --- !u!1001 &3106201570605615808
@@ -2819,7 +2819,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraTransform
       value: 
-      objectReference: {fileID: 903766207}
+      objectReference: {fileID: 1663034848}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28509b31d2940141989296e3da019a7, type: 3}
 --- !u!1001 &4782533646826601271
@@ -2893,7 +2893,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraTransform
       value: 
-      objectReference: {fileID: 903766207}
+      objectReference: {fileID: 1663034848}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa, type: 3}
 --- !u!1001 &7524724345541049820
@@ -2911,7 +2911,7 @@ PrefabInstance:
     - target: {fileID: 7524724345407139523, guid: 078f20ed9d00b704cb80f5432808d238,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.29
+      value: -6.97
       objectReference: {fileID: 0}
     - target: {fileID: 7524724345407139523, guid: 078f20ed9d00b704cb80f5432808d238,
         type: 3}
@@ -2972,6 +2972,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524724345407139522, guid: 078f20ed9d00b704cb80f5432808d238,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7524724346170494414, guid: 078f20ed9d00b704cb80f5432808d238,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 078f20ed9d00b704cb80f5432808d238, type: 3}
