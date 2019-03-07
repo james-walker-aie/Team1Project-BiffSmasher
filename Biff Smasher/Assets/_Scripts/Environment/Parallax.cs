@@ -7,7 +7,7 @@ public class Parallax : MonoBehaviour
     public float backgroundSize;
     public float parallaxSpeed;
 
-    private Transform cameraTransform;
+    [SerializeField] Transform cameraTransform;
     private Transform[] layers;
     private float viewZone = 10;
     private int leftIndex;
@@ -17,7 +17,7 @@ public class Parallax : MonoBehaviour
     private void Start()
     {
         //set the main camera
-        cameraTransform = Camera.main.transform;
+        //cameraTransform = Camera.main.transform;
         lastCameraX = cameraTransform.position.x;
         //get the children of the object the script is attached to
         layers = new Transform[transform.childCount];

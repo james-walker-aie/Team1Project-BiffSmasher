@@ -2362,9 +2362,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   jumpForce: 27
+  checkRadius: 0.5
   sr: {fileID: 1663034847}
   groundCheck: {fileID: 1413346923}
-  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
@@ -2657,6 +2657,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 976234084800064093, guid: 2bbe7254412276047a97e25563a31c1c,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 903766207}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbe7254412276047a97e25563a31c1c, type: 3}
 --- !u!1001 &3106201570605615808
@@ -2810,6 +2815,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4567959870202959469, guid: e28509b31d2940141989296e3da019a7,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 903766207}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28509b31d2940141989296e3da019a7, type: 3}
 --- !u!1001 &4782533646826601271
@@ -2879,6 +2889,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5056214019735387498, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 903766207}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa, type: 3}
 --- !u!1001 &7524724345541049820
