@@ -9,22 +9,26 @@ public class CharacterController2D : MonoBehaviour
     public float jumpForce;
     private float moveInput;
     public float checkRadius;
-            
+    private bool facingRight;     // set default look direction to right.
     private bool isGrounded;        // determine if player is standing on ground.
+
+    public bool branch = false;
+    public bool axe = false;
+    public bool sword = false;
+    public bool ultimate = false;
+      
     private bool slashAttack;
     private bool thrustAttack;
     private bool kick;
     private bool ultAttack;
     private bool jump;
-    private bool facingRight;     // set default look direction to right.
+
     private Rigidbody2D rb;
     public SpriteRenderer sr;
     public Transform groundCheck;
     public LayerMask whatIsGround;
     public Animator animator;
     
-
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -40,6 +44,7 @@ public class CharacterController2D : MonoBehaviour
     void Update()
     {
         HandleInput();
+        AnimationControl();
     }
 
 
@@ -68,7 +73,6 @@ public class CharacterController2D : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
         }
 
-
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
     
@@ -88,18 +92,17 @@ public class CharacterController2D : MonoBehaviour
 
         }
 
-        if (ultAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("UltAttack"))
-        {
-            animator.SetTrigger("ultAttack");
-
-        }
-
         if (kick && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Kick"))
         {
             animator.SetTrigger("kick");
 
         }
 
+        if (ultAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("UltAttack"))
+        {
+            animator.SetTrigger("ultAttack");
+
+        }     
 
     }
 
@@ -158,6 +161,46 @@ public class CharacterController2D : MonoBehaviour
         kick = false;
         jump = false;
 
+    }
+
+
+    void AnimationControl()
+    {
+        if (branch == false)                // when branch object collected set animation layer to branch animations.
+        {
+            animator.SetLayerWeight(1, 0);
+        }
+        else
+        {
+            animator.SetLayerWeight(1, 1);
+        }
+
+        if (axe == false)                 // when axe object collected set animation layer to axe animations.
+        {
+            animator.SetLayerWeight(2, 0);
+        }
+        else
+        {
+            animator.SetLayerWeight(2, 2);
+        }
+
+        if (sword == false)                 // when sword object collected set animation layer to sword animations.
+        {
+            animator.SetLayerWeight(3, 0);
+        }
+        else
+        {
+            animator.SetLayerWeight(3, 3);
+        }
+
+        if (ultimate == false)                 // when ultiamte object collected set animation layer to ultiamte animations.
+        {
+            animator.SetLayerWeight(4, 0);
+        }
+        else
+        {
+            animator.SetLayerWeight(4, 4);
+        }
     }
 
 

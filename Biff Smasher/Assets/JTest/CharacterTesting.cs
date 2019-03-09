@@ -24,7 +24,7 @@ public class CharacterTesting : MonoBehaviour
 
     // scene name for sceneManager
     // scenes have to be in build settings "scenes to build" list
-    public string level1 = "CamTest";
+    public string level1 = "SpriteTestCalum";
 
    
 
