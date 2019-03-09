@@ -13,6 +13,8 @@ public class CharacterController2D : MonoBehaviour
     private bool isGrounded;        // determine if player is standing on ground.
     private bool slashAttack;
     private bool thrustAttack;
+    private bool kick;
+    private bool ultAttack;
     private bool jump;
     private bool facingRight;     // set default look direction to right.
     private Rigidbody2D rb;
@@ -28,6 +30,8 @@ public class CharacterController2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         slashAttack = false;
         thrustAttack = false;
+        ultAttack = false;
+        kick = false;
         jump = false;
         facingRight = true;
     }
@@ -83,6 +87,20 @@ public class CharacterController2D : MonoBehaviour
             animator.SetTrigger("thrustAttack");
 
         }
+
+        if (ultAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("UltAttack"))
+        {
+            animator.SetTrigger("ultAttack");
+
+        }
+
+        if (kick && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("Kick"))
+        {
+            animator.SetTrigger("kick");
+
+        }
+
+
     }
 
 
@@ -98,7 +116,15 @@ public class CharacterController2D : MonoBehaviour
             thrustAttack = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ultAttack = true;
+        }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            kick = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))                     // player jump.
         {
@@ -128,6 +154,8 @@ public class CharacterController2D : MonoBehaviour
     {
         slashAttack = false;
         thrustAttack = false;
+        ultAttack = false;
+        kick = false;
         jump = false;
 
     }
