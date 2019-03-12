@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.2611258, z: -10}
+  m_LocalPosition: {x: -5.5111175, y: -0.4177382, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -1070,8 +1070,8 @@ MonoBehaviour:
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 0
-  m_ScreenX: 0.49765626
-  m_ScreenY: 0.63144374
+  m_ScreenX: 0.5031252
+  m_ScreenY: 0.6236131
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.21368748
   m_DeadZoneHeight: 0.5454443
@@ -1502,7 +1502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.316667, y: -0.2611258, z: -10}
+  m_LocalPosition: {x: -5.5111175, y: -0.4177382, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10314,11 +10314,12 @@ GameObject:
   - component: {fileID: 1827971382}
   - component: {fileID: 1827971381}
   - component: {fileID: 1827971380}
+  - component: {fileID: 1827971385}
   - component: {fileID: 1827971379}
   - component: {fileID: 1827971378}
   - component: {fileID: 1827971377}
   - component: {fileID: 1827971384}
-  - component: {fileID: 1827971385}
+  - component: {fileID: 1827971386}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -10511,7 +10512,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   moveSpeedZ: 0
---- !u!114 &1827971385
+--- !u!58 &1827971385
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827971376}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.8759036, y: 0.3751812}
+  serializedVersion: 2
+  m_Radius: 0.3881197
+--- !u!114 &1827971386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10520,7 +10537,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827971376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2418a2a4b92488e488b34bc1180b0238, type: 3}
+  m_Script: {fileID: 11500000, guid: fab81a3528a1c864083734c6d811fff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1834931084
