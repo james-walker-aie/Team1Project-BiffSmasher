@@ -144,9 +144,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   jumpForce: 27
+  checkRadius: 0.5
+  branch: 0
+  axe: 0
+  sword: 0
+  ultimate: 0
   sr: {fileID: 6499830839699898944}
   groundCheck: {fileID: 6499830841038864104}
-  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
@@ -196,10 +200,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16f68b909f3eb640a0645f58f4c0947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 5
   startDirection: {x: -1, y: 0}
   isDead: 0
-  health: 10
+  health: 5
   moveDir: {x: 0, y: 0, z: 0}
 --- !u!50 &6499830839699898945
 Rigidbody2D:
