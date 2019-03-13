@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4425143597276727508, guid: 987944fbb524a0b45a3be4c0da2d3f09,
         type: 3}
       propertyPath: m_Name
-      value: Portal
+      value: Portal Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4425143597276727511, guid: 987944fbb524a0b45a3be4c0da2d3f09,
         type: 3}
