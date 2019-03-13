@@ -884,5 +884,20 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 903766207}
+    - target: {fileID: 3821755935681996182, guid: d0fd17f65b079734ab19bd6f6d19cb72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821755935371334475, guid: d0fd17f65b079734ab19bd6f6d19cb72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821755934719822407, guid: d0fd17f65b079734ab19bd6f6d19cb72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0fd17f65b079734ab19bd6f6d19cb72, type: 3}
