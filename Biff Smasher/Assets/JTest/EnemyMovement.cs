@@ -12,50 +12,59 @@ public class EnemyMovement : MonoBehaviour
 
     // is the enemy dead? if so don't worry about it.
     public bool isDead;
-
+    public bool isKnockedBack;
     // Navmesh
     // NavMeshAgent agent;
 
     // Player
-  //  public Transform target;
+    //  public Transform target;
 
     //Health
     public float health = 2;
 
 
 
-    public Vector3 moveDir;
-   //  public float[] myArray;
+    public Vector2 moveDir;
+    // public float[] myArray;
 
     // rigidbody
-  //  public Rigidbody2D rb;
+    public Rigidbody2D rb;
 
-
+    //knockback
+    public float knockbackCounter, knockbackTime, knockbackForce;
 
 
     // Start is called before the first frame update
     void Start()
     {
         // AI find navmesh
-       // agent = this.GetComponent<NavMeshAgent>();
+        // agent = this.GetComponent<NavMeshAgent>();
         // on Instantiation Ai will find player and Set as target
-     //  target = GameObject.Find("Capsule").transform;
+        //  target = GameObject.Find("Capsule").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // simple move script
-        transform.position += new Vector3(startDirection.x * moveSpeed * Time.deltaTime, startDirection.y * moveSpeed * Time.deltaTime, 0f);
-      
+        if (knockbackCounter <= 0)
+        {
+            // simple move script
+            transform.position += new Vector3(startDirection.x * moveSpeed * Time.deltaTime, startDirection.y * moveSpeed * Time.deltaTime, 0f);
+        }
+
+        else
+        {
+            //simple knockback
+            transform.position += new Vector3(moveDir.x * moveSpeed * Time.deltaTime, moveDir.y * moveSpeed * Time.deltaTime, 0f);
+            knockbackCounter -= Time.deltaTime;
+        }
     }
 
 
-   public void Movement()
+    public void Movement()
     {
         // move the enemy get values from array
-        //  this.transform.forward = new Vector3(myArray[0], myArray[1], myArray[2])  * 1000f;
-      //  rb.AddForce(moveDir.x, moveDir.y,moveDir.z, ForceMode.Impulse);
+
 
     }
     /*
@@ -64,18 +73,14 @@ public class EnemyMovement : MonoBehaviour
         health--;
     }
     */
-    /*
+
     public void Knockback(Vector3 dir)
     {
         knockbackCounter = knockbackTime;
-        //turn off NavAgent script
-     //   agent.enabled = false;
 
         //calculate move enemy values
-       moveDir = dir * knockbackForce;
+        moveDir.x = dir.x * knockbackForce;
         moveDir.y = knockbackForce;
-        moveDir.z = 0;
-
     }
-    */
+
 }

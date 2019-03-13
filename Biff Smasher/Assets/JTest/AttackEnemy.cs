@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GotHit : MonoBehaviour
+public class AttackEnemy : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -18,10 +18,11 @@ public class GotHit : MonoBehaviour
                     Debug.Log("current health " + col.gameObject.GetComponent<EnemyMovement>().health);
                     col.gameObject.GetComponent<EnemyMovement>().health--;
                     Debug.Log("hurt enemy " + col.gameObject.GetComponent<EnemyMovement>().health);
+
                     // knockback direction
-                    Vector3 hitDir = col.transform.position - this.transform.position;
-                    // hitDir = hitDir.normalized;
-                    //   other.gameObject.GetComponent<EnemyMovement>().Knockback(hitDir);
+                    Vector2 hitDir = col.transform.position - this.transform.position;
+                    hitDir = hitDir.normalized;
+                    col.gameObject.GetComponent<EnemyMovement>().Knockback(hitDir);
 
                 }
 
