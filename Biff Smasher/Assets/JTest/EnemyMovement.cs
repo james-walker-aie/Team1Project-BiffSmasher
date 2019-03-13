@@ -83,4 +83,8 @@ public class EnemyMovement : MonoBehaviour
         moveDir.y = knockbackForce;
     }
 
+    public void FireballDamage()
+    {
+        health = health - 10;
+    }
 }

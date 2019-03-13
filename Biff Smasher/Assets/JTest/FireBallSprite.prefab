@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2862042603136141966}
   - component: {fileID: 6385887099458846587}
   - component: {fileID: 1888769904972099739}
+  - component: {fileID: 8931337273298486565}
   m_Layer: 0
   m_Name: FireBallSprite
   m_TagString: Untagged
@@ -109,5 +110,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d2a1c844a2d90479a56e6d7604d036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startDirection: {x: 1, y: 0, z: 0}
+  startDirection: {x: 1, y: 0}
   moveSpeed: 10
+  MyRB: {fileID: 8931337273298486565}
+--- !u!50 &8931337273298486565
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262175539246870588}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
