@@ -15,14 +15,16 @@ public class AttackEnemy : MonoBehaviour
                 Debug.Log("punched " + col.gameObject.tag);
                 if (col.gameObject.GetComponent<EnemyMovement>().health > 0 && col.gameObject.GetComponent<EnemyMovement>().isDead == false)
                 {
-                    Debug.Log("current health " + col.gameObject.GetComponent<EnemyMovement>().health);
-                    col.gameObject.GetComponent<EnemyMovement>().health--;
-                    Debug.Log("hurt enemy " + col.gameObject.GetComponent<EnemyMovement>().health);
-
                     // knockback direction
                     Vector2 hitDir = col.transform.position - this.transform.position;
                     hitDir = hitDir.normalized;
                     col.gameObject.GetComponent<EnemyMovement>().Knockback(hitDir);
+                    // hurt enemy
+                    Debug.Log("current health " + col.gameObject.GetComponent<EnemyMovement>().health);
+                    col.gameObject.GetComponent<EnemyMovement>().HurtEnemy();
+                    Debug.Log("hurt enemy " + col.gameObject.GetComponent<EnemyMovement>().health);
+
+                   
 
                 }
 

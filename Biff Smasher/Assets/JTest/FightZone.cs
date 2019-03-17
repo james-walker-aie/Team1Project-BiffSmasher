@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class FightZone : MonoBehaviour
 {
+
+    public static FightZone instance;
     public GameObject player;
     public GameObject enemySpawn;
     public GameObject enemy;
     public GameObject fightZoneCollider;
     public GameObject zoneWallFront, zoneWallBehind;
+    
+
     // cams
-  
     public GameObject playerCam;
     public GameObject FightZoneCam;
 
@@ -28,6 +31,7 @@ public class FightZone : MonoBehaviour
     // Set static variables
     void Awake()
     {
+        instance = this;
         wave1 = w1;
       //  wave2 = w2;
       //  wave3 = w3;
@@ -52,6 +56,9 @@ public class FightZone : MonoBehaviour
             FightZoneCam.SetActive(true);
             playerCam.SetActive(false);
 
+            // Music
+            MusicManager.instance.PlayFight();
+
             // set walls for fight zone
             zoneWallFront.SetActive(true);
             zoneWallBehind.SetActive(true);
@@ -70,6 +77,9 @@ public class FightZone : MonoBehaviour
             // camera swap to fight cam
             FightZoneCam.SetActive(true);
             playerCam.SetActive(false);
+
+            // Music
+            MusicManager.instance.PlayFight();
 
             // set walls for fight zone
             zoneWallFront.SetActive(true);
@@ -90,6 +100,10 @@ public class FightZone : MonoBehaviour
             FightZoneCam.SetActive(true);
             playerCam.SetActive(false);
 
+            // Music
+            MusicManager.instance.PlayFight();
+
+
             // set walls for fight zone
             zoneWallFront.SetActive(true);
             zoneWallBehind.SetActive(true);
@@ -108,6 +122,10 @@ public class FightZone : MonoBehaviour
             // camera swap to fight cam
             FightZoneCam.SetActive(true);
             playerCam.SetActive(false);
+
+            // Music
+            MusicManager.instance.PlayFight();
+
 
             // set walls for fight zone
             zoneWallFront.SetActive(true);

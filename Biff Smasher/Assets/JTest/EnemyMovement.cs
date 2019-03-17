@@ -13,13 +13,10 @@ public class EnemyMovement : MonoBehaviour
     // is the enemy dead? if so don't worry about it.
     public bool isDead;
     public bool isKnockedBack;
-    // Navmesh
-    // NavMeshAgent agent;
 
-    // Player
-    //  public Transform target;
 
     //Health
+    // public bool hurtEnemy;
     public float health = 2;
 
 
@@ -33,19 +30,14 @@ public class EnemyMovement : MonoBehaviour
     //knockback
     public float knockbackCounter, knockbackTime, knockbackForce;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // AI find navmesh
-        // agent = this.GetComponent<NavMeshAgent>();
-        // on Instantiation Ai will find player and Set as target
-        //  target = GameObject.Find("Capsule").transform;
-    }
+    //weapon drop
+    public GameObject[] weapons;
+    public int dropSuccessRate = 20;
 
     // Update is called once per frame
     void Update()
     {
+
         if (knockbackCounter <= 0)
         {
             // simple move script
@@ -67,12 +59,7 @@ public class EnemyMovement : MonoBehaviour
 
 
     }
-    /*
-    public void Health()
-    {
-        health--;
-    }
-    */
+
 
     public void Knockback(Vector3 dir)
     {
@@ -87,4 +74,30 @@ public class EnemyMovement : MonoBehaviour
     {
         health = health - 10;
     }
+
+    public void HurtEnemy()
+    {
+        health--;
+        // hurtEnemy = false;
+        if (health <= 0)
+        {
+            // GameManager.instance.AddScore(scoreValue);
+
+
+            // drop random weapon
+            int randomChance = Random.Range(0, 100);
+            if (randomChance < dropSuccessRate)
+            {
+                int randomPick = Random.Range(0, weapons.Length);
+                Instantiate(weapons[randomPick], transform.position, transform.rotation);
+            }
+
+
+
+            // Destroy(gameObject);
+            // Instantiate(deathEffect, transform.position, transform.rotation);
+        }
+    }
+
 }
+

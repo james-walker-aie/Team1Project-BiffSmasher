@@ -133,6 +133,7 @@ public class CharacterController2D : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             animator.SetTrigger("jump");
+            jump = true;
         }
 
     }

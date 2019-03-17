@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 6499830839699898958}
   - component: {fileID: 1424898541488960788}
   - component: {fileID: 6499830839699898945}
-  - component: {fileID: 4721440121774900432}
   m_Layer: 9
   m_Name: Enemy2
   m_TagString: Enemy
@@ -211,6 +210,11 @@ MonoBehaviour:
   knockbackCounter: 0
   knockbackTime: 0.2
   knockbackForce: 5
+  weapons:
+  - {fileID: 1129742451232748817, guid: 8422993e881f6464286e929145a06e69, type: 3}
+  - {fileID: 3734182179517557550, guid: 52a18898c8b00494b89f0696a09fa344, type: 3}
+  - {fileID: 6558822804593834067, guid: 686929118c928ae44a06b60c85c03ba9, type: 3}
+  dropSuccessRate: 99
 --- !u!50 &6499830839699898945
 Rigidbody2D:
   serializedVersion: 4
@@ -232,18 +236,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &4721440121774900432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6499830839699898959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2418a2a4b92488e488b34bc1180b0238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6499830840873684562
 GameObject:
   m_ObjectHideFlags: 0

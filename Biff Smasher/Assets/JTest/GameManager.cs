@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     public static int fightZone1Enemies = 1;
     public static int fightZone2Enemies = 1;
     public static int fightZone3Enemies = 1;
@@ -18,6 +20,17 @@ public class GameManager : MonoBehaviour
     public GameObject zone4wall;
     public GameObject playerCam;
 
+    public bool canPause = true;
+
+    // Music volume variable that will be modified
+    // by dragging music slider knob
+    public float musicVolume = 1f;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +40,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && canPause)
+        {
+            PauseUnpause();
+        }
+
         if (FightZone.wave1 == true)
         {
            // Debug.Log("Wave 1");
@@ -38,6 +56,9 @@ public class GameManager : MonoBehaviour
                 FightZone.wave1 = false;
                 FightZone.wave2 = true;
                 Debug.Log("Wave 1 defeated");
+
+                //music
+                MusicManager.instance.PlayLevel1();
             }
         }
 
@@ -52,6 +73,10 @@ public class GameManager : MonoBehaviour
                 FightZone.wave2 = false;
                 FightZone.wave3 = true;
                 Debug.Log("Wave 2 defeated");
+
+                //music
+                MusicManager.instance.PlayLevel1();
+
             }
         }
 
@@ -67,6 +92,10 @@ public class GameManager : MonoBehaviour
                 FightZone.wave3 = false;
                 FightZone.wave4 = true;
                 Debug.Log("Wave 3 defeated");
+
+                //music
+                MusicManager.instance.PlayLevel1();
+
             }
         }
 
@@ -78,9 +107,39 @@ public class GameManager : MonoBehaviour
                 zone4wall.SetActive(false);
                 playerCam.SetActive(true);
 
-                // FightZone.wave4 = false;
+                 FightZone.wave4 = false;
                 Debug.Log("Wave 4 defeated");
+
+                //music
+                MusicManager.instance.PlayVictory();
+
             }
         }
+    }
+    public void PauseUnpause()
+    {
+        
+        if (UIManager.instance.pauseScreen.activeInHierarchy)
+        {
+            Debug.Log("PauseMenu Inactive");
+            UIManager.instance.pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+          //  PlayerController.instance.StopMove = false;
+        }
+        else
+        {
+            Debug.Log("PauseMenu active");
+            UIManager.instance.pauseScreen.SetActive(true);
+            Time.timeScale = 0f;
+           // PlayerController.instance.StopMove = true;
+        }
+    }
+
+    // Method that is called by Music slider UI
+    // This method takes vol value passed by slider
+    // and sets it as musicVolume
+    public void SetVolume(float vol)
+    {
+        musicVolume = vol;
     }
 }
