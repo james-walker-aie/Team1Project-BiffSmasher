@@ -36,7 +36,7 @@ public class WeaponPickups : MonoBehaviour
         }
         else
         {
-            GetComponent<BoxCollider2D>().enabled = true;
+           // GetComponent<BoxCollider2D>().enabled = true;
         }
        
     }
@@ -54,18 +54,21 @@ public class WeaponPickups : MonoBehaviour
         {
             ResetWeaponController();
             controller.axe = true;
+            Destroy(gameObject);
         }
         if (other.CompareTag("Player") && isSword == true)
         {
             ResetWeaponController();
             controller.sword = true;
+            Destroy(gameObject);
         }
         if (other.CompareTag("Player") && isBranch == true)
         {
             ResetWeaponController();
             controller.branch = true;
+            Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+      
     }
 }
