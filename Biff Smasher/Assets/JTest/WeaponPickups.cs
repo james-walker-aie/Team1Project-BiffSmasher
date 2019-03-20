@@ -36,7 +36,7 @@ public class WeaponPickups : MonoBehaviour
         }
         else
         {
-           // GetComponent<BoxCollider2D>().enabled = true;
+            GetComponent<BoxCollider2D>().enabled = true;
         }
        
     }

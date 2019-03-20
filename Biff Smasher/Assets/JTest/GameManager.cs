@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public static int fightZone1Enemies = 1;
-    public static int fightZone2Enemies = 1;
-    public static int fightZone3Enemies = 1;
-    public static int fightZone4Enemies = 1;
+    public int fightZone1Enemies = 1;
+    public  int fightZone2Enemies = 1;
+    public  int fightZone3Enemies = 1;
+    public  int fightZone4Enemies = 1;
     public GameObject zone1Trigger;
     public GameObject zone2Trigger;
     public GameObject zone3Trigger;

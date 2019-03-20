@@ -528,5 +528,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042498874716901070, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5407062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498874128906047, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5407062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498875499225596, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873743985395, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 704941887781762329, guid: f201647ac071bff4b979f7b90b76d1b9,
+        type: 3}
+    - target: {fileID: 3042498873380299746, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 704941887781762329, guid: f201647ac071bff4b979f7b90b76d1b9,
+        type: 3}
+    - target: {fileID: 3042498873520148266, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 704941887781762329, guid: f201647ac071bff4b979f7b90b76d1b9,
+        type: 3}
+    - target: {fileID: 3042498874652834437, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 704941887781762329, guid: f201647ac071bff4b979f7b90b76d1b9,
+        type: 3}
+    - target: {fileID: 3042498873408382423, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.72
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}

@@ -73,6 +73,14 @@ public class EnemyMovement : MonoBehaviour
     public void FireballDamage()
     {
         health = health - 10;
+
+        // drop random weapon
+        int randomChance = Random.Range(0, 100);
+        if (randomChance < dropSuccessRate)
+        {
+            int randomPick = Random.Range(0, weapons.Length);
+            Instantiate(weapons[randomPick], transform.position, transform.rotation);
+        }
     }
 
     public void HurtEnemy()

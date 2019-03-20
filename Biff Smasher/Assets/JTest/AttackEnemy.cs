@@ -32,7 +32,7 @@ public class AttackEnemy : MonoBehaviour
                 {
                     Debug.Log("destroy enemy");
                     col.gameObject.GetComponent<EnemyMovement>().isDead = true;
-                    GameManager.fightZone1Enemies--;
+                    GameManager.instance.fightZone1Enemies--;
                     Destroy(col.gameObject, .1f);
 
                 }
@@ -42,7 +42,7 @@ public class AttackEnemy : MonoBehaviour
                     Debug.Log("destroy enemy");
                     col.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     Destroy(col.gameObject, .1f);
-                    GameManager.fightZone2Enemies--;
+                    GameManager.instance.fightZone2Enemies--;
 
 
                 }
@@ -51,7 +51,7 @@ public class AttackEnemy : MonoBehaviour
                     Debug.Log("destroy enemy");
                     col.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     Destroy(col.gameObject, .1f);
-                    GameManager.fightZone3Enemies--;
+                    GameManager.instance.fightZone3Enemies--;
 
 
                 }
@@ -60,7 +60,7 @@ public class AttackEnemy : MonoBehaviour
                     Debug.Log("destroy enemy");
                     col.gameObject.GetComponent<EnemyMovement>().isDead = true;
                     Destroy(col.gameObject, .1f);
-                    GameManager.fightZone4Enemies--;
+                    GameManager.instance.fightZone4Enemies--;
 
 
                 }
