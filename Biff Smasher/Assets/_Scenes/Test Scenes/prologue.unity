@@ -461,7 +461,7 @@ MonoBehaviour:
   instructions: {fileID: 2101547511}
   timeBetweenText: 3
   canExit: 0
-  level1: CamTest
+  level1: 1_Forest
 --- !u!4 &468366586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782533646329431886, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
@@ -599,6 +599,11 @@ PrefabInstance:
     - target: {fileID: 2271737072619251560, guid: 2bbe7254412276047a97e25563a31c1c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 976234084800064093, guid: 2bbe7254412276047a97e25563a31c1c,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -949,6 +954,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4567959870202959469, guid: e28509b31d2940141989296e3da019a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e28509b31d2940141989296e3da019a7, type: 3}
 --- !u!1001 &1642347400
@@ -1016,6 +1026,11 @@ PrefabInstance:
     - target: {fileID: 4782533646329431886, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056214019735387498, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1367,9 +1382,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   jumpForce: 27
+  checkRadius: 0.5
+  branch: 0
+  axe: 0
+  sword: 0
+  ultimate: 0
   sr: {fileID: 1827971382}
   groundCheck: {fileID: 1734229108}
-  checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
