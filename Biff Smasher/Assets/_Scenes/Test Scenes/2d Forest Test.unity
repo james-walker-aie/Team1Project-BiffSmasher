@@ -474,7 +474,7 @@ Transform:
   - {fileID: 195936688}
   - {fileID: 1413346923}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1663034849
 Animator:
@@ -852,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 6386659056318617787, guid: c8ab98523ca73054698c18fa93c31087,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6386659056318617787, guid: c8ab98523ca73054698c18fa93c31087,
         type: 3}
@@ -869,22 +869,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3843255126439745063, guid: c8ab98523ca73054698c18fa93c31087,
-        type: 3}
-      propertyPath: cameraTransform
-      value: 
-      objectReference: {fileID: 1663034848}
     - target: {fileID: 3843255125342440077, guid: c8ab98523ca73054698c18fa93c31087,
         type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1663034848}
-    - target: {fileID: 3843255126443053456, guid: c8ab98523ca73054698c18fa93c31087,
+    - target: {fileID: 3843255125734078624, guid: c8ab98523ca73054698c18fa93c31087,
         type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1663034848}
-    - target: {fileID: 3843255125734078624, guid: c8ab98523ca73054698c18fa93c31087,
+    - target: {fileID: 3843255126439745063, guid: c8ab98523ca73054698c18fa93c31087,
+        type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 1663034848}
+    - target: {fileID: 3843255126443053456, guid: c8ab98523ca73054698c18fa93c31087,
         type: 3}
       propertyPath: cameraTransform
       value: 
