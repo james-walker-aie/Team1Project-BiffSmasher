@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Final Scenes/Menu.unity
     guid: 6131645d625aedb4cbc36bdb3c723ab8
   - enabled: 1
-    path: Assets/_Scenes/Test Scenes/prologue.unity
+    path: Assets/_Scenes/Final Scenes/_Prologue.unity
     guid: 9bc96cdaad572514daf26c21a56ed2bb
   - enabled: 1
     path: Assets/_Scenes/Final Scenes/1_Forest.unity
