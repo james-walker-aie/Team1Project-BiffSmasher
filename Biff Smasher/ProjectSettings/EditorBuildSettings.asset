@@ -18,6 +18,18 @@ EditorBuildSettings:
     path: Assets/_Scenes/Final Scenes/1_Forest.unity
     guid: 5c0240900a8f64c4881bbb7a3800dfb9
   - enabled: 1
+    path: Assets/_Scenes/Final Scenes/1a_Transition.unity
+    guid: c6085610304d0cc498747e9f28c06c14
+  - enabled: 1
     path: Assets/_Scenes/Final Scenes/2_Village.unity
     guid: c5bfae375df9ccd4a9de89ef425f56c3
+  - enabled: 1
+    path: Assets/_Scenes/Final Scenes/2a_Transition.unity
+    guid: 0c3e2fc03a6e6e5498575c388d61df85
+  - enabled: 1
+    path: Assets/_Scenes/Final Scenes/3_Dungeon.unity
+    guid: 817b2df2dc8942e49a0fb4c59850ec73
+  - enabled: 1
+    path: Assets/_Scenes/Final Scenes/3a_End Scene.unity
+    guid: 3abf2ab3a6ef1404da58810b6c816c94
   m_configObjects: {}

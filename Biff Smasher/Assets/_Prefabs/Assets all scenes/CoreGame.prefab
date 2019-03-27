@@ -1415,7 +1415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042498873848106047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.393281, y: 3.4972413, z: -17.085388}
+  m_LocalPosition: {x: 11.282168, y: 2.9416878, z: -17.085388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3042498875445015308}
@@ -3105,7 +3105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042498874716901071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.393281, y: 3.4972413, z: -17.085388}
+  m_LocalPosition: {x: 11.282168, y: 2.9416878, z: -17.085388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3042498874688438918}
@@ -5109,8 +5109,8 @@ MonoBehaviour:
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 0
-  m_ScreenX: 0.36893773
-  m_ScreenY: 0.58611286
+  m_ScreenX: 0.37206274
+  m_ScreenY: 0.5583352
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.728125
   m_DeadZoneHeight: 0.69822216

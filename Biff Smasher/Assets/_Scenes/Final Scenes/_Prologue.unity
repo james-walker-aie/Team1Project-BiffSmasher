@@ -461,7 +461,7 @@ MonoBehaviour:
   instructions: {fileID: 2101547511}
   timeBetweenText: 3
   canExit: 0
-  level1: 1_Forest
+  level1: Menu
 --- !u!4 &468366586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782533646329431886, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
