@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
+    // floats
     public float speed;
-    public float jumpForce;
-    private float moveInput;
+    public float jumpForce;                     
     public float checkRadius;
+    private float moveInput;
     private bool facingRight;     // set default look direction to right.
     private bool isGrounded;        // determine if player is standing on ground.
 
+       // booleans
     public bool branch = false;
     public bool axe = false;
     public bool sword = false;
@@ -38,6 +41,7 @@ public class CharacterController2D : MonoBehaviour
         kick = false;
         jump = false;
         facingRight = true;
+        
     }
 
 
@@ -45,6 +49,8 @@ public class CharacterController2D : MonoBehaviour
     {
         HandleInput();
         AnimationControl();
+
+      
     }
 
 
@@ -60,6 +66,8 @@ public class CharacterController2D : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround );         // circle collider to check collision with ground.            
     }
+
+   
 
 
     private void HandleMovement(float horizontal)
