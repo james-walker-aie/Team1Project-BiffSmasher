@@ -11,6 +11,11 @@ public class Health : MonoBehaviour
 
     Animator myAnimator;
 
+    public void RestartScene()
+    {
+        Scene thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(thisScene.name);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +34,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             myAnimator.SetBool("isDead", true);
-
-           
-
+            RestartScene();
         }
     }
 
