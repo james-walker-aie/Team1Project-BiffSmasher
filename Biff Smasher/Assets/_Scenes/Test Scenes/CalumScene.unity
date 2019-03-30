@@ -5449,6 +5449,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1104586302 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1924047297315347403, guid: 9845c6b72c6a9e345908daa638f43fa6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924047297918581498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1110624967
 GameObject:
   m_ObjectHideFlags: 0
@@ -9417,6 +9423,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1924047297315347392, guid: 9845c6b72c6a9e345908daa638f43fa6,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1104586302}
+    - target: {fileID: 1924047297315347392, guid: 9845c6b72c6a9e345908daa638f43fa6,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1104586302}
     - target: {fileID: 8937842985643931825, guid: 9845c6b72c6a9e345908daa638f43fa6,
         type: 3}
       propertyPath: fireBall

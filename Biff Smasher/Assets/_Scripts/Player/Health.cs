@@ -9,39 +9,44 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     private bool isDead;
 
-    
+    public Animator anim;
+    public float restartDelay = 4f;
+    float restartTimer;
 
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentHealth = maxHealth;
+        anim.GetComponent<Animator>();
+
+    }
+
+    //Update is called once per frame
+    void Update()
+    {
+                    
+        if (currentHealth <= 0)
+        {           
+            anim.SetTrigger("isDead");
+
+            restartTimer += Time.deltaTime;
+
+            if (restartTimer >= restartDelay)
+            {
+                RestartScene();
+            }
+        }
+
+    }
+
+   
     public void RestartScene()
     {
         Scene thisScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(thisScene.name);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentHealth = maxHealth;
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-        if (currentHealth <= 0)
-        {
-            
-            RestartScene();
-        }
-    }
-
-    void Die()
-    {
-        
-        Scene thisScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(thisScene.name);
-    }
+   
 }
