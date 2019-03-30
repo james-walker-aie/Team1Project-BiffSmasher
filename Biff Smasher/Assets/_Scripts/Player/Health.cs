@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
     private bool isDead;
 
-    Animator myAnimator;
+    
 
     public void RestartScene()
     {
@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        myAnimator.enabled = true;
+
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            myAnimator.SetBool("isDead", true);
+            
             RestartScene();
         }
     }

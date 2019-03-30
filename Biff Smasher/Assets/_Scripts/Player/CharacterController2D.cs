@@ -11,10 +11,10 @@ public class CharacterController2D : MonoBehaviour
     public float jumpForce;                     
     public float checkRadius;
     private float moveInput;
-    private bool facingRight;     // set default look direction to right.
-    private bool isGrounded;        // determine if player is standing on ground.
+    private float attackTimer = 0;
+    private float attackCD = 0.3f; // attack cooldown
 
-       // booleans
+    // booleans
     public bool branch = false;
     public bool axe = false;
     public bool sword = false;
@@ -25,6 +25,8 @@ public class CharacterController2D : MonoBehaviour
     private bool kick;
     private bool ultAttack;
     private bool jump;
+    private bool facingRight;     // set default look direction to right.
+    private bool isGrounded;        // determine if player is standing on ground.
 
     private Rigidbody2D rb;
     public SpriteRenderer sr;
@@ -32,6 +34,8 @@ public class CharacterController2D : MonoBehaviour
     public LayerMask whatIsGround;
     public Animator animator;
     
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -41,7 +45,9 @@ public class CharacterController2D : MonoBehaviour
         kick = false;
         jump = false;
         facingRight = true;
+        animator = gameObject.GetComponent<Animator>();
         
+
     }
 
 
@@ -50,12 +56,6 @@ public class CharacterController2D : MonoBehaviour
         HandleInput();
         AnimationControl();
 
-      
-    }
-
-
-    private void FixedUpdate()
-    {
         float horizontal = Input.GetAxisRaw("Horizontal");
         HandleMovement(horizontal);
 
@@ -64,11 +64,8 @@ public class CharacterController2D : MonoBehaviour
 
         ResetValues();
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround );         // circle collider to check collision with ground.            
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);         // circle collider to check collision with ground.  
     }
-
-   
-
 
     private void HandleMovement(float horizontal)
     {
@@ -117,10 +114,10 @@ public class CharacterController2D : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))  // primary attack
         {
-            slashAttack = true;
-        }
+            slashAttack = true;     
+        }           
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
@@ -169,9 +166,8 @@ public class CharacterController2D : MonoBehaviour
         ultAttack = false;
         kick = false;
         jump = false;
-
     }
-
+    
 
     void AnimationControl()
     {
