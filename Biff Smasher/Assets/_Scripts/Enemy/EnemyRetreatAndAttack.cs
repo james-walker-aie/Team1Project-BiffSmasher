@@ -25,6 +25,21 @@ public class EnemyRetreatAndAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Health.instance.currentHealth > 0)
+        {
+            if (Vector2.Distance(transform.position, Waypoint.position) > stoppingDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, speed * Time.deltaTime);
+            }
+            
+        }
+        else if (Health.instance.currentHealth <= 0)
+        {
+            Debug.Log("Zombie dance of joy");
+            transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, -speed * Time.deltaTime);
+        }
+
+        /*
         if (Vector2.Distance(transform.position, Waypoint.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, speed * Time.deltaTime); 
@@ -39,8 +54,19 @@ public class EnemyRetreatAndAttack : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, -speed * Time.deltaTime);
         }
+        */
+    }
+
+    // strike player and player loses health
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag == "Player" && Health.instance.currentHealth > 0)
+        {
+            Debug.Log("player" + Health.instance.currentHealth);
+            Health.instance.currentHealth -= attackDamage;
+            Debug.Log(" hit player" + Health.instance.currentHealth);
+        }
 
     }
 
-   
 }

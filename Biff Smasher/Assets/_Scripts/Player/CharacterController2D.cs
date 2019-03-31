@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterController2D : MonoBehaviour
 {
+    public static CharacterController2D instance;
     // floats
     public float speed;
     public float jumpForce;                     
@@ -20,13 +21,14 @@ public class CharacterController2D : MonoBehaviour
     public bool sword = false;
     public bool ultimate = false;
       
-    private bool slashAttack;
-    private bool thrustAttack;
+    public bool slashAttack;
+    public bool thrustAttack;
     private bool kick;
     private bool ultAttack;
     private bool jump;
     private bool facingRight;     // set default look direction to right.
-    private bool isGrounded;        // determine if player is standing on ground.
+    public bool isGrounded;        // determine if player is standing on ground.
+    public bool isDead;
 
     private Rigidbody2D rb;
     public SpriteRenderer sr;
@@ -38,6 +40,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
         slashAttack = false;
         thrustAttack = false;
@@ -64,7 +67,7 @@ public class CharacterController2D : MonoBehaviour
 
         ResetValues();
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);         // circle collider to check collision with ground.  
+      //  isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);         // circle collider to check collision with ground.  
     }
 
     private void HandleMovement(float horizontal)
@@ -134,11 +137,12 @@ public class CharacterController2D : MonoBehaviour
             kick = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))                     // player jump.
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)   // player jump.
         {
             rb.velocity = Vector2.up * jumpForce;
             animator.SetTrigger("jump");
             jump = true;
+            isGrounded = false;
         }
 
     }

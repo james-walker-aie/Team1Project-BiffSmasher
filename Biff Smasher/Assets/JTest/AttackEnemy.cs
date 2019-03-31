@@ -9,7 +9,7 @@ public class AttackEnemy : MonoBehaviour
 
         if (col != null)
         {
-            if (col.gameObject.tag == "Enemy")
+            if ((col.gameObject.tag == "Enemy") && (CharacterController2D.instance.slashAttack == true || CharacterController2D.instance.thrustAttack == true ))
 
             {
                 Debug.Log("punched " + col.gameObject.tag);
