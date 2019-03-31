@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3030464279178060745}
   - component: {fileID: 1627933347}
   - component: {fileID: 1627933346}
-  - component: {fileID: 1627933344}
   - component: {fileID: 1627933345}
   m_Layer: 0
   m_Name: zombie
@@ -167,30 +166,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4498465, y: 0.72179914}
   m_EdgeRadius: 0
---- !u!114 &1627933344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044937863551718}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16f68b909f3eb640a0645f58f4c0947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0
-  startDirection: {x: 0, y: 0}
-  isDead: 0
-  isKnockedBack: 0
-  health: 2
-  moveDir: {x: 0, y: 0}
-  rb: {fileID: 1627933347}
-  knockbackCounter: 0
-  knockbackTime: 0
-  knockbackForce: 0
-  weapons: []
-  dropSuccessRate: 20
 --- !u!114 &1627933345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,9 +178,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfdb8cdad3806148b4441d12200b5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 1
   attackDamage: 10
   speed: 4
   stoppingDistance: 2
   retreatDistance: 4
   Waypoint: {fileID: 0}
+  isDead: 0
+  isKnockedBack: 0
+  knockbackCounter: 0
+  knockbackTime: 0
+  knockbackForce: 0
+  weapons:
+  - {fileID: 3734182179517557550, guid: 52a18898c8b00494b89f0696a09fa344, type: 3}
+  dropSuccessRate: 20
+  health: 20

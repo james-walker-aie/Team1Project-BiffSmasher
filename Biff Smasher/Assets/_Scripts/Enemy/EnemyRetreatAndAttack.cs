@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyRetreatAndAttack : MonoBehaviour
 {
+    public static EnemyRetreatAndAttack instance;
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
     public float speed;
@@ -13,8 +14,26 @@ public class EnemyRetreatAndAttack : MonoBehaviour
     public Transform Waypoint;
     GameObject player;
     
-    float timer; 
+    float timer;
 
+    // is the enemy dead? if so don't worry about it.
+    public bool isDead;
+    public bool isKnockedBack;
+
+    //knockback
+    public float knockbackCounter, knockbackTime, knockbackForce;
+
+    //weapon drop
+    public GameObject[] weapons;
+    public int dropSuccessRate = 20;
+
+    //Health  
+    public float health = 20;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -62,11 +81,33 @@ public class EnemyRetreatAndAttack : MonoBehaviour
     {
         if(col.gameObject.tag == "Player" && Health.instance.currentHealth > 0)
         {
-            Debug.Log("player" + Health.instance.currentHealth);
+           
             Health.instance.currentHealth -= attackDamage;
             Debug.Log(" hit player" + Health.instance.currentHealth);
         }
 
     }
+    public void HurtEnemy()
+    {
+        health = health-10;
+        // hurtEnemy = false;
+        if (health <= 0)
+        {
+            // GameManager.instance.AddScore(scoreValue);
 
+
+            // drop random weapon
+            int randomChance = Random.Range(0, 100);
+            if (randomChance < dropSuccessRate)
+            {
+                int randomPick = Random.Range(0, weapons.Length);
+                Instantiate(weapons[randomPick], transform.position, transform.rotation);
+            }
+
+
+
+            // Destroy(gameObject);
+            // Instantiate(deathEffect, transform.position, transform.rotation);
+        }
+    }
 }
