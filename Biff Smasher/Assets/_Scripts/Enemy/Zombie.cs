@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRetreatAndAttack : MonoBehaviour
+public class Zombie : MonoBehaviour
 {
-    public static EnemyRetreatAndAttack instance;
+    public static Zombie instance;
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
     public float speed;
     public float stoppingDistance;
     public float retreatDistance;
-
+    float timer;
+    public Animator animator;
     public Transform Waypoint;
     GameObject player;
-    
-    float timer;
 
+    
     // is the enemy dead? if so don't worry about it.
     public bool isDead;
     public bool isKnockedBack;
@@ -50,7 +50,7 @@ public class EnemyRetreatAndAttack : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, speed * Time.deltaTime);
             }
-            
+
         }
         else if (Health.instance.currentHealth <= 0)
         {
@@ -58,8 +58,8 @@ public class EnemyRetreatAndAttack : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, -speed * Time.deltaTime);
         }
 
-        /*
-        if (Vector2.Distance(transform.position, Waypoint.position) > stoppingDistance)
+        
+        /*if (Vector2.Distance(transform.position, Waypoint.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, speed * Time.deltaTime); 
         }  
@@ -72,16 +72,16 @@ public class EnemyRetreatAndAttack : MonoBehaviour
         else if(Vector2.Distance(transform.position, Waypoint.position) < retreatDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, -speed * Time.deltaTime);
-        }
-        */
+        }*/
+        
     }
 
     // strike player and player loses health
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player" && Health.instance.currentHealth > 0)
+        if (col.gameObject.tag == "Player" && Health.instance.currentHealth > 0)
         {
-           
+            animator.SetTrigger("attack");
             Health.instance.currentHealth -= attackDamage;
             Debug.Log(" hit player" + Health.instance.currentHealth);
         }
@@ -89,7 +89,7 @@ public class EnemyRetreatAndAttack : MonoBehaviour
     }
     public void HurtEnemy()
     {
-        health = health-10;
+        health = health - 10;
         // hurtEnemy = false;
         if (health <= 0)
         {

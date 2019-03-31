@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.419796, y: 0.26887965, z: -10}
+  m_LocalPosition: {x: -7.3951035, y: 0.26887965, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -1460,7 +1460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.419796, y: 0.26887965, z: -10}
+  m_LocalPosition: {x: -7.3951035, y: 0.26887965, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3371,15 +3371,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 667335218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddfdb8cdad3806148b4441d12200b5d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9232f9e065ec2db479387721bb42d97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackDamage: 10
-  speed: 4
-  stoppingDistance: 8
-  retreatDistance: 4
-  Waypoint: {fileID: 2107485253}
+  speed: 0
+  stoppingDistance: 0
+  retreatDistance: 0
+  animator: {fileID: 667335223}
+  Waypoint: {fileID: 1827971383}
   isDead: 0
   isKnockedBack: 0
   knockbackCounter: 0
@@ -3388,6 +3389,12 @@ MonoBehaviour:
   weapons: []
   dropSuccessRate: 20
   health: 20
+--- !u!95 &667335223 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95016758148294110, guid: c78964a868130e046832ee43d8b97d86,
+    type: 3}
+  m_PrefabInstance: {fileID: 1343269952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &667335224
 Rigidbody2D:
   serializedVersion: 4
@@ -3421,7 +3428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16f68b909f3eb640a0645f58f4c0947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 4
   startDirection: {x: 0, y: 0}
   isDead: 0
   isKnockedBack: 0
@@ -6267,7 +6274,8 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1627933345, guid: c78964a868130e046832ee43d8b97d86, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c78964a868130e046832ee43d8b97d86, type: 3}
 --- !u!4 &1354864792
 Transform:
