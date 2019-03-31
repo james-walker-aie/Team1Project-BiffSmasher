@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     private bool isDead;
 
     public Animator anim;
-    public float restartDelay = 4f;
+    public float restartDelay = 2f;
     float restartTimer;
 
     private void Awake()
@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {           
            // anim.SetTrigger("isDead");
-            anim.SetTrigger("jump");
+            anim.SetTrigger("isDead");
 
             restartTimer += Time.deltaTime;
 

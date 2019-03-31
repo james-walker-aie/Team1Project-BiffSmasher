@@ -221,6 +221,10 @@ MonoBehaviour:
   axe: 0
   sword: 0
   ultimate: 0
+  slashAttack: 0
+  thrustAttack: 0
+  isGrounded: 0
+  isDead: 0
   sr: {fileID: 1924047297315347404}
   groundCheck: {fileID: 1924047297392576142}
   whatIsGround:
@@ -253,8 +257,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aee65b15d70cde048885969fbfe079c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
   currentHealth: 0
   maxHealth: 100
+  anim: {fileID: 0}
+  restartDelay: 1
 --- !u!1 &1924047297392576137
 GameObject:
   m_ObjectHideFlags: 0

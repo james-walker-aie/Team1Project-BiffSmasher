@@ -753,6 +753,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3042498874128906047, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.129838
+      objectReference: {fileID: 0}
     - target: {fileID: 3042498875235741724, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -813,5 +818,15 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 183430975}
+    - target: {fileID: 3042498875012724921, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: restartDelay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498874716901070, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.129838
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
