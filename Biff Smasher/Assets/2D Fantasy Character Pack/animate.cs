@@ -10,6 +10,7 @@ public class animate : MonoBehaviour {
     Vector2 initialPosition;
     public float currentTimeOnPath, time;
     string[] animations;
+
     // Use this for initialization
     void Start () {
         animator = GetComponent<Animator>();
