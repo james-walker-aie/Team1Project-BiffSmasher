@@ -209,7 +209,9 @@ MonoBehaviour:
   knockbackCounter: 0
   knockbackTime: 0
   knockbackForce: 0
-  weapons: []
+  weapons:
+  - {fileID: 3734182179517557550, guid: 52a18898c8b00494b89f0696a09fa344, type: 3}
+  - {fileID: 1129742451232748817, guid: 8422993e881f6464286e929145a06e69, type: 3}
   dropSuccessRate: 20
   health: 20
 --- !u!114 &648504796
