@@ -451,7 +451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326084773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54bfe8141b25d1c40805205fe4039b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d427c4cd8bf37940a52d8388971af1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827971376}
@@ -459,7 +459,7 @@ MonoBehaviour:
   orb: {fileID: 1389619493}
   orbDialogueTextBox: {fileID: 974942641}
   instructions: {fileID: 2101547511}
-  timeBetweenText: 3
+  timeBetweenText: 0
   canExit: 0
   level1: 2_Village
 --- !u!4 &468366586 stripped
