@@ -422,17 +422,7 @@ MonoBehaviour:
   instructions: {fileID: 2101547511}
   timeBetweenText: 3
   canExit: 0
-<<<<<<< HEAD
-  level1: 1_Forest
---- !u!4 &468366586 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4782533646329431886, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1642347400}
-  m_PrefabAsset: {fileID: 0}
-=======
   level1: 3_Dungeon
->>>>>>> 8e8a8434d439db9aaad770ce24b6859cd2c5358d
 --- !u!1 &593790902
 GameObject:
   m_ObjectHideFlags: 0
