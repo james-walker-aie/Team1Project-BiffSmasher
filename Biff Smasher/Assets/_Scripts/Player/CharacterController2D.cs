@@ -9,6 +9,7 @@ public class CharacterController2D : MonoBehaviour
     public static CharacterController2D instance;
     // floats
     public float speed;
+    public float moveSpeedZ = 3f;
     public float jumpForce;                     
     public float checkRadius;
     private float moveInput;
@@ -56,6 +57,8 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0f, Input.GetAxis("Vertical") * Time.deltaTime * moveSpeedZ); // simple movement
+
         HandleInput();
         AnimationControl();
 
@@ -86,7 +89,7 @@ public class CharacterController2D : MonoBehaviour
     
 
 
-    private void HandleAttacks()
+    private void HandleAttacks()     // set animations to play when triggered by input keys.
     {
         if (slashAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))   
         {
@@ -122,17 +125,17 @@ public class CharacterController2D : MonoBehaviour
             slashAttack = true;     
         }           
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))  // secondary attack
         {
             thrustAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))  // ultimate attack
         {
             ultAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))  // kick attack
         {
             kick = true;
         }
