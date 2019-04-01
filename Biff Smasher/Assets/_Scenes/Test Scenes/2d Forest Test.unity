@@ -898,11 +898,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Open Portal
       objectReference: {fileID: 0}
-    - target: {fileID: 7547146197763916942, guid: 37adaae7241dbaf418701692e6420255,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7547146197763916939, guid: 37adaae7241dbaf418701692e6420255,
         type: 3}
       propertyPath: m_LocalPosition.x
