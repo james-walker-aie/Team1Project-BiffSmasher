@@ -451,13 +451,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 326084773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78d3efbd4c17cf944a85575fb488a60d, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d427c4cd8bf37940a52d8388971af1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTransit: LEVEL TO BE LOADED
   player: {fileID: 1827971376}
-  portalTransitAnimation: {fileID: 0}
-  timeBetweenText: 1
+  playerDialogueTextBox: {fileID: 649091722}
+  orb: {fileID: 1389619493}
+  orbDialogueTextBox: {fileID: 974942641}
+  instructions: {fileID: 2101547511}
+  timeBetweenText: 0
+  canExit: 0
+  level1: 2_Village
 --- !u!4 &468366586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782533646329431886, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
