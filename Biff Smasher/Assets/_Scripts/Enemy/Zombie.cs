@@ -98,7 +98,7 @@ public class Zombie : MonoBehaviour
     // strike player and player loses health
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player" && Health.instance.currentHealth > 0)
+        if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
         {
             animator.SetTrigger("attack");
             Health.instance.currentHealth -= attackDamage;

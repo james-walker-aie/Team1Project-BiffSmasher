@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
 
     public void StopMusic()
     {
-        //MainMenuMusic.Stop();
+        MainMenuMusic.Stop();
         FightMusic.Stop();
         level1Music.Stop();
        // level2Music.Stop();

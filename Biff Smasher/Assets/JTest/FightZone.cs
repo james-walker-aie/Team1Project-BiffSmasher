@@ -46,10 +46,10 @@ public class FightZone : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
        // Debug.Log("OnCollisionEnter2D");
-        if (other.gameObject.tag == "Player" && wave1 ==true)
+        if (other.gameObject.CompareTag("Player") && wave1 ==true)
         {
             Debug.Log("FightZone1 collider Active");
             // camera swap to fight cam
