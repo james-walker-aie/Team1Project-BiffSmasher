@@ -10,6 +10,7 @@ public class Scene_Transition : MonoBehaviour
     [SerializeField] Animator portalTransitAnimation;
     // pause length between dialogue
     [SerializeField] float timeBetweenText = 1f;
+    [SerializeField] float timeBetweenTransition = 3f;
 
     private void Update()
     {
@@ -37,7 +38,7 @@ public class Scene_Transition : MonoBehaviour
 
         portalTransitAnimation.SetTrigger("PlayerTransition");
 
-        yield return new WaitForSeconds(timeBetweenText);
+        yield return new WaitForSeconds(timeBetweenTransition);
 
         SceneManager.LoadScene(levelTransit);
     }
