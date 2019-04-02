@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        musicVolume = PlayerPrefs.GetFloat("Volume");
+       
     }
 
     // Update is called once per frame
@@ -141,5 +142,6 @@ public class GameManager : MonoBehaviour
     public void SetVolume(float vol)
     {
         musicVolume = vol;
+        PlayerPrefs.SetFloat("Volume", musicVolume);
     }
 }

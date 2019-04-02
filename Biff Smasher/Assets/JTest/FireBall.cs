@@ -15,7 +15,7 @@ public class FireBall : MonoBehaviour
     {
           player = GameObject.FindWithTag("Player").transform;
         // determine dirction
-         startDirection.x = transform.position.x - player.position.x ;
+         startDirection.x = player.position.x - transform.position.x;
         startDirection.Normalize();
     }  
 
@@ -57,50 +57,50 @@ public class FireBall : MonoBehaviour
 
             {
                 Debug.Log("Fireball damage " + col.gameObject.tag);
-                if (col.gameObject.GetComponent<EnemyMovement>().health > 0 && col.gameObject.GetComponent<EnemyMovement>().isDead == false)
+                if (col.gameObject.GetComponent<Zombie>().health > 0 && col.gameObject.GetComponent<Zombie>().isDead == false)
                 {
-                    Debug.Log("Fireball damage current health " + col.gameObject.GetComponent<EnemyMovement>().health);
-                    col.gameObject.GetComponent<EnemyMovement>().FireballDamage();
-                    Debug.Log("Fireball damage hurt enemy " + col.gameObject.GetComponent<EnemyMovement>().health);
+                    Debug.Log("Fireball damage current health " + col.gameObject.GetComponent<Zombie>().health);
+                    col.gameObject.GetComponent<Zombie>().FireballDamage();
+                    Debug.Log("Fireball damage hurt enemy " + col.gameObject.GetComponent<Zombie>().health);
 
                     // knockback direction
-                    Vector2 hitDir = col.transform.position - this.transform.position;
-                    hitDir = hitDir.normalized;
-                    col.gameObject.GetComponent<EnemyMovement>().Knockback(hitDir);
+                  //  Vector2 hitDir = col.transform.position - this.transform.position;
+                  //  hitDir = hitDir.normalized;
+                  //  col.gameObject.GetComponent<Zombie>().Knockback(hitDir);
 
                 }
 
-                if (col.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave1 && col.gameObject.GetComponent<EnemyMovement>().isDead == false)
+                if (col.gameObject.GetComponent<Zombie>().health <= 0 && FightZone.wave1 && col.gameObject.GetComponent<Zombie>().isDead == false)
                 {
                     Debug.Log("Fireball damage destroy enemy");
-                    col.gameObject.GetComponent<EnemyMovement>().isDead = true;
+                    col.gameObject.GetComponent<Zombie>().isDead = true;
                     GameManager.instance.fightZone1Enemies--;
                     Destroy(col.gameObject, .1f);
 
                 }
 
-                if (col.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave2 && col.gameObject.GetComponent<EnemyMovement>().isDead == false)
+                if (col.gameObject.GetComponent<Zombie>().health <= 0 && FightZone.wave2 && col.gameObject.GetComponent<Zombie>().isDead == false)
                 {
                     Debug.Log("Fireball damage destroy enemy");
-                    col.gameObject.GetComponent<EnemyMovement>().isDead = true;
+                    col.gameObject.GetComponent<Zombie>().isDead = true;
                     Destroy(col.gameObject, .1f);
                     GameManager.instance.fightZone2Enemies--;
 
 
                 }
-                if (col.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave3 && col.gameObject.GetComponent<EnemyMovement>().isDead == false)
+                if (col.gameObject.GetComponent<Zombie>().health <= 0 && FightZone.wave3 && col.gameObject.GetComponent<Zombie>().isDead == false)
                 {
                     Debug.Log("Fireball damage destroy enemy");
-                    col.gameObject.GetComponent<EnemyMovement>().isDead = true;
+                    col.gameObject.GetComponent<Zombie>().isDead = true;
                     Destroy(col.gameObject, .1f);
                     GameManager.instance.fightZone3Enemies--;
 
 
                 }
-                if (col.gameObject.GetComponent<EnemyMovement>().health <= 0 && FightZone.wave4 && col.gameObject.GetComponent<EnemyMovement>().isDead == false)
+                if (col.gameObject.GetComponent<Zombie>().health <= 0 && FightZone.wave4 && col.gameObject.GetComponent<Zombie>().isDead == false)
                 {
                     Debug.Log("Fireball damage destroy enemy");
-                    col.gameObject.GetComponent<EnemyMovement>().isDead = true;
+                    col.gameObject.GetComponent<Zombie>().isDead = true;
                     Destroy(col.gameObject, .1f);
                     GameManager.instance.fightZone4Enemies--;
 

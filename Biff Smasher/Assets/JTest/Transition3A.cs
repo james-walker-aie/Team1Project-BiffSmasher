@@ -57,7 +57,7 @@ public class Transition3A : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Phew, Where are we now?";
+        playerDialogueTextBox.text = "OK, is that it?";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -69,7 +69,7 @@ public class Transition3A : MonoBehaviour
         playerDialogueTextBox.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         // text for dialogue box
-        orbDialogueTextBox.text = "The Palace of lost souls.";
+        orbDialogueTextBox.text = "I think so...";
         //Show character and dialogue box
         orbDialogueTextBox.gameObject.SetActive(true);
         orb.gameObject.SetActive(true);
@@ -81,7 +81,7 @@ public class Transition3A : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Let me guess, i have to fight my way through.";
+        playerDialogueTextBox.text = "Sweet. Now send me home. I gotta eat.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -93,7 +93,7 @@ public class Transition3A : MonoBehaviour
         playerDialogueTextBox.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         // text for dialogue box
-        orbDialogueTextBox.text = "Yes, the exit back to your world is past the castle not far from here.";
+        orbDialogueTextBox.text = "Don't you want a reward?";
         //Show character and dialogue box
         orbDialogueTextBox.gameObject.SetActive(true);
         orb.gameObject.SetActive(true);
@@ -105,7 +105,7 @@ public class Transition3A : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Well lets smash through these undead,";
+        playerDialogueTextBox.text = "Nah. I do this sort of stuff for fun.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -119,7 +119,7 @@ public class Transition3A : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "... I've got dinner at 7 and i ain't missing out. ";
+        playerDialogueTextBox.text = "Stay metal \\M/";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);

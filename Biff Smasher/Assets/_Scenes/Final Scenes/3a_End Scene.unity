@@ -202,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &280987785
 Transform:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 326084773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54bfe8141b25d1c40805205fe4039b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: a6feb427eeff2d34ea7cdd0c74307d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1827971376}
@@ -461,7 +461,7 @@ MonoBehaviour:
   instructions: {fileID: 2101547511}
   timeBetweenText: 3
   canExit: 0
-  level1: 1_Forest
+  level1: Menu
 --- !u!4 &468366586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782533646329431886, guid: 3b5fde81eeaace24cbfcc45e46cdc4aa,
@@ -1381,12 +1381,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  moveSpeedZ: 3
   jumpForce: 27
   checkRadius: 0.5
   branch: 0
   axe: 0
   sword: 0
   ultimate: 0
+  slashAttack: 0
+  thrustAttack: 0
+  isGrounded: 0
+  isDead: 0
   sr: {fileID: 1827971382}
   groundCheck: {fileID: 1734229108}
   whatIsGround:
@@ -1604,13 +1609,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 80
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HIT ANY KEY TO PLAY
+  m_Text: CONGRATULATIONS!! HIT ANY KEY TO GO TO THE MAIN MENU
 --- !u!222 &2101547512
 CanvasRenderer:
   m_ObjectHideFlags: 0

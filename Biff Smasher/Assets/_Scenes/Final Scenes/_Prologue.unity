@@ -1381,12 +1381,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  moveSpeedZ: 3
   jumpForce: 27
   checkRadius: 0.5
   branch: 0
   axe: 0
   sword: 0
   ultimate: 0
+  slashAttack: 0
+  thrustAttack: 0
+  isGrounded: 0
+  isDead: 0
   sr: {fileID: 1827971382}
   groundCheck: {fileID: 1734229108}
   whatIsGround:
