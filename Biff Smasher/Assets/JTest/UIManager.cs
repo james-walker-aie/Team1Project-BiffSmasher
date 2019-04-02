@@ -43,6 +43,10 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
     public void Restart()
     {
@@ -51,7 +55,8 @@ public class UIManager : MonoBehaviour
     }
     public void QuitToMain()
     {
-        SceneManager.LoadScene(mainMenuName);
+        Application.Quit();
+        //SceneManager.LoadScene(mainMenuName);
         Time.timeScale = 1;
     }
     public void PlayGame()
