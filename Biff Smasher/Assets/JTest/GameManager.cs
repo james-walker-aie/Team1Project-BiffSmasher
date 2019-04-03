@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +23,16 @@ public class GameManager : MonoBehaviour
 
     public bool canPause = true;
 
+    //level unlocked
+    [SerializeField]
+    private int level1;
+    private int level2;
+    private int level3;
+
+    //Reference To Slider
+    public Slider MusicSlider;
+    public Slider SFXSlider;
+
     // Music volume variable that will be modified
     // by dragging music slider knob
     public float musicVolume = 1f;
@@ -34,8 +45,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // get volumelevel
         musicVolume = PlayerPrefs.GetFloat("Volume");
-       
+
+        MusicSlider.value = musicVolume; //Update Slider's Value To Equal volume level
+
+        // see if level is unlocked
+        level1 = PlayerPrefs.GetInt("level1");
+        level2 = PlayerPrefs.GetInt("level2");
+        level3 = PlayerPrefs.GetInt("level3");
+
+
     }
 
     // Update is called once per frame

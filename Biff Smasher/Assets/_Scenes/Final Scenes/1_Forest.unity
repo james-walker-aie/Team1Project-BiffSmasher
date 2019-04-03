@@ -652,6 +652,16 @@ PrefabInstance:
       propertyPath: speed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: MusicSlider
+      value: 
+      objectReference: {fileID: 3042498875012724921}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 3042498875012724920}
     - target: {fileID: 7424171741778876627, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: Loop
@@ -669,3 +679,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
+--- !u!114 &3042498875012724920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+    type: 3}
+  m_PrefabInstance: {fileID: 3042498875012724919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3042498875012724921 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3042498875256669210, guid: a8ec47b047b2cc748837098c7dead589,
+    type: 3}
+  m_PrefabInstance: {fileID: 3042498875012724919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

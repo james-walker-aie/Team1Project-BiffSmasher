@@ -631,6 +631,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7388232685238137157, guid: bef8568d64284174b97eaf99c457be9a,
+        type: 3}
+      propertyPath: MusicSlider
+      value: 
+      objectReference: {fileID: 1619462031}
+    - target: {fileID: 7388232685238137157, guid: bef8568d64284174b97eaf99c457be9a,
+        type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 1464169932}
     - target: {fileID: 7388232685238137154, guid: bef8568d64284174b97eaf99c457be9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1580,6 +1590,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464169932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2600420348214585850, guid: 3b600a7477143ef4e8cb68d04243d019,
+    type: 3}
+  m_PrefabInstance: {fileID: 1068585824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1572071725 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7005661253438488885, guid: 487dad5a6f68d9f478c55cfc76d20973,
@@ -1590,6 +1612,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f4bf6c096b432b42b51de956b3ab94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1619462031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3845840459465419836, guid: 3b600a7477143ef4e8cb68d04243d019,
+    type: 3}
+  m_PrefabInstance: {fileID: 1068585824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1625176980
