@@ -36,6 +36,8 @@ public class CharacterController2D : MonoBehaviour
     public Transform groundCheck;
     public LayerMask whatIsGround;
     public Animator animator;
+    public AudioSource walkSound;
+    
     
 
 

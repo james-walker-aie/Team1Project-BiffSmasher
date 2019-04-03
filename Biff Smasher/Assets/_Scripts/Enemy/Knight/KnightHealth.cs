@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieHealth : MonoBehaviour
+public class KnightHealth : MonoBehaviour
 {
     // health
     public int currentHealth;
@@ -11,7 +11,7 @@ public class ZombieHealth : MonoBehaviour
     // reference to 
     private bool dying;
     public Animator anim;
-    public static ZombieHealth instance;
+    public static KnightHealth instance;
 
     public float destructionDelay = 2f;
     float destructionTimer;
@@ -51,6 +51,11 @@ public class ZombieHealth : MonoBehaviour
     public void OnDestroy()
     {
         Destroy(gameObject);
+    }
+
+    public void HurtEnemy(int damageToKnight)
+    {
+        currentHealth -= damageToKnight;
     }
 
 }

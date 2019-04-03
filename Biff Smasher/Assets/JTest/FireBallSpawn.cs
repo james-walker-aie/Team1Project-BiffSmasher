@@ -7,7 +7,7 @@ public class FireBallSpawn : MonoBehaviour
     public GameObject fireBallSpawn;
     public GameObject fireBall;
     public bool spawned;
-   public float cooldown;
+    public float cooldown;
     public float cooldownTime = .1f;
     private void Start()
     {

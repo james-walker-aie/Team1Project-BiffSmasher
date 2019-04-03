@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        
         SetHealthUI();
         if (currentHealth <= 0)
         {           
@@ -41,6 +42,7 @@ public class Health : MonoBehaviour
             anim.SetTrigger("isDead");
 
             restartTimer += Time.deltaTime;
+            
 
             if (restartTimer >= restartDelay)
             {
@@ -61,5 +63,17 @@ public class Health : MonoBehaviour
     {
         
         healthbar.value = currentHealth; //Update Slider's Value To Equal Player's Health
+    }
+
+
+    public void HurtPlayer(int damageToGive)
+    {
+        currentHealth -= damageToGive;
+        
+    }
+
+    public void FireballDamage(int fireDamageToGive)
+    {
+        currentHealth -= fireDamageToGive;
     }
 }

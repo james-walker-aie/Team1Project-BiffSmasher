@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombie : MonoBehaviour
+public class Mage : MonoBehaviour
 {
-    public static Zombie instance;
+    public static Mage instance;
 
     // attack
     public float attackDelay;
@@ -55,12 +55,10 @@ public class Zombie : MonoBehaviour
     {
 
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-        animator.SetTrigger("walk");
+        //animator.SetTrigger("walk");
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
 
-        // check distance between zombie and player to see if able to attack
-
-      
+        // check distance between zombie and player to see if able to attack           
                     
     }
 
@@ -73,9 +71,11 @@ public class Zombie : MonoBehaviour
         if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
         {
             
-            Health.instance.currentHealth -= attackDamage;
+            //Health.instance.currentHealth -= attackDamage;
             Debug.Log(" hit player" + Health.instance.currentHealth);
-        }                                   
+        }
+         
+                          
     }
 
 
@@ -110,9 +110,7 @@ public class Zombie : MonoBehaviour
                 int randomPick = Random.Range(0, weapons.Length);
                 Instantiate(weapons[randomPick], transform.position, transform.rotation);
             }
-
-            
-
+          
             // Destroy(gameObject);
             // Instantiate(deathEffect, transform.position, transform.rotation);
         }

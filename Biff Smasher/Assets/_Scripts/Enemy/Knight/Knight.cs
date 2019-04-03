@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zombie : MonoBehaviour
+public class Knight : MonoBehaviour
 {
-    public static Zombie instance;
+    public static Knight instance;
 
     // attack
     public float attackDelay;
@@ -12,7 +12,7 @@ public class Zombie : MonoBehaviour
     public int attackDamage = 10;
 
     // movement
-    public float moveSpeed;
+    public float speed;
     public float stoppingDistance;
     public float retreatDistance;
 
@@ -54,13 +54,43 @@ public class Zombie : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
         animator.SetTrigger("walk");
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
 
         // check distance between zombie and player to see if able to attack
 
-      
+       
+
+
+
+        /*if (groundInfo.collider == false)                                         /////// To make enemy move both left and right as if patrolling.
+        {
+            if(movingLeft == true)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                movingLeft = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                movingLeft = true;
+            }
+        }
+
+        if (Health.instance.currentHealth > 0)
+        {
+            if (Vector2.Distance(transform.position, Waypoint.position) > stoppingDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, moveSpeed * Time.deltaTime);
+            }
+
+        }
+        else if (Health.instance.currentHealth <= 0)
+        {
+            Debug.Log("Zombie dance of joy");
+            transform.position = Vector2.MoveTowards(transform.position, Waypoint.position, -moveSpeed * Time.deltaTime);
+        }*/
                     
     }
 
@@ -75,7 +105,8 @@ public class Zombie : MonoBehaviour
             
             Health.instance.currentHealth -= attackDamage;
             Debug.Log(" hit player" + Health.instance.currentHealth);
-        }                                   
+        }
+                                   
     }
 
 

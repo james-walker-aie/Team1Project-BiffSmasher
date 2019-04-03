@@ -8,6 +8,9 @@ TagManager:
   - Punch
   - FightZoneWall
   - Ground
+  - Zombie
+  - Knight
+  - Mage
   layers:
   - Default
   - TransparentFX
