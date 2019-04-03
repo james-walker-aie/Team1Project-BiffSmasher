@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int fightZone1Enemies = 1;
-    public  int fightZone2Enemies = 1;
-    public  int fightZone3Enemies = 1;
-    public  int fightZone4Enemies = 1;
+    public int fightZone2Enemies = 1;
+    public int fightZone3Enemies = 1;
+    public int fightZone4Enemies = 1;
     public GameObject zone1Trigger;
     public GameObject zone2Trigger;
     public GameObject zone3Trigger;
@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     // by dragging music slider knob
     public float musicVolume = 1f;
 
+    // SFX volume variable that will be modified
+    // by dragging music slider knob
+    public float sFXVolume = 1f;
+
     private void Awake()
     {
         instance = this;
@@ -47,7 +51,10 @@ public class GameManager : MonoBehaviour
     {
         // get volumelevel
         musicVolume = PlayerPrefs.GetFloat("Volume");
+        MusicSlider.value = musicVolume; //Update Slider's Value To Equal volume level
 
+        // get SFXvolumelevel
+        sFXVolume = PlayerPrefs.GetFloat("SFXVolume");
         MusicSlider.value = musicVolume; //Update Slider's Value To Equal volume level
 
         // see if level is unlocked
@@ -68,7 +75,7 @@ public class GameManager : MonoBehaviour
 
         if (FightZone.wave1 == true)
         {
-           // Debug.Log("Wave 1");
+            // Debug.Log("Wave 1");
             if (fightZone1Enemies <= 0)
             {
                 zone1wall.SetActive(false);
@@ -85,7 +92,7 @@ public class GameManager : MonoBehaviour
 
         if (FightZone.wave2 == true)
         {
-         //   Debug.Log("Wave 2");
+            //   Debug.Log("Wave 2");
             if (fightZone2Enemies <= 0)
             {
                 zone2wall.SetActive(false);
@@ -103,7 +110,7 @@ public class GameManager : MonoBehaviour
 
         if (FightZone.wave3 == true)
         {
-          //  Debug.Log("Wave 3");
+            //  Debug.Log("Wave 3");
 
             if (fightZone3Enemies <= 0)
             {
@@ -122,13 +129,13 @@ public class GameManager : MonoBehaviour
 
         if (FightZone.wave4 == true)
         {
-          //  Debug.Log("Wave 4");
+            //  Debug.Log("Wave 4");
             if (fightZone4Enemies <= 0)
             {
                 zone4wall.SetActive(false);
                 playerCam.SetActive(true);
 
-                 FightZone.wave4 = false;
+                FightZone.wave4 = false;
                 Debug.Log("Wave 4 defeated");
 
                 //music
@@ -139,20 +146,20 @@ public class GameManager : MonoBehaviour
     }
     public void PauseUnpause()
     {
-        
+
         if (UIManager.instance.pauseScreen.activeInHierarchy)
         {
             Debug.Log("PauseMenu Inactive");
             UIManager.instance.pauseScreen.SetActive(false);
             Time.timeScale = 1f;
-          //  PlayerController.instance.StopMove = false;
+            //  PlayerController.instance.StopMove = false;
         }
         else
         {
             Debug.Log("PauseMenu active");
             UIManager.instance.pauseScreen.SetActive(true);
             Time.timeScale = 0f;
-           // PlayerController.instance.StopMove = true;
+            // PlayerController.instance.StopMove = true;
         }
     }
 
@@ -163,5 +170,11 @@ public class GameManager : MonoBehaviour
     {
         musicVolume = vol;
         PlayerPrefs.SetFloat("Volume", musicVolume);
+    }
+
+    public void SFXSetVolume(float vol)
+    {
+       sFXVolume = vol;
+        PlayerPrefs.SetFloat("SFXVolume", sFXVolume);
     }
 }
