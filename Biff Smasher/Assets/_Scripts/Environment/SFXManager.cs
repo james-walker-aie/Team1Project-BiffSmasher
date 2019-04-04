@@ -10,6 +10,8 @@ public class SFXManager : MonoBehaviour
     public AudioSource fireball, punch, swordAxeSwing, kick;
     public AudioSource playerDying;
     public AudioSource enemyDying;
+    public AudioSource portalOpen;
+    public AudioSource portalDeath;
 
     private void Awake()
     {
@@ -25,7 +27,7 @@ public class SFXManager : MonoBehaviour
 
 
 
-    public void StopMusic()
+    public void StopSFX()
     {
         /*
         fireball.Stop();

@@ -322,6 +322,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ebbeadfe92e12d47ac4f8d67f1d5f92, type: 3}
+--- !u!114 &423098033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+    type: 3}
+  m_PrefabInstance: {fileID: 3042498875012724919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbd725002a3b2547acea8080ca5383e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &528505529
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +469,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820566549532810281, guid: 2a3a53f983db0e44f9f4ed6bee4a5e72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a3a53f983db0e44f9f4ed6bee4a5e72, type: 3}
@@ -646,6 +663,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403039262808884344, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: slashAttack
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2403039262808884336, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -926,6 +948,36 @@ PrefabInstance:
       propertyPath: enemySpawn
       value: 
       objectReference: {fileID: 3042498875012724922}
+    - target: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 423098033}
+    - target: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SFXSetVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873599650577, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
 --- !u!114 &3042498875012724920 stripped

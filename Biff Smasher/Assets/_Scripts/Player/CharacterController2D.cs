@@ -30,6 +30,8 @@ public class CharacterController2D : MonoBehaviour
     private bool facingRight;     // set default look direction to right.
     public bool isGrounded;        // determine if player is standing on ground.
     public bool isDead;
+    public bool StopMove;  // pause menu stop character controller
+
 
     private Rigidbody2D rb;
     public SpriteRenderer sr;
@@ -122,27 +124,27 @@ public class CharacterController2D : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))  // primary attack
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !StopMove)  // primary attack
         {
             slashAttack = true;     
         }           
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))  // secondary attack
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !StopMove)  // secondary attack
         {
             thrustAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.R))  // ultimate attack
+        if (Input.GetKeyDown(KeyCode.R) && !StopMove)  // ultimate attack
         {
             ultAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))  // kick attack
+        if (Input.GetKeyDown(KeyCode.E) && !StopMove)  // kick attack
         {
             kick = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)   // player jump.
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true && !StopMove)   // player jump.
         {
             rb.velocity = Vector2.up * jumpForce;
             animator.SetTrigger("jump");
@@ -156,7 +158,7 @@ public class CharacterController2D : MonoBehaviour
 
     private void Flip(float horizontal)   // flip direction character is facing when button pressed.
     {     
-        if (horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+        if ( !StopMove && horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
         {
             facingRight = !facingRight;
 

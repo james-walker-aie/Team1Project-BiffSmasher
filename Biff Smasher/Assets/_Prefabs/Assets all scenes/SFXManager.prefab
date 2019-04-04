@@ -149,9 +149,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3483991198057254653}
-  - component: {fileID: 3483991198057254652}
+  - component: {fileID: 5694195808815255230}
   m_Layer: 0
-  m_Name: MusicManager
+  m_Name: SFXManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,7 +175,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3483991198057254652
+--- !u!114 &5694195808815255230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,17 +184,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3483991198057254655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db8d91c62c557a145bf363fddfa81471, type: 3}
+  m_Script: {fileID: 11500000, guid: 62bbf484b2963b248a527f2f2bbe6227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuMusic: {fileID: 1081792635}
-  FightMusic: {fileID: 3483991199530885402}
-  level1Music: {fileID: 3483991198351091073}
-  level2Music: {fileID: 0}
-  level3Music: {fileID: 0}
-  bossMusic: {fileID: 0}
-  victoryMusic: {fileID: 3483991198192700493}
-  gameOverMusic: {fileID: 0}
+  fireball: {fileID: 0}
+  punch: {fileID: 0}
+  swordAxeSwing: {fileID: 0}
+  kick: {fileID: 0}
+  playerDying: {fileID: 0}
+  enemyDying: {fileID: 0}
+  portalOpen: {fileID: 9187431807193534874, guid: b16746648d491e04f88ff338209d2986,
+    type: 3}
+  portalDeath: {fileID: 1228180643730512852, guid: 4ca0bcb59c9dfc44396cfb1e5f236401,
+    type: 3}
 --- !u!1 &3483991198192700492
 GameObject:
   m_ObjectHideFlags: 0

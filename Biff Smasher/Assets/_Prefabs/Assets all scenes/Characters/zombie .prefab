@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1230028369}
   - component: {fileID: 1230028370}
   - component: {fileID: 1230028368}
+  - component: {fileID: 1150337288415953242}
   m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -163,6 +164,18 @@ MonoBehaviour:
     type: 3}
   zombieHit: {fileID: 1115372345}
   hitSound: {fileID: 0}
+--- !u!114 &1150337288415953242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379938187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a4e7a4b03331d4fbbc26a390b26c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775797825
 GameObject:
   m_ObjectHideFlags: 0

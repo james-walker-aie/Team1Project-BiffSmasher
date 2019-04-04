@@ -245,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 50
+  isDead: 0
   anim: {fileID: 866536332}
   destructionDelay: 2
 --- !u!1 &1147622566
@@ -319,6 +320,7 @@ GameObject:
   - component: {fileID: 1821670684}
   - component: {fileID: 1821670682}
   - component: {fileID: 1821670683}
+  - component: {fileID: 7502447624719386662}
   m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -478,3 +480,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7502447624719386662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821670680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a4e7a4b03331d4fbbc26a390b26c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

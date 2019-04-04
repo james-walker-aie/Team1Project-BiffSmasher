@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
         // get SFXvolumelevel
         sFXVolume = PlayerPrefs.GetFloat("SFXVolume");
-        SFXSlider.value = musicVolume; //Update Slider's Value To Equal volume level
+        SFXSlider.value = sFXVolume; //Update Slider's Value To Equal volume level
 
         // see if level is unlocked
         level1 = PlayerPrefs.GetInt("level1");
@@ -152,14 +152,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("PauseMenu Inactive");
             UIManager.instance.pauseScreen.SetActive(false);
             Time.timeScale = 1f;
-            //  PlayerController.instance.StopMove = false;
+            CharacterController2D.instance.StopMove = false;
         }
         else
         {
             Debug.Log("PauseMenu active");
             UIManager.instance.pauseScreen.SetActive(true);
             Time.timeScale = 0f;
-            // PlayerController.instance.StopMove = true;
+             CharacterController2D.instance.StopMove = true;
         }
     }
 
