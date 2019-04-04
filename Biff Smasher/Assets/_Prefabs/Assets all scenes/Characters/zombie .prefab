@@ -159,7 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 0
-  damageBust: {fileID: 0}
+  damageBust: {fileID: 2488509483849196198, guid: c4709bfc42dfabd458ac2a22dd8092e8,
+    type: 3}
   zombieHit: {fileID: 1115372345}
   hitSound: {fileID: 0}
 --- !u!1 &775797825
@@ -359,6 +360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 20
+  isDead: 0
+  dying: 0
   anim: {fileID: 775797830}
   destructionDelay: 1
 --- !u!1 &1115372344

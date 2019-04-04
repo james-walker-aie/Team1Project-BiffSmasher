@@ -7,9 +7,10 @@ public class ZombieHealth : MonoBehaviour
     // health
     public int currentHealth;
     public int maxHealth = 50;
+    public bool isDead;
 
     // reference to 
-    private bool dying;
+    public bool dying;
     public Animator anim;
     public static ZombieHealth instance;
 
@@ -35,6 +36,9 @@ public class ZombieHealth : MonoBehaviour
        
         if (currentHealth <= 0)
         {
+            // for player attack script to edit game manager to know when enemy is dead
+            isDead = true;
+
             // anim.SetTrigger("dying");
             anim.SetTrigger("isDead");
 

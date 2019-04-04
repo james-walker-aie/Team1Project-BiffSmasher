@@ -219,7 +219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageToGive: 0
-  damageBust: {fileID: 0}
+  damageBust: {fileID: 2488509483849196198, guid: c4709bfc42dfabd458ac2a22dd8092e8,
+    type: 3}
   knightHit: {fileID: 3168661434083655447}
   hitSound: {fileID: 0}
 --- !u!1 &8878722601731908480
@@ -417,5 +418,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 50
+  isDead: 0
   anim: {fileID: 4629221060608805540}
   destructionDelay: 2

@@ -30,7 +30,35 @@ public class playerAttack : MonoBehaviour
             other.gameObject.GetComponent<ZombieHealth>().HurtEnemy(damageToZombie);
             Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
             hitSound.Play();
-                        
+
+            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave1 && other.gameObject.GetComponent<ZombieHealth>().isDead == true)
+            {
+                Debug.Log("zombie beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave2 && other.gameObject.GetComponent<ZombieHealth>().isDead == true)
+            {
+                Debug.Log("zombie beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave3 && other.gameObject.GetComponent<ZombieHealth>().isDead == true)
+            {
+                Debug.Log("zombie beaten");
+
+                GameManager.instance.fightZone3Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave4 && other.gameObject.GetComponent<ZombieHealth>().isDead == true)
+            {
+                Debug.Log("zombie beaten");
+
+                GameManager.instance.fightZone4Enemies--;
+            }
+
         }
 
         if (other.gameObject.tag == "Knight")
@@ -39,6 +67,33 @@ public class playerAttack : MonoBehaviour
             Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
             hitSound.Play();
 
+            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0 && FightZone.wave1 && other.gameObject.GetComponent<KnightHealth>().isDead == true)
+            {
+                Debug.Log("Knight beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0 && FightZone.wave1 && other.gameObject.GetComponent<KnightHealth>().isDead == true)
+            {
+                Debug.Log("Knight beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0 && FightZone.wave1 && other.gameObject.GetComponent<KnightHealth>().isDead == true)
+            {
+                Debug.Log("Knight beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0 && FightZone.wave1 && other.gameObject.GetComponent<KnightHealth>().isDead == true)
+            {
+                Debug.Log("Knight beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
         }
 
         if (other.gameObject.tag == "Mage")
@@ -47,11 +102,37 @@ public class playerAttack : MonoBehaviour
             Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
             hitSound.Play();
 
+            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 && FightZone.wave1 && other.gameObject.GetComponent<MageHealth>().isDead == true)
+            {
+                Debug.Log("mage beaten");
+
+                GameManager.instance.fightZone1Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 && FightZone.wave2 && other.gameObject.GetComponent<MageHealth>().isDead == true)
+            {
+                Debug.Log("mage beaten");
+
+                GameManager.instance.fightZone2Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 && FightZone.wave3 && other.gameObject.GetComponent<MageHealth>().isDead == true)
+            {
+                Debug.Log("mage beaten");
+
+                GameManager.instance.fightZone3Enemies--;
+            }
+
+            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 && FightZone.wave4 && other.gameObject.GetComponent<MageHealth>().isDead == true)
+            {
+                Debug.Log("mage beaten");
+
+                GameManager.instance.fightZone4Enemies--;
+            }
         }
 
-    }
 
-   
+    }
 
 
 }

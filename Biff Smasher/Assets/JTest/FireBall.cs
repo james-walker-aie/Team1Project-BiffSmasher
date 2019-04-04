@@ -64,8 +64,8 @@ public class FireBall : MonoBehaviour
                     Debug.Log("Fireball damage hurt enemy " + col.gameObject.GetComponent<Zombie>().health);
 
                     // knockback direction
-                  //  Vector2 hitDir = col.transform.position - this.transform.position;
-                  //  hitDir = hitDir.normalized;
+                   // Vector2 hitDir = col.transform.position - this.transform.position;
+                   // hitDir = hitDir.normalized;
                   //  col.gameObject.GetComponent<Zombie>().Knockback(hitDir);
 
                 }

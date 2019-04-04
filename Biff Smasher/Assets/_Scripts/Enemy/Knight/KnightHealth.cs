@@ -7,6 +7,7 @@ public class KnightHealth : MonoBehaviour
     // health
     public int currentHealth;
     public int maxHealth = 50;
+    public bool isDead;
 
     // reference to 
     private bool dying;
@@ -35,6 +36,9 @@ public class KnightHealth : MonoBehaviour
        
         if (currentHealth <= 0)
         {
+            // for player attack script to edit game manager to know when enemy is dead
+            isDead = true;
+
             // anim.SetTrigger("dying");
             anim.SetTrigger("isDead");
 
