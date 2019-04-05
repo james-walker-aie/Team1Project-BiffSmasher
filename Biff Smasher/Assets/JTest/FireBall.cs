@@ -8,7 +8,12 @@ public class FireBall : MonoBehaviour
     public Vector2 startDirection;
     Transform player;
     public float moveSpeed;
-   // public Rigidbody2D MyRB;
+    // public Rigidbody2D MyRB;
+
+    void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
