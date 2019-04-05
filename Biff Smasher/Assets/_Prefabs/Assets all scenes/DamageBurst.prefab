@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7440454925566825676}
   - component: {fileID: 66172170019771669}
   - component: {fileID: 1860512383489800421}
+  - component: {fileID: 1673157896135633770}
   m_Layer: 0
   m_Name: DamageBurst
   m_TagString: Untagged
@@ -4756,3 +4757,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1673157896135633770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2488509483849196198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97fc7156452f82946b8ff34d3113f7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
