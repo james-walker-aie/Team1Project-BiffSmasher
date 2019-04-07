@@ -34,35 +34,7 @@ public class playerAttack : MonoBehaviour
                 hitSound.Play();
             }
 
-
-            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave1 && ZombieHealth.instance.isBeaten ==false)
-            {
-                Debug.Log("zombie beaten");
-
-                GameManager.instance.fightZone1Enemies--;
-                ZombieHealth.instance.isBeaten = true;
-            }
-
-            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave2)
-            {
-                Debug.Log("zombie beaten");
-
-                GameManager.instance.fightZone2Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave3)
-            {
-                Debug.Log("zombie beaten");
-
-                GameManager.instance.fightZone3Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave4)
-            {
-                Debug.Log("zombie beaten");
-
-                GameManager.instance.fightZone4Enemies--;
-            }
+   
 
         }
 
@@ -75,34 +47,7 @@ public class playerAttack : MonoBehaviour
                 hitSound.Play();
             }
         
-
-            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0)
-            {
-                Debug.Log("Knight beaten");
-
-                GameManager.instance.fightZone1Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0)
-            {
-                Debug.Log("Knight beaten");
-
-                GameManager.instance.fightZone2Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0)
-            {
-                Debug.Log("Knight beaten");
-
-                GameManager.instance.fightZone3Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0)
-            {
-                Debug.Log("Knight beaten");
-
-                GameManager.instance.fightZone4Enemies--;
-            }
+    
         }
 
         if (other.gameObject.tag == "Mage")
@@ -114,34 +59,7 @@ public class playerAttack : MonoBehaviour
                 hitSound.Play();
             }
        
-
-            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 )
-            {
-                Debug.Log("mage beaten");
-
-                GameManager.instance.fightZone1Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 )
-            {
-                Debug.Log("mage beaten");
-
-                GameManager.instance.fightZone2Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 )
-            {
-                Debug.Log("mage beaten");
-
-                GameManager.instance.fightZone3Enemies--;
-            }
-
-            if (other.gameObject.GetComponent<MageHealth>().currentHealth <= 0 )
-            {
-                Debug.Log("mage beaten");
-
-                GameManager.instance.fightZone4Enemies--;
-            }
+   
         }
 
 

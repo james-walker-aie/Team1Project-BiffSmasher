@@ -36,23 +36,58 @@ public class KnightHealth : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-       
+
         if (currentHealth <= 0)
         {
-            // for player attack script to edit game manager to know when enemy is dead
+            // for player attack script to edit game manager script to know when enemy is dead
             isDead = true;
 
-            // power up player on death
-            UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+            if (isDead == true)
+            {
 
-            // anim.SetTrigger("dying");
-            anim.SetTrigger("isDead");
+                dying = true;
+
+                // anim.SetTrigger("dying");
+                anim.SetTrigger("isDead");
+
+            }
 
             destructionTimer += Time.deltaTime;
 
-            if (destructionTimer >= destructionDelay)
+            if (dying == true && destructionTimer >= destructionDelay)
             {
+
+                PowerUp();
                 OnDestroy();
+
+                // game manager tracks wave deaths
+                if (FightZone.wave1)
+                {
+                    Debug.Log("Knight beaten");
+
+                    GameManager.instance.fightZone1Enemies--;
+                }
+
+                if (FightZone.wave2)
+                {
+                    Debug.Log("Knight beaten");
+
+                    GameManager.instance.fightZone2Enemies--;
+                }
+
+                if (FightZone.wave3)
+                {
+                    Debug.Log("Knight beaten");
+
+                    GameManager.instance.fightZone3Enemies--;
+                }
+
+                if (FightZone.wave4)
+                {
+                    Debug.Log("Knight beaten");
+
+                    GameManager.instance.fightZone4Enemies--;
+                }
             }
         }
 
@@ -68,4 +103,9 @@ public class KnightHealth : MonoBehaviour
         currentHealth -= damageToKnight;
     }
 
+    public void PowerUp()
+    {
+        // power up player on death
+        UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+    }
 }

@@ -42,17 +42,51 @@ public class MageHealth : MonoBehaviour
             // for player attack script to edit game manager script to know when enemy is dead
             isDead = true;
 
-            // power up player on death
-            UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+            if (isDead == true)
+            {
 
-            // anim.SetTrigger("dying");
-            anim.SetTrigger("isDead");
+                dying = true;
+
+                // anim.SetTrigger("dying");
+                anim.SetTrigger("isDead");
+
+            }
 
             destructionTimer += Time.deltaTime;
 
-            if (destructionTimer >= destructionDelay)
+            if (dying == true && destructionTimer >= destructionDelay)
             {
+
+                PowerUp();
                 OnDestroy();
+
+                if (FightZone.wave1)
+                {
+                    Debug.Log("Mage beaten");
+
+                    GameManager.instance.fightZone1Enemies--;
+                }
+
+                if (FightZone.wave2)
+                {
+                    Debug.Log("Mage beaten");
+
+                    GameManager.instance.fightZone2Enemies--;
+                }
+
+                if (FightZone.wave3)
+                {
+                    Debug.Log("Mage beaten");
+
+                    GameManager.instance.fightZone3Enemies--;
+                }
+
+                if (FightZone.wave4)
+                {
+                    Debug.Log("Mage beaten");
+
+                    GameManager.instance.fightZone4Enemies--;
+                }
             }
         }
 
@@ -68,6 +102,10 @@ public class MageHealth : MonoBehaviour
         currentHealth -= damageToMage;
     }
 
-
+    public void PowerUp()
+    {
+        // power up player on death
+        UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+    }
 
 }

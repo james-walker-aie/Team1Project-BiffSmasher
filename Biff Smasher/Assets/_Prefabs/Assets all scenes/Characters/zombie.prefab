@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1230028370}
   - component: {fileID: 1230028368}
   - component: {fileID: 1150337288415953242}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 775797827}
   - component: {fileID: 775797826}
   - component: {fileID: 5527498648380120761}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: zombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ MonoBehaviour:
   dying: 0
   anim: {fileID: 775797830}
   destructionDelay: 3
-  Collide: {fileID: 775797827}
+  isBeaten: 0
 --- !u!1 &1115372344
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1115372345}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: zombieHit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952046797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}

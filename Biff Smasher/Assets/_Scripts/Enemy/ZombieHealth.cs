@@ -20,8 +20,8 @@ public class ZombieHealth : MonoBehaviour
     public float destructionDelay = 2f;
     float destructionTimer;
 
-    public bool isBeaten =false;
-    
+    public bool isBeaten = false;
+
     private void Awake()
     {
         instance = this;
@@ -38,37 +38,64 @@ public class ZombieHealth : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        Debug.Log(  gameObject.name + "  " + currentHealth);
-  
-            if (currentHealth <= 0)
+        Debug.Log(gameObject.name + "  " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+
+            // for player attack script to edit game manager to know when enemy is dead
+            isDead = true;
+
+            if (isDead == true)
             {
-            
-                // for player attack script to edit game manager to know when enemy is dead
-                isDead = true;
 
-                if (isDead == true)
-                {
+                dying = true;
 
-                    dying = true;
+                // anim.SetTrigger("dying");
+                anim.SetTrigger("isDead");
 
-                    // anim.SetTrigger("dying");
-                    anim.SetTrigger("isDead");
+            }
 
-                }
+            destructionTimer += Time.deltaTime;
 
-                destructionTimer += Time.deltaTime;
-
-                if (dying == true && destructionTimer >= destructionDelay)
-                {
+            if (dying == true && destructionTimer >= destructionDelay)
+            {
 
                 PowerUp();
                 OnDestroy();
 
+                if (FightZone.wave1)
+                {
+                    Debug.Log("zombie beaten");
+
+                    GameManager.instance.fightZone1Enemies--;
                 }
 
+                if (FightZone.wave2)
+                {
+                    Debug.Log("zombie beaten");
+
+                    GameManager.instance.fightZone2Enemies--;
+                }
+
+                if (FightZone.wave3)
+                {
+                    Debug.Log("zombie beaten");
+
+                    GameManager.instance.fightZone3Enemies--;
+                }
+
+                if (FightZone.wave4)
+                {
+                    Debug.Log("zombie beaten");
+
+                    GameManager.instance.fightZone4Enemies--;
+                }
             }
-        
-       
+
+        }
+
+
 
     }
 
