@@ -33,13 +33,14 @@ public class playerAttack : MonoBehaviour
                 Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
                 hitSound.Play();
             }
-        
-           
-            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave1)
+
+
+            if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave1 && ZombieHealth.instance.isBeaten ==false)
             {
                 Debug.Log("zombie beaten");
 
                 GameManager.instance.fightZone1Enemies--;
+                ZombieHealth.instance.isBeaten = true;
             }
 
             if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave2)

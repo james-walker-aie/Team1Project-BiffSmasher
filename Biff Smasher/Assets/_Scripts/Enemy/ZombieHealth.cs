@@ -19,6 +19,8 @@ public class ZombieHealth : MonoBehaviour
 
     public float destructionDelay = 2f;
     float destructionTimer;
+
+    public bool isBeaten =false;
     
     private void Awake()
     {
