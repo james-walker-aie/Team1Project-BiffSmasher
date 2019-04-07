@@ -59,7 +59,7 @@ public class Health : MonoBehaviour
         SceneManager.LoadScene(thisScene.name);
     }
 
-    private void SetHealthUI()
+    public void SetHealthUI()
     {
         
         healthbar.value = currentHealth; //Update Slider's Value To Equal Player's Health
