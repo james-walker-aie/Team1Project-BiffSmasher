@@ -73,7 +73,7 @@ public class Health : MonoBehaviour
     public void SetHealthUI()
     {
         
-        healthbar.value = currentHealth; //Update Slider's Value To Equal Player's Health
+        healthbar.value = currentHealth *0.01f; //Update Slider's Value To Equal Player's Health
     }
 
 
