@@ -282,6 +282,7 @@ MonoBehaviour:
   maxHealth: 100
   anim: {fileID: 1924047297315347403}
   restartDelay: 2
+  dying: 0
 --- !u!114 &3810240245975176110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,7 +395,8 @@ MonoBehaviour:
   damageToZombie: 10
   damageToMage: 20
   damageToKnight: 30
-  damageBust: {fileID: 0}
+  damageBust: {fileID: 2488509483849196198, guid: c4709bfc42dfabd458ac2a22dd8092e8,
+    type: 3}
   bloodHit: {fileID: 1483695330}
   hitSound: {fileID: 765996744}
 --- !u!82 &765996744
