@@ -46,7 +46,7 @@ public class playerAttack : MonoBehaviour
             {
                 Debug.Log("zombie beaten");
 
-                GameManager.instance.fightZone1Enemies--;
+                GameManager.instance.fightZone2Enemies--;
             }
 
             if (other.gameObject.GetComponent<ZombieHealth>().currentHealth <= 0 && FightZone.wave3)
@@ -86,21 +86,21 @@ public class playerAttack : MonoBehaviour
             {
                 Debug.Log("Knight beaten");
 
-                GameManager.instance.fightZone1Enemies--;
+                GameManager.instance.fightZone2Enemies--;
             }
 
             if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0)
             {
                 Debug.Log("Knight beaten");
 
-                GameManager.instance.fightZone1Enemies--;
+                GameManager.instance.fightZone3Enemies--;
             }
 
             if (other.gameObject.GetComponent<KnightHealth>().currentHealth <= 0)
             {
                 Debug.Log("Knight beaten");
 
-                GameManager.instance.fightZone1Enemies--;
+                GameManager.instance.fightZone4Enemies--;
             }
         }
 
