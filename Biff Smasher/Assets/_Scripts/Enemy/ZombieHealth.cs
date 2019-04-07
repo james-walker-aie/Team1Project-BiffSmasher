@@ -37,8 +37,7 @@ public class ZombieHealth : MonoBehaviour
     void Update()
     {
         Debug.Log(  gameObject.name + "  " + currentHealth);
-        if (isDead == false)
-        {
+  
             if (currentHealth <= 0)
             {
                 Debug.Log("Dead");
@@ -62,7 +61,7 @@ public class ZombieHealth : MonoBehaviour
                     OnDestroy();
                 }
             }
-        }
+        
        
 
     }
