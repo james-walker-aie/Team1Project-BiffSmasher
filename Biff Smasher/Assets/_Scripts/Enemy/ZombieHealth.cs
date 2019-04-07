@@ -19,7 +19,7 @@ public class ZombieHealth : MonoBehaviour
 
     public float destructionDelay = 2f;
     float destructionTimer;
-
+    
     private void Awake()
     {
         instance = this;
@@ -40,6 +40,8 @@ public class ZombieHealth : MonoBehaviour
   
             if (currentHealth <= 0)
             {
+            gameObject.GetComponent<Collider2D>().enabled = false;
+
                 // for player attack script to edit game manager to know when enemy is dead
                 isDead = true;
 
