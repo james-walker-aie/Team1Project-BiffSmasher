@@ -40,8 +40,7 @@ public class ZombieHealth : MonoBehaviour
   
             if (currentHealth <= 0)
             {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-
+            
                 // for player attack script to edit game manager to know when enemy is dead
                 isDead = true;
 
@@ -59,9 +58,11 @@ public class ZombieHealth : MonoBehaviour
 
                 if (dying == true && destructionTimer >= destructionDelay)
                 {
-                    OnDestroy();
-                }
 
+                PowerUp();
+                OnDestroy();
+
+                }
 
             }
         
@@ -72,6 +73,11 @@ public class ZombieHealth : MonoBehaviour
     public void OnDestroy()
     {
         Destroy(gameObject);
+
+    }
+
+    public void PowerUp()
+    {
         // power up player on death
         UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
     }

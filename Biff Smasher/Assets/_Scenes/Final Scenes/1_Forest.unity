@@ -1087,11 +1087,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.257334
       objectReference: {fileID: 0}
-    - target: {fileID: 3042498873675362343, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: mainMenuName
-      value: Menu
-      objectReference: {fileID: 0}
     - target: {fileID: 1139097729, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
       propertyPath: m_CenterOnActivate
       value: 0
@@ -1100,6 +1095,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873675362343, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: mainMenuName
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
