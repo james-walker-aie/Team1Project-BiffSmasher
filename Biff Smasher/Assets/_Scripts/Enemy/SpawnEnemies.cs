@@ -39,6 +39,8 @@ public class SpawnEnemies : MonoBehaviour
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
+                // stop spawning of enemies script
+                enemySpawn.GetComponent<SpawnEnemies>().enabled = false;
             }
             else
             {
@@ -53,6 +55,8 @@ public class SpawnEnemies : MonoBehaviour
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
+                // stop spawning of enemies script
+                enemySpawn.GetComponent<SpawnEnemies>().enabled = false;
             }
             else
             {
@@ -67,6 +71,8 @@ public class SpawnEnemies : MonoBehaviour
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
+                // stop spawning of enemies script
+                enemySpawn.GetComponent<SpawnEnemies>().enabled = false;
             }
             else
             {
@@ -81,6 +87,8 @@ public class SpawnEnemies : MonoBehaviour
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
+                // stop spawning of enemies script
+                enemySpawn.GetComponent<SpawnEnemies>().enabled = false;
             }
             else
             {

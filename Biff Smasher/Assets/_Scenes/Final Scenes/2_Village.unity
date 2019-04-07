@@ -2015,6 +2015,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.307334
       objectReference: {fileID: 0}
+    - target: {fileID: 3042498873675362343, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: mainMenuName
+      value: Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 1328378011983772299, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: m_LocalPosition.y
