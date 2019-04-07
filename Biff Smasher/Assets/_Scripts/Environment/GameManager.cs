@@ -62,7 +62,8 @@ public class GameManager : MonoBehaviour
         level2 = PlayerPrefs.GetInt("level2");
         level3 = PlayerPrefs.GetInt("level3");
 
-
+        // unpause player
+        CharacterController2D.instance.StopMove = false;
     }
 
     // Update is called once per frame
