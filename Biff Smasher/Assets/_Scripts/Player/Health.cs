@@ -41,6 +41,8 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
 
+            isDead = true;
+
             if (isDead == true)
             {
 
@@ -48,12 +50,9 @@ public class Health : MonoBehaviour
 
                 // anim.SetTrigger("dying");
                 anim.SetTrigger("isDead");
+                restartTimer += Time.deltaTime;
 
-            }
-
-
-            restartTimer += Time.deltaTime;
-            
+            }           
 
             if (dying == true && restartTimer >= restartDelay)
             {
