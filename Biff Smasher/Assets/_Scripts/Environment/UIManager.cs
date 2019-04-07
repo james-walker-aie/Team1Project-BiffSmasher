@@ -55,8 +55,8 @@ public class UIManager : MonoBehaviour
     }
     public void QuitToMain()
     {
-        Application.Quit();
-        //SceneManager.LoadScene(mainMenuName);
+        //Application.Quit();
+        SceneManager.LoadScene(mainMenuName);
         Time.timeScale = 1;
     }
     public void PlayGame()

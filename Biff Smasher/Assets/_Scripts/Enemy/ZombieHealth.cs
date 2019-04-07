@@ -37,8 +37,11 @@ public class ZombieHealth : MonoBehaviour
     void Update()
     {
        
-        if (currentHealth <= 0)
+        if (maxHealth <= 0)
         {
+            Debug.Log("Dead");
+
+
             // for player attack script to edit game manager to know when enemy is dead
             isDead = true;
 
