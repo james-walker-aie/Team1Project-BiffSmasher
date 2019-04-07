@@ -36,30 +36,34 @@ public class ZombieHealth : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-       
-        if (currentHealth <= 0)
+        Debug.Log(  gameObject.name + "  " + currentHealth);
+        if (isDead == false)
         {
-            Debug.Log("Dead");
-
-
-            // for player attack script to edit game manager to know when enemy is dead
-            isDead = true;
-
-           
-
-            // anim.SetTrigger("dying");
-            anim.SetTrigger("isDead");
-
-            destructionTimer += Time.deltaTime;
-
-            if (destructionTimer >= destructionDelay)
+            if (currentHealth <= 0)
             {
-                // power up player on death
-                UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
-                Debug.Log("Destroy Dead");
-                OnDestroy();
+                Debug.Log("Dead");
+
+
+                // for player attack script to edit game manager to know when enemy is dead
+                isDead = true;
+
+
+
+                // anim.SetTrigger("dying");
+                anim.SetTrigger("isDead");
+
+                destructionTimer += Time.deltaTime;
+
+                if (destructionTimer >= destructionDelay)
+                {
+                    // power up player on death
+                    UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+                    Debug.Log("Destroy Dead");
+                    OnDestroy();
+                }
             }
         }
+       
 
     }
 
