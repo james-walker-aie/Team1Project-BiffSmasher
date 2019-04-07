@@ -54,9 +54,13 @@ public class Zombie : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-        animator.SetTrigger("walk");
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
+        if (ZombieHealth.instance.isDead == false)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+            animator.SetTrigger("walk");
+            RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
+        }
+      
 
         // check distance between zombie and player to see if able to attack
 
@@ -69,13 +73,18 @@ public class Zombie : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        animator.SetTrigger("attack");
-        if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
+
+        if (ZombieHealth.instance.isDead == false)
         {
-            
-            Health.instance.currentHealth -= attackDamage;
-            Debug.Log(" hit player" + Health.instance.currentHealth);
-        }                                   
+            animator.SetTrigger("attack");
+            if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
+            {
+
+                Health.instance.currentHealth -= attackDamage;
+                Debug.Log(" hit player" + Health.instance.currentHealth);
+            }
+        }
+                                
     }
 
 
