@@ -228,7 +228,9 @@ MonoBehaviour:
   knockbackCounter: 0
   knockbackTime: 0
   knockbackForce: 0
-  weapons: []
+  weapons:
+  - {fileID: 6558822804593834067, guid: 686929118c928ae44a06b60c85c03ba9, type: 3}
+  - {fileID: 1129742451232748817, guid: 8422993e881f6464286e929145a06e69, type: 3}
   dropSuccessRate: 20
   health: 20
 --- !u!114 &849254623
@@ -246,6 +248,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 50
   isDead: 0
+  powerUp: 3
   anim: {fileID: 866536332}
   destructionDelay: 2
 --- !u!1 &1147622566

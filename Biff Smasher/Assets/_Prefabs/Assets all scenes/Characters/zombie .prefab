@@ -374,6 +374,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 20
   isDead: 0
+  powerUp: 1
   dying: 0
   anim: {fileID: 775797830}
   destructionDelay: 1

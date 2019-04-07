@@ -134,9 +134,11 @@ public class CharacterController2D : MonoBehaviour
             thrustAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && !StopMove)  // ultimate attack
+        if (Input.GetKeyDown(KeyCode.R) && ultimate && !StopMove)  // ultimate attack
         {
             ultAttack = true;
+            // lower fireball counter
+            UltimatePower.instance.fireballCount --;
         }
 
         if (Input.GetKeyDown(KeyCode.E) && !StopMove)  // kick attack

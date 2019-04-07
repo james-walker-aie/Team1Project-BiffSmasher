@@ -9,6 +9,9 @@ public class KnightHealth : MonoBehaviour
     public int maxHealth = 50;
     public bool isDead;
 
+    //power up player
+    public int powerUp;
+
     // reference to 
     private bool dying;
     public Animator anim;
@@ -38,6 +41,9 @@ public class KnightHealth : MonoBehaviour
         {
             // for player attack script to edit game manager to know when enemy is dead
             isDead = true;
+
+            // power up player on death
+            UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
 
             // anim.SetTrigger("dying");
             anim.SetTrigger("isDead");
