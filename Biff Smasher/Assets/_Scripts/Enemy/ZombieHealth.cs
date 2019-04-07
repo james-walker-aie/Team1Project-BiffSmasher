@@ -13,7 +13,7 @@ public class ZombieHealth : MonoBehaviour
     public int powerUp;
 
     // reference to 
-    public bool dying;
+    public bool dying = false;
     public Animator anim;
     public static ZombieHealth instance;
 
@@ -42,24 +42,28 @@ public class ZombieHealth : MonoBehaviour
             {
                 Debug.Log("Dead");
 
-
                 // for player attack script to edit game manager to know when enemy is dead
                 isDead = true;
 
+                if (isDead == true)
+                {
+                // power up player on death
+                UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+                dying = true;
+                }
 
+                destructionTimer += Time.deltaTime;
+
+                if (dying == true && destructionTimer >= destructionDelay)
+                {
+
+                Debug.Log("Destroy Dead");
+                OnDestroy();
+                }
 
                 // anim.SetTrigger("dying");
                 anim.SetTrigger("isDead");
 
-                destructionTimer += Time.deltaTime;
-
-                if (destructionTimer >= destructionDelay)
-                {
-                    // power up player on death
-                    UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
-                    Debug.Log("Destroy Dead");
-                    OnDestroy();
-                }
             }
         
        

@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 775797826}
   - component: {fileID: 5527498648380120761}
   m_Layer: 0
-  m_Name: 'zombie '
+  m_Name: zombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   powerUp: 1
   dying: 0
   anim: {fileID: 775797830}
-  destructionDelay: 1
+  destructionDelay: 4
 --- !u!1 &1115372344
 GameObject:
   m_ObjectHideFlags: 0
