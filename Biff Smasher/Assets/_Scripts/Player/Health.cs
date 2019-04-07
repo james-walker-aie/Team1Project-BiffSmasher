@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     public Animator anim;
     public float restartDelay = 2f;
     float restartTimer;
+    public bool dying = false;
 
     private void Awake()
     {
@@ -36,15 +37,25 @@ public class Health : MonoBehaviour
     {
         
         SetHealthUI();
+
         if (currentHealth <= 0)
-        {           
-           // anim.SetTrigger("isDead");
-            anim.SetTrigger("isDead");
+        {
+
+            if (isDead == true)
+            {
+
+                dying = true;
+
+                // anim.SetTrigger("dying");
+                anim.SetTrigger("isDead");
+
+            }
+
 
             restartTimer += Time.deltaTime;
             
 
-            if (restartTimer >= restartDelay)
+            if (dying == true && restartTimer >= restartDelay)
             {
                 RestartScene();
             }
