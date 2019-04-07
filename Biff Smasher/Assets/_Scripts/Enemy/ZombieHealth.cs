@@ -40,29 +40,27 @@ public class ZombieHealth : MonoBehaviour
   
             if (currentHealth <= 0)
             {
-                Debug.Log("Dead");
-
                 // for player attack script to edit game manager to know when enemy is dead
                 isDead = true;
 
                 if (isDead == true)
                 {
-                // power up player on death
-                UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
-                dying = true;
+                    // power up player on death
+                    UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+                    dying = true;
+
+                    // anim.SetTrigger("dying");
+                    anim.SetTrigger("isDead");
+
                 }
 
                 destructionTimer += Time.deltaTime;
 
                 if (dying == true && destructionTimer >= destructionDelay)
                 {
-
-                Debug.Log("Destroy Dead");
-                OnDestroy();
+                    OnDestroy();
                 }
 
-                // anim.SetTrigger("dying");
-                anim.SetTrigger("isDead");
 
             }
         

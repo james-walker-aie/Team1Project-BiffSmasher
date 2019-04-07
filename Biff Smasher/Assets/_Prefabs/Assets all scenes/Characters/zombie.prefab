@@ -377,7 +377,7 @@ MonoBehaviour:
   powerUp: 1
   dying: 0
   anim: {fileID: 775797830}
-  destructionDelay: 1
+  destructionDelay: 3
 --- !u!1 &1115372344
 GameObject:
   m_ObjectHideFlags: 0
