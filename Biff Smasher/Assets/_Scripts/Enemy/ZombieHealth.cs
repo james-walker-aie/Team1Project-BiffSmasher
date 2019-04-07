@@ -45,8 +45,7 @@ public class ZombieHealth : MonoBehaviour
 
                 if (isDead == true)
                 {
-                    // power up player on death
-                    UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+
                     dying = true;
 
                     // anim.SetTrigger("dying");
@@ -71,6 +70,8 @@ public class ZombieHealth : MonoBehaviour
     public void OnDestroy()
     {
         Destroy(gameObject);
+        // power up player on death
+        UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
     }
 
     public void HurtEnemy(int damageToZombie)
