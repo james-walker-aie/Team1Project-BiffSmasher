@@ -58,7 +58,7 @@ public class KnightHealth : MonoBehaviour
             {
 
                 PowerUp();
-                OnDestroy();
+             
 
                 // game manager tracks wave deaths
                 if (FightZone.wave1)
