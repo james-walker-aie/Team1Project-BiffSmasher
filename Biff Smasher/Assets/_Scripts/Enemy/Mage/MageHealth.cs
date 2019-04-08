@@ -60,7 +60,8 @@ public class MageHealth : MonoBehaviour
             {
 
                 PowerUp();
-                OnDestroy();
+                
+                Mage.instance.Drop();
 
                 if (FightZone.wave1)
                 {
@@ -89,6 +90,8 @@ public class MageHealth : MonoBehaviour
 
                     GameManager.instance.fightZone4Enemies--;
                 }
+
+                OnDestroy();
             }
         }
 
@@ -108,6 +111,11 @@ public class MageHealth : MonoBehaviour
     {
         // power up player on death
         UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+    }
+
+    public void FireballDamage(int fBdamageToZombie)
+    {
+        currentHealth -= fBdamageToZombie;
     }
 
 }
