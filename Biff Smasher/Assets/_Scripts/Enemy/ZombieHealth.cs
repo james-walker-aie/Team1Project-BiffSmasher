@@ -62,8 +62,8 @@ public class ZombieHealth : MonoBehaviour
             {
 
                 PowerUp();
-                OnDestroy();
-               Zombie.instance.Drop();
+               
+                Zombie.instance.Drop();
 
                 if (FightZone.wave1)
                 {
@@ -92,6 +92,8 @@ public class ZombieHealth : MonoBehaviour
 
                     GameManager.instance.fightZone4Enemies--;
                 }
+
+                OnDestroy();
             }
 
         }
@@ -117,6 +119,10 @@ public class ZombieHealth : MonoBehaviour
         currentHealth -= damageToZombie;
     }
 
+    public void FireballDamage(int fBdamageToZombie)
+    {
+        currentHealth -= fBdamageToZombie;
+    }
 
 
 }

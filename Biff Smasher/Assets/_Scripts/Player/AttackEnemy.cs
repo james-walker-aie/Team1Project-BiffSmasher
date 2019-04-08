@@ -24,7 +24,7 @@ public class AttackEnemy : MonoBehaviour
                     
                     // hurt enemy
                     Debug.Log("current health " + col.gameObject.GetComponent<Zombie>().health);
-                    col.gameObject.GetComponent<Zombie>().HurtEnemy();
+                 //   col.gameObject.GetComponent<Zombie>().HurtEnemy();
                     Debug.Log("hurt enemy " + col.gameObject.GetComponent<Zombie>().health);
                   
 

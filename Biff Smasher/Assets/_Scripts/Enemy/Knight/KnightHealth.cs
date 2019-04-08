@@ -58,7 +58,7 @@ public class KnightHealth : MonoBehaviour
             {
 
                 PowerUp();
-                OnDestroy();
+             
 
                 // game manager tracks wave deaths
                 if (FightZone.wave1)
@@ -88,6 +88,8 @@ public class KnightHealth : MonoBehaviour
 
                     GameManager.instance.fightZone4Enemies--;
                 }
+
+                OnDestroy();
             }
         }
 
@@ -107,5 +109,10 @@ public class KnightHealth : MonoBehaviour
     {
         // power up player on death
         UltimatePower.instance.ultimatePowerUpLevel = UltimatePower.instance.ultimatePowerUpLevel + powerUp;
+    }
+
+    public void FireballDamage(int fBdamageToZombie)
+    {
+        currentHealth -= fBdamageToZombie;
     }
 }

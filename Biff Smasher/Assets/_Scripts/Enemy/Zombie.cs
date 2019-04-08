@@ -91,8 +91,9 @@ public class Zombie : MonoBehaviour
     
     public void FireballDamage()
     {
-        health = health - 10;
+        health = health - 30;
 
+        /*
         // drop random weapon
         int randomChance = Random.Range(0, 100);
         if (randomChance < dropSuccessRate)
@@ -100,10 +101,10 @@ public class Zombie : MonoBehaviour
             int randomPick = Random.Range(0, weapons.Length);
             Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
-
+        */
         
     }
-
+    /*
     public void HurtEnemy()
     {
         health = health - 10;
@@ -125,7 +126,7 @@ public class Zombie : MonoBehaviour
             // Destroy(gameObject);
             // Instantiate(deathEffect, transform.position, transform.rotation);
         }
-    }
+    }*/
 
     public void Drop()
     {

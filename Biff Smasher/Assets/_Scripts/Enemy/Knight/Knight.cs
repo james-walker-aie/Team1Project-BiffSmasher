@@ -148,4 +148,15 @@ public class Knight : MonoBehaviour
             // Instantiate(deathEffect, transform.position, transform.rotation);
         }
     }
+
+    public void Drop()
+    {
+        // drop random weapon
+        int randomChance = Random.Range(0, 100);
+        if (randomChance < dropSuccessRate)
+        {
+            int randomPick = Random.Range(0, weapons.Length);
+            Instantiate(weapons[randomPick], transform.position, transform.rotation);
+        }
+    }
 }
