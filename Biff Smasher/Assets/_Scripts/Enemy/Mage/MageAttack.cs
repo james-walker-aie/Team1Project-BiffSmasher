@@ -29,6 +29,7 @@ public class MageAttack : MonoBehaviour
 
     void CheckIfTimeToFire()
     {
+
         if (Time.time > nextFire)
         {
             Instantiate(fireball, transform.position, Quaternion.identity);

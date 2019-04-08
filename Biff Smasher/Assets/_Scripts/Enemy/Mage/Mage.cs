@@ -68,14 +68,14 @@ public class Mage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         animator.SetTrigger("attack");
+
         if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
         {
             
             //Health.instance.currentHealth -= attackDamage;
             Debug.Log(" hit player" + Health.instance.currentHealth);
         }
-         
-                          
+
     }
 
 
@@ -126,4 +126,5 @@ public class Mage : MonoBehaviour
             Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
     }
+
 }
