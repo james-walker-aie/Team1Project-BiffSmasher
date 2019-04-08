@@ -110,7 +110,7 @@ public class Knight : MonoBehaviour
     }
 
 
-    
+    /*
     public void FireballDamage()
     {
         health = health - 10;
@@ -122,9 +122,9 @@ public class Knight : MonoBehaviour
             int randomPick = Random.Range(0, weapons.Length);
             Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
-
         
-    }
+        
+    }*/
 
     public void HurtEnemy()
     {

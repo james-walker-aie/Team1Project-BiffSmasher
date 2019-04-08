@@ -214,10 +214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8436172a8a9254d9abbdc39c05ef42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDelay: 0
+  attackDelay: 2
   attackRange: 0
   attackDamage: 10
-  moveSpeed: 1
+  moveSpeed: 0.4
   stoppingDistance: 0
   retreatDistance: 1
   animator: {fileID: 866536332}
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a97db753979faf4899be1fc92f6821d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 2807820452561435543, guid: 1fc85913206467343966940ec6f744ad,
+  fireball: {fileID: 2807820452561435543, guid: 2aa34f45835272243aed92cc0bcb3a56,
     type: 3}
   damageToGive: 10
 --- !u!61 &1821670682
@@ -370,7 +370,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821670680}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
