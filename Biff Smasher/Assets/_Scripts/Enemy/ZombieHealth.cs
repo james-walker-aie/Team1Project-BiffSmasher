@@ -63,6 +63,7 @@ public class ZombieHealth : MonoBehaviour
 
                 PowerUp();
                 OnDestroy();
+               Zombie.instance.Drop();
 
                 if (FightZone.wave1)
                 {

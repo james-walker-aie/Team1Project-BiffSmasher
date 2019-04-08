@@ -60,12 +60,12 @@ public class Zombie : MonoBehaviour
             animator.SetTrigger("walk");
             RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
         }
-      
+
 
         // check distance between zombie and player to see if able to attack
 
-      
-                    
+
+
     }
 
    
@@ -124,6 +124,17 @@ public class Zombie : MonoBehaviour
 
             // Destroy(gameObject);
             // Instantiate(deathEffect, transform.position, transform.rotation);
+        }
+    }
+
+    public void Drop()
+    {
+        // drop random weapon
+        int randomChance = Random.Range(0, 100);
+        if (randomChance < dropSuccessRate)
+        {
+            int randomPick = Random.Range(0, weapons.Length);
+            Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
     }
 }
