@@ -252,7 +252,7 @@ MonoBehaviour:
   branch: 0
   axe: 0
   sword: 0
-  ultimate: 1
+  ultimate: 0
   slashAttack: 0
   thrustAttack: 0
   isGrounded: 0
@@ -295,8 +295,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328650be6dcc6d34dbd63feb29df8d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ultimatePowerUpLevel: 20
-  fireballCount: 5
+  ultimatePowerUpLevel: 0
+  fireballCount: 0
   UltimatePowerActivateNumber: 10
 --- !u!1 &1924047297392576137
 GameObject:
