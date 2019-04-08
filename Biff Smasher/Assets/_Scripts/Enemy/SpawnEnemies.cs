@@ -25,9 +25,25 @@ public class SpawnEnemies : MonoBehaviour
     public bool z3;
     public bool z4;
 
+    // enemy numbers to spawn
+
+        public int spawn1, spawn2, spawn3, spawn4;
+
+
+    private void Awake()
+    {
+       
+    }
 
     private void Start()
+
+
     {
+        spawn1 = GameManager.instance.fightZone1Enemies;
+        spawn2 = GameManager.instance.fightZone2Enemies;
+        spawn3 = GameManager.instance.fightZone3Enemies;
+        spawn4 = GameManager.instance.fightZone4Enemies;
+
         StartCoroutine(SpawnTheEnemies());
     }
     // Update is called once per frame
@@ -35,7 +51,7 @@ public class SpawnEnemies : MonoBehaviour
     {
         if (z1)
         {
-            if (enemyCount >= GameManager.instance.fightZone1Enemies)
+            if (enemyCount >= spawn1)
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
@@ -51,7 +67,7 @@ public class SpawnEnemies : MonoBehaviour
 
         if (z2)
         {
-            if (enemyCount >= GameManager.instance.fightZone2Enemies)
+            if (enemyCount >= spawn2)
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
@@ -67,7 +83,7 @@ public class SpawnEnemies : MonoBehaviour
 
         if (z3)
         {
-            if (enemyCount >= GameManager.instance.fightZone3Enemies)
+            if (enemyCount >= spawn3)
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
@@ -83,7 +99,7 @@ public class SpawnEnemies : MonoBehaviour
 
         if (z4)
         {
-            if (enemyCount >= GameManager.instance.fightZone4Enemies)
+            if (enemyCount >= spawn4)
             {
                 Debug.Log("Stop spawn");
                 stopSpawn = true;
