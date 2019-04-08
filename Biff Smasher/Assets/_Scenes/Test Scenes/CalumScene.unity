@@ -124,6 +124,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2946587881274692999, guid: 8d62a68ef25a2f44b9b930f368af6387,
+        type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2946587879511796647, guid: 8d62a68ef25a2f44b9b930f368af6387,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,7 +167,7 @@ PrefabInstance:
     - target: {fileID: 2946587879511796647, guid: 8d62a68ef25a2f44b9b930f368af6387,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2946587879511796647, guid: 8d62a68ef25a2f44b9b930f368af6387,
         type: 3}
@@ -237,11 +242,6 @@ PrefabInstance:
     - target: {fileID: 2946587880790801934, guid: 8d62a68ef25a2f44b9b930f368af6387,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2946587881274692999, guid: 8d62a68ef25a2f44b9b930f368af6387,
-        type: 3}
-      propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2946587879341571812, guid: 8d62a68ef25a2f44b9b930f368af6387,
@@ -359,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.399448, y: 0.26887965, z: -10}
+  m_LocalPosition: {x: -9.371267, y: 0.26887965, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -1485,7 +1485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.399448, y: 0.26887965, z: -10}
+  m_LocalPosition: {x: -9.371267, y: 0.26887965, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5923,7 +5923,11 @@ MonoBehaviour:
   zone4wall: {fileID: 0}
   playerCam: {fileID: 58666483}
   canPause: 1
+  level1: 0
+  MusicSlider: {fileID: 0}
+  SFXSlider: {fileID: 0}
   musicVolume: 1
+  sFXVolume: 1
 --- !u!4 &1284618428
 Transform:
   m_ObjectHideFlags: 0
@@ -8292,7 +8296,7 @@ Transform:
   m_LocalScale: {x: 3.591, y: 3.591, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1879296785
 BoxCollider2D:
@@ -9388,7 +9392,7 @@ PrefabInstance:
     - target: {fileID: 1924047297315347405, guid: 9845c6b72c6a9e345908daa638f43fa6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1924047297315347405, guid: 9845c6b72c6a9e345908daa638f43fa6,
         type: 3}
@@ -9466,7 +9470,7 @@ PrefabInstance:
     - target: {fileID: 7440454925566825676, guid: c4709bfc42dfabd458ac2a22dd8092e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7440454925566825676, guid: c4709bfc42dfabd458ac2a22dd8092e8,
         type: 3}

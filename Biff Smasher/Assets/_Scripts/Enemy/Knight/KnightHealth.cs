@@ -13,7 +13,7 @@ public class KnightHealth : MonoBehaviour
     public int powerUp;
 
     // reference to 
-    private bool dying;
+    public bool dying = false;
     public Animator anim;
     public static KnightHealth instance;
 
