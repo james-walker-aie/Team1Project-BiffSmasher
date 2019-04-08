@@ -372,12 +372,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 20
+  maxHealth: 30
   isDead: 0
   powerUp: 1
   dying: 0
   anim: {fileID: 775797830}
-  destructionDelay: 3
+  destructionDelay: 2.5
   isBeaten: 0
 --- !u!1 &1115372344
 GameObject:

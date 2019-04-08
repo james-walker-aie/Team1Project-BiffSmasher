@@ -13,12 +13,14 @@ public class MageHealth : MonoBehaviour
     public int powerUp;
 
     // reference to 
-    private bool dying;
+    public bool dying = false;
     public Animator anim;
     public static MageHealth instance;
 
     public float destructionDelay = 2f;
     float destructionTimer;
+
+    public bool isBeaten = false;
 
     private void Awake()
     {

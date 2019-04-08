@@ -17,7 +17,7 @@ public class KnightHealth : MonoBehaviour
     public Animator anim;
     public static KnightHealth instance;
 
-    public float destructionDelay = 2f;
+    public float destructionDelay = 1.4f;
     float destructionTimer;
 
     private void Awake()
