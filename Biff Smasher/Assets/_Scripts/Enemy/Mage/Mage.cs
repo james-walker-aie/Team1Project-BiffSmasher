@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mage : MonoBehaviour
 {
     public static Mage instance;
+    public MageAttack mageAtk;
 
     // attack
     public float attackDelay;
@@ -27,6 +28,7 @@ public class Mage : MonoBehaviour
     // is the enemy dead? if so don't worry about it.
     public bool isDead;
     public bool isKnockedBack;
+    public bool canWalk;
 
     //knockback
     public float knockbackCounter, knockbackTime, knockbackForce;
@@ -41,45 +43,48 @@ public class Mage : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        canWalk = true;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         Waypoint = GameObject.FindGameObjectWithTag("Player").transform;
-       
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (canWalk == true)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        }
 
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
         //animator.SetTrigger("walk");
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
 
-        // check distance between zombie and player to see if able to attack           
-                    
+        // check distance between zombie and player to see if able to attack             
     }
 
    
-
-    
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        animator.SetTrigger("attack");
-
+     public void OnTriggerEnter2D(Collider2D col)
+     {
         if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
         {
-            
+            mageAtk.CheckIfTimeToFire();
+            animator.SetTrigger("attack");
+            canWalk = false;
             //Health.instance.currentHealth -= attackDamage;
             Debug.Log(" hit player" + Health.instance.currentHealth);
         }
-
-    }
-
+        else
+        {
+            canWalk = true;
+        }
+     }
 
     
+
     public void FireballDamage()
     {
         health = health - 10;
@@ -91,8 +96,6 @@ public class Mage : MonoBehaviour
             int randomPick = Random.Range(0, weapons.Length);
             Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
-
-        
     }
 
     public void HurtEnemy()
@@ -126,5 +129,4 @@ public class Mage : MonoBehaviour
             Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
     }
-
 }

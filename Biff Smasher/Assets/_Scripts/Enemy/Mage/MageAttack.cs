@@ -8,7 +8,6 @@ public class MageAttack : MonoBehaviour
     [SerializeField]
     GameObject fireball;
 
-    
     public int damageToGive;
 
     
@@ -23,11 +22,10 @@ public class MageAttack : MonoBehaviour
 
     private void Update()
     {
-        CheckIfTimeToFire();
+
     }
-
-
-    void CheckIfTimeToFire()
+    
+    public void CheckIfTimeToFire()
     {
 
         if (Time.time > nextFire)
