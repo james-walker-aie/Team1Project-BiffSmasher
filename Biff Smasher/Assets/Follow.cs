@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public Transform target;
-    public float speed = 1f;
-
+    [SerializeField] Transform target;
+    [SerializeField] float speed = 1f;
+    [SerializeField] float floatSpeed = 1f;
 
 
     // Start is called before the first frame update
@@ -20,7 +20,9 @@ public class Follow : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, target.position) > 6f) // move if distance from target is greater than 1
         {
-            transform.Translate(new Vector3(speed * Time.deltaTime,0, 0));
+            transform.position=Vector3.Lerp(transform.position, target.transform.position, Time.deltaTime * speed);
         }
+
+        transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Clamp(Mathf.Sin(Time.time * floatSpeed), -1, 1), transform.localPosition.z);
     }
 }
