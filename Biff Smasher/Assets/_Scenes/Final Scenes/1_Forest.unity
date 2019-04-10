@@ -1172,6 +1172,11 @@ PrefabInstance:
       propertyPath: slashAttack
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2403039262808884344, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: jumpForce
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 2403039262808884336, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: healthbar
@@ -1594,6 +1599,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 171.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403039262808884346, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4951671769825254054, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
