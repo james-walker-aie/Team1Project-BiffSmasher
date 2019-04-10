@@ -69,7 +69,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: da5678180650215468b2b288d9cefdb6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd1d4af2f9df7b542bd155aa803d8e67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
   levelTransit: 1a_Transition
   player: {fileID: 0}
   portalTransitAnimation: {fileID: 7547146197763916941}
-  timeBetweenText: 0.5
-  timeBetweenTransition: 3
+  timeBetweenText: 1.2
+  timeBetweenTransition: 2
 --- !u!1001 &231897310091891894
 PrefabInstance:
   m_ObjectHideFlags: 0
