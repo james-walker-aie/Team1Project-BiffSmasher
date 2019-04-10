@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 884630774442776480}
   - component: {fileID: 263051951980417556}
   - component: {fileID: 8178592636546440300}
-  - component: {fileID: 6990019846839856339}
+  - component: {fileID: 616412798}
   m_Layer: 0
   m_Name: Companion Orb
-  m_TagString: Untagged
+  m_TagString: Orby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4912146269843905695}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.040515002, y: 0.040515002, z: 0}
+  m_LocalScale: {x: 0.113523036, y: 0.113523036, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300004, guid: 16a9887607da87845a916b62472fff7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -100,7 +100,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6990019846839856339
+--- !u!114 &616412798
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,6 +109,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4912146269843905695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a586e927b6fcd449bd99ba548d8fc20, type: 3}
+  m_Script: {fileID: 11500000, guid: 9fef5d0c9a37c05439534634983d686e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 2
