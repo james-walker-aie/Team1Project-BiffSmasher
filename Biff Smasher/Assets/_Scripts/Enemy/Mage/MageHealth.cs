@@ -62,6 +62,7 @@ public class MageHealth : MonoBehaviour
                 PowerUp();
                 
                 Mage.instance.Drop();
+                Mage.instance.HealthDrop();
 
                 if (FightZone.wave1)
                 {

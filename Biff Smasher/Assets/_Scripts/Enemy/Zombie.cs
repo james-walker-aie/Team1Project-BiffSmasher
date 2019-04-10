@@ -35,6 +35,12 @@ public class Zombie : MonoBehaviour
     public GameObject[] weapons;
     public int dropSuccessRate = 20;
 
+    //health drop
+    public GameObject[] healthDrop;
+    public int healthDropRate = 20;
+
+
+
     //Health  
     public float health = 20;   
     
@@ -61,10 +67,7 @@ public class Zombie : MonoBehaviour
             RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
         }
 
-
         // check distance between zombie and player to see if able to attack
-
-
 
     }
 
@@ -138,4 +141,16 @@ public class Zombie : MonoBehaviour
             Instantiate(weapons[randomPick], transform.position, transform.rotation);
         }
     }
+
+    public void HealthDrop()
+    {
+        // random health drop
+        int randomChance = Random.Range(0, 100);
+        if (randomChance < dropSuccessRate)
+        {
+            int randomPick = Random.Range(0, healthDrop.Length);
+            Instantiate(healthDrop[randomPick], transform.position, transform.rotation);
+        }
+    }
+
 }

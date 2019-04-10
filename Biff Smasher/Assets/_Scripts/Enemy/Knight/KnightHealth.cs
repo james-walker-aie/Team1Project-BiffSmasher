@@ -58,6 +58,7 @@ public class KnightHealth : MonoBehaviour
             {
 
                 PowerUp();
+                Knight.instance.HealthDrop();
              
 
                 // game manager tracks wave deaths

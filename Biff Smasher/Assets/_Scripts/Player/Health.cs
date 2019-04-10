@@ -10,8 +10,8 @@ public class Health : MonoBehaviour
     public Slider healthbar;
 
     public static Health instance;
-    public int currentHealth;
-    public int maxHealth = 100;
+    public float currentHealth;
+    public float maxHealth = 100;
     private bool isDead;
 
     public Animator anim;
