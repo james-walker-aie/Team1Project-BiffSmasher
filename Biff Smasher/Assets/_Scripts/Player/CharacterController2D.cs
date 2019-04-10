@@ -61,7 +61,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0f, Input.GetAxis("Vertical") * Time.deltaTime * moveSpeedZ); // simple movement
+        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0f, 0f); // simple movement
 
         HandleInput();
         AnimationControl();
