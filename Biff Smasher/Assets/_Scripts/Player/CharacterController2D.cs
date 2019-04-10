@@ -26,7 +26,7 @@ public class CharacterController2D : MonoBehaviour
     public bool thrustAttack;
     private bool kick;
     private bool ultAttack;
-    private bool jump;
+    public bool jump;
     private bool facingRight;     // set default look direction to right.
     public bool isGrounded;        // determine if player is standing on ground.
     public bool isDead;

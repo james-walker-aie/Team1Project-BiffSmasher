@@ -1489,6 +1489,11 @@ PrefabInstance:
       propertyPath: m_CenterOnActivate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3042498874986629686, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_VerticalAxis
+      value: Vertical
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
 --- !u!114 &3042498875012724920 stripped
