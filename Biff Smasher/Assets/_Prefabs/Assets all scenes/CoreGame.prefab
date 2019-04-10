@@ -1230,8 +1230,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042498874484029781}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.839819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 3042498874480519451}
@@ -1248,7 +1248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 20.078325, y: 1.3776495}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!223 &3042498874484029777
@@ -3989,11 +3989,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3042498875235741724}
     m_Modifications:
-    - target: {fileID: 2946587879511796635, guid: 8d62a68ef25a2f44b9b930f368af6387,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthUI
-      objectReference: {fileID: 0}
     - target: {fileID: 2946587879511796647, guid: 8d62a68ef25a2f44b9b930f368af6387,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4098,6 +4093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946587879511796635, guid: 8d62a68ef25a2f44b9b930f368af6387,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthUI
       objectReference: {fileID: 0}
     - target: {fileID: 2946587880790801934, guid: 8d62a68ef25a2f44b9b930f368af6387,
         type: 3}
