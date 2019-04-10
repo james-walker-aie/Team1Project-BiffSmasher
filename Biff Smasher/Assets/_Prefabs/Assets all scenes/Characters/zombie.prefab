@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f85a9ffe603d0e4ab9f041ad05c920e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 0
+  damageToGive: 10
   damageBust: {fileID: 2488509483849196198, guid: c4709bfc42dfabd458ac2a22dd8092e8,
     type: 3}
   zombieHit: {fileID: 1115372345}

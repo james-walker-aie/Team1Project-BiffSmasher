@@ -12,6 +12,7 @@ TagManager:
   - Knight
   - Mage
   - Orby
+  - Guardian
   layers:
   - Default
   - TransparentFX

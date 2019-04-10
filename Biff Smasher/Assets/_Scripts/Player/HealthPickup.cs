@@ -17,11 +17,15 @@ public class HealthPickup : MonoBehaviour
     {
         if(health.currentHealth < health.maxHealth)
         {
-            Destroy(gameObject);
+            OnDestroy();
             health.currentHealth = health.currentHealth + healthBonus;
         }
-        
-      
+              
+    }
+
+    public void OnDestroy()
+    {
+        Destroy(gameObject);
 
     }
 

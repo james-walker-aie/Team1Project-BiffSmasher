@@ -8,6 +8,8 @@ public class playerAttack : MonoBehaviour
     public int damageToZombie = 10;
     public int damageToMage = 20;
     public int damageToKnight = 30;
+    public int damageToGuardian = 30;
+
 
     public GameObject damageBust;
     public Transform bloodHit;
@@ -58,12 +60,15 @@ public class playerAttack : MonoBehaviour
                 Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
                 hitSound.Play();
             }
-       
-   
+          
         }
 
-
+        if (other.gameObject.tag == "Guardian")
+        {
+            other.gameObject.GetComponent<GuardianHealth>().HurtEnemy(damageToGuardian);
+            Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
+            hitSound.Play();
+        }
     }
-
 
 }

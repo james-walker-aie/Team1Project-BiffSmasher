@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class GuardianAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int damageToGive;
+    public GameObject damageBust;
+    public Transform guardianHit;
+    public AudioSource hitSound;
+
+
+    private void Start()
     {
-        
+        //hitSound = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<Health>().HurtPlayer(damageToGive);
+            Instantiate(damageBust, guardianHit.position, guardianHit.rotation);
+            hitSound.Play();
+
+
+        }
+    }
+    
 }
