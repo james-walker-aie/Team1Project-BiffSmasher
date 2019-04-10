@@ -697,6 +697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944034544}
   - component: {fileID: 944034543}
+  - component: {fileID: 944034545}
   m_Layer: 0
   m_Name: EndMusic
   m_TagString: Untagged
@@ -814,6 +815,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &944034545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944034542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc92326ba7e80f4fa75a5cf335e90c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &974942639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,12 +1532,14 @@ MonoBehaviour:
   thrustAttack: 0
   isGrounded: 0
   isDead: 0
+  StopMove: 0
   sr: {fileID: 1827971382}
   groundCheck: {fileID: 1734229108}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1024
   animator: {fileID: 1827971377}
+  walkSound: {fileID: 0}
 --- !u!58 &1827971379
 CircleCollider2D:
   m_ObjectHideFlags: 0

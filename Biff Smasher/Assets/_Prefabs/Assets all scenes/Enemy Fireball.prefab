@@ -130,6 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startDirection: {x: 0, y: 0}
-  moveSpeed: 20
+  moveSpeed: 15
   fBdamageToZombie: 0
   attackDamage: 30
