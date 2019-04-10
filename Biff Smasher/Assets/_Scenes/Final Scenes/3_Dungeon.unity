@@ -799,6 +799,21 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3843255125362110376, guid: c8ab98523ca73054698c18fa93c31087,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1849445259
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843255125362110376, guid: c8ab98523ca73054698c18fa93c31087,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843255125362110376, guid: c8ab98523ca73054698c18fa93c31087,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8ab98523ca73054698c18fa93c31087, type: 3}
 --- !u!1 &795440161
@@ -882,6 +897,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoreGame
       objectReference: {fileID: 0}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: MusicSlider
+      value: 
+      objectReference: {fileID: 1102479947}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 1102479946}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: fightZone1Enemies
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: fightZone2Enemies
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: fightZone3Enemies
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: fightZone4Enemies
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2403039262808884349, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -916,36 +961,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.044963
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: MusicSlider
-      value: 
-      objectReference: {fileID: 1102479947}
-    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: SFXSlider
-      value: 
-      objectReference: {fileID: 1102479946}
-    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: fightZone1Enemies
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: fightZone2Enemies
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: fightZone3Enemies
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: fightZone4Enemies
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3042498875235741724, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -1242,16 +1257,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.1
       objectReference: {fileID: 0}
-    - target: {fileID: 3871641855913712449, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3871641855913712449, guid: a8ec47b047b2cc748837098c7dead589,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 72.66
-      objectReference: {fileID: 0}
     - target: {fileID: 2403039262808884346, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: m_Layer
@@ -1272,12 +1277,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1601773921, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 819302549956806965, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 3871641855913712449, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3871641855913712449, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 72.66
+      objectReference: {fileID: 0}
     - target: {fileID: 3042498874062967091, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: m_IsActive
@@ -1297,10 +1316,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1601773921, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
