@@ -11,6 +11,16 @@ public class Scene_Transition : MonoBehaviour
     // pause length between dialogue
     [SerializeField] float timeBetweenText = 1f;
     [SerializeField] float timeBetweenTransition = 3f;
+    [SerializeField] GameObject SpriteDeath;
+
+    private void Awake()
+    {
+        SpriteDeath.SetActive(false);
+    }
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
@@ -38,8 +48,12 @@ public class Scene_Transition : MonoBehaviour
 
         portalTransitAnimation.SetTrigger("PlayerTransition");
 
+        SpriteDeath.SetActive(true);
+
         yield return new WaitForSeconds(timeBetweenTransition);
 
         SceneManager.LoadScene(levelTransit);
+
+        SpriteDeath.SetActive(false);
     }
 }

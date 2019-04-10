@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 771305899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.075, y: -0.04, z: 0}
-  m_LocalScale: {x: 0.122848, y: 0.122848, z: 0.122848}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 956977939236599041}
   m_Father: {fileID: 7547146197763916939}
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 7547146197763916942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.99, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3.858, y: 3.858, z: 3.858}
   m_Children:
   - {fileID: 8986807517904373035}
   - {fileID: 771305900}
@@ -207,7 +207,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3950372, y: 1.4417617}
+  m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &7547146197763916944
 MonoBehaviour:
@@ -224,8 +224,9 @@ MonoBehaviour:
   levelTransit: 1a_Transition
   player: {fileID: 0}
   portalTransitAnimation: {fileID: 7547146197763916941}
-  timeBetweenText: 1.2
+  timeBetweenText: 0.8
   timeBetweenTransition: 2
+  SpriteDeath: {fileID: 771305899}
 --- !u!1001 &231897310091891894
 PrefabInstance:
   m_ObjectHideFlags: 0

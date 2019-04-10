@@ -1489,6 +1489,26 @@ PrefabInstance:
       propertyPath: m_CenterOnActivate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324741026635993965, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324741026635993965, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324741026635993965, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324741026635993962, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ec47b047b2cc748837098c7dead589, type: 3}
 --- !u!114 &3042498875012724920 stripped
