@@ -17,8 +17,9 @@ public class HealthPickup : MonoBehaviour
     {
         if(health.currentHealth < health.maxHealth)
         {
-            OnDestroy();
             health.currentHealth = health.currentHealth + healthBonus;
+            OnDestroy();
+           
         }
               
     }
