@@ -124,29 +124,29 @@ public class CharacterController2D : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !StopMove)  // primary attack
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetButtonDown("Fire1") && !StopMove)  // primary attack
         {
             slashAttack = true;     
         }           
 
-        if (Input.GetKeyDown(KeyCode.Mouse1) && !StopMove)  // secondary attack
+        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetButtonDown("Fire2") && !StopMove)  // secondary attack
         {
             thrustAttack = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && ultimate && !StopMove)  // ultimate attack
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Ultimate") && ultimate && !StopMove)  // ultimate attack
         {
             ultAttack = true;
             // lower fireball counter
             UltimatePower.instance.fireballCount --;
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && !StopMove)  // kick attack
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("Fire3") && !StopMove)  // kick attack
         {
             kick = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true && !StopMove)   // player jump.
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Jump") && isGrounded == true && !StopMove)   // player jump.
         {
             rb.velocity = Vector2.up * jumpForce;
             animator.SetTrigger("jump");
