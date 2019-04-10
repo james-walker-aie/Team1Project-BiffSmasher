@@ -7,24 +7,24 @@ using UnityEngine.UI;
 public class TwoAScript : MonoBehaviour
 {
     // player
-    public GameObject player;
-    public Text playerDialogueTextBox;
+    [SerializeField] GameObject player;
+    [SerializeField] Text playerDialogueTextBox;
 
     //Orb
-    public GameObject orb;
-    public Text orbDialogueTextBox;
-
-    public Text instructions;
+    [SerializeField] GameObject orb;
+    [SerializeField] Text orbDialogueTextBox;
+    [SerializeField] Animator animator;
+    [SerializeField] Text instructions;
 
     // pause length between dialogue
-    public float timeBetweenText;
+    [SerializeField] float timeBetweenText;
 
     // bool for can exit to first level
-    public bool canExit;
+    [SerializeField] bool canExit;
 
     // scene name for sceneManager
     // scenes have to be in build settings "scenes to build" list
-    public string level1 = "CamTest";
+    [SerializeField] string level1 = "CamTest";
 
    
 
@@ -39,6 +39,7 @@ public class TwoAScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetTrigger("Talking");
         // go to level 1 on any key press
         if (canExit && Input.anyKeyDown)
         {

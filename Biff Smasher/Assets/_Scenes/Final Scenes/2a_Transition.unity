@@ -211,6 +211,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 189049357}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &189049360 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8178592636546440300, guid: 601fef237403e964c8113830de715e68,
+    type: 3}
+  m_PrefabInstance: {fileID: 189049357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &234317807
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +524,7 @@ MonoBehaviour:
   playerDialogueTextBox: {fileID: 649091722}
   orb: {fileID: 189049358}
   orbDialogueTextBox: {fileID: 974942641}
+  animator: {fileID: 189049360}
   instructions: {fileID: 2101547511}
   timeBetweenText: 3
   canExit: 0
