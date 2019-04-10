@@ -39,8 +39,6 @@ public class GuardianHealth : MonoBehaviour
         Debug.Log(gameObject.name + "  " + currentHealth);
         SetHealthUI();
 
-
-
         if (currentHealth <= 0)
         {
             // for player attack script to edit game manager to know when enemy is dead

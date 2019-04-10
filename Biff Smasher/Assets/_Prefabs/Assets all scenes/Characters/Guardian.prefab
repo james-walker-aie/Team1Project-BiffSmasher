@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507669821115701412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.13, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 364751419038898452}
@@ -125,6 +125,7 @@ MonoBehaviour:
   damageBust: {fileID: 0}
   guardianHit: {fileID: 2702815193243783940}
   hitSound: {fileID: 0}
+  animator: {fileID: 7199632359042791080}
 --- !u!1 &6500264493964104985
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,11 +228,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 30
+  m_GravityScale: 12
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!60 &6500264493964104998
 PolygonCollider2D:
@@ -385,12 +386,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ea7a022a3c21c40aa56aa37df75583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
-  moveSpeed: 0
+  guardianAttack: {fileID: 1384982955}
+  moveSpeed: 1
   stoppingDistance: 0
   retreatDistance: 0
+  isDead: 0
   animator: {fileID: 7199632359042791080}
   groundCheck: {fileID: 6115545018025326991}
+  Waypoint: {fileID: 0}
   bossHealthBar: {fileID: 0}
   health: 200
 --- !u!114 &691614621
