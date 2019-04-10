@@ -462,7 +462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58666483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.6503286, y: 0.44887948, z: -10}
+  m_LocalPosition: {x: -7.650417, y: 0.44887948, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 217078441}
@@ -1667,7 +1667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299755443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.6503286, y: 0.44887948, z: -10}
+  m_LocalPosition: {x: -7.650417, y: 0.44887948, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9988,6 +9988,21 @@ PrefabInstance:
       propertyPath: FireballText
       value: 
       objectReference: {fileID: 1184745235}
+    - target: {fileID: 1924047297938667686, guid: 9845c6b72c6a9e345908daa638f43fa6,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 1.702178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924047297938667686, guid: 9845c6b72c6a9e345908daa638f43fa6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.056583405
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924047297938667686, guid: 9845c6b72c6a9e345908daa638f43fa6,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.49632072
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9845c6b72c6a9e345908daa638f43fa6, type: 3}
 --- !u!1001 &2334324416711435922
