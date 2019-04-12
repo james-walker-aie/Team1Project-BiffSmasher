@@ -24,7 +24,7 @@ public class GuardianHealth : MonoBehaviour
     public bool isBeaten = false;
     public Slider healthBar;
 
-
+  
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,6 @@ public class GuardianHealth : MonoBehaviour
 
                 // anim.SetTrigger("dying");
                 anim.SetTrigger("isDead");
-
             }
 
             destructionTimer += Time.deltaTime;
@@ -64,10 +63,8 @@ public class GuardianHealth : MonoBehaviour
     }
     public void SetHealthUI()
     {
-
         healthBar.value = currentHealth; //Update Slider's Value To Equal Player's Health
     }
-
 
     public void OnDestroy()
     {

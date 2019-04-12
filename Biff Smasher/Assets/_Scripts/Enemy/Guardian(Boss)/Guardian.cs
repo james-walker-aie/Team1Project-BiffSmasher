@@ -1,68 +1,65 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Guardian : MonoBehaviour
 {
-    public static Guardian instance;
     public GuardianAttack guardianAttack;
-
-    // attack
-    //public int attackDamage = 10;
+    public DeathOrbAttack deathOrbAttack;
 
     // movement
     public float moveSpeed;
-    public float stoppingDistance;
-    public float retreatDistance;
 
-    public bool isDead;
-    float timer;
+    public bool canWalk;
 
-    public Animator animator;   
-    GameObject player;
-
+    public Animator animator;       
     public Transform groundCheck;
     public Transform Waypoint;
-
     public GameObject bossHealthBar;
-    
-    public float health = 200;
+
 
     private void Awake()
-    {
-        instance = this;
+    {        
+        canWalk = true;
     }
+
     // Start is called before the first frame update
     void Start()
     {
+        bossHealthBar.SetActive(false);
         Waypoint = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-        animator.SetTrigger("Walk");
+        if (canWalk == true)
+        {
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+            animator.SetTrigger("Walk");
+        }
+                
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
-        
     }
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        gameObject.SetActive(bossHealthBar);
-        animator.SetTrigger("Attack");
+        bossHealthBar.SetActive(true);
+        
         if (col.gameObject.CompareTag("Player") && Health.instance.currentHealth > 0)
         {
-            guardianAttack.TimeToAttack();           
-            
-            //Health.instance.currentHealth -= attackDamage;
-
+            guardianAttack.TimeToAttack();
+            deathOrbAttack.CheckIfTimeToFire();
+            animator.SetTrigger("Attack");
+            animator.SetTrigger("deathOrbs");
+            canWalk = false;
+        }
+        else
+        {
+            canWalk = true;
         }
     }
 
-    public void FireballDamage()
-    {
-        health = health - 30;
-    }
+   
 }

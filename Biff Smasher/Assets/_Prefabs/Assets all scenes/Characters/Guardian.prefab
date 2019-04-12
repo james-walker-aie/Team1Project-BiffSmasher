@@ -71,6 +71,8 @@ GameObject:
   - component: {fileID: 364751419038898452}
   - component: {fileID: 1384982956}
   - component: {fileID: 1384982955}
+  - component: {fileID: 1107718850}
+  - component: {fileID: 1107718849}
   m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
@@ -121,11 +123,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec8eb38a5831a4c48978aa1c861c437c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 20
+  damageToGive: 10
   damageBust: {fileID: 0}
   guardianHit: {fileID: 2702815193243783940}
   hitSound: {fileID: 0}
-  animator: {fileID: 7199632359042791080}
+--- !u!61 &1107718850
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887647843962431711}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.6266367, y: -0.051570892}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2017016, y: 0.8968582}
+  m_EdgeRadius: 0
+--- !u!114 &1107718849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2887647843962431711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28a6fdb56d5a8e49ba88872af3dd983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireball: {fileID: 2807820452561435543, guid: 2aa34f45835272243aed92cc0bcb3a56,
+    type: 3}
+  damageToGive: 2
 --- !u!1 &6500264493964104985
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +275,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!60 &6500264493964104998
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -387,15 +429,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guardianAttack: {fileID: 1384982955}
-  moveSpeed: 1
-  stoppingDistance: 0
-  retreatDistance: 0
-  isDead: 0
+  deathOrbAttack: {fileID: 1107718849}
+  moveSpeed: 2
+  canWalk: 0
   animator: {fileID: 7199632359042791080}
   groundCheck: {fileID: 6115545018025326991}
   Waypoint: {fileID: 0}
   bossHealthBar: {fileID: 0}
-  health: 200
 --- !u!114 &691614621
 MonoBehaviour:
   m_ObjectHideFlags: 0
