@@ -256,9 +256,15 @@ MonoBehaviour:
   ultimate: 0
   slashAttack: 0
   thrustAttack: 0
+  jump: 0
   isGrounded: 0
   isDead: 0
   StopMove: 0
+  swordDamage: 50
+  axeDamage: 40
+  branchDamage: 20
+  ultimateDamage: 60
+  weaponDamage: 0
   sr: {fileID: 1924047297315347404}
   groundCheck: {fileID: 1924047297392576142}
   whatIsGround:
@@ -299,6 +305,8 @@ MonoBehaviour:
   ultimatePowerUpLevel: 0
   fireballCount: 0
   UltimatePowerActivateNumber: 10
+  ultimateUI: {fileID: 0}
+  FireballText: {fileID: 0}
 --- !u!1 &1924047297392576137
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +403,7 @@ MonoBehaviour:
   damageToZombie: 10
   damageToMage: 20
   damageToKnight: 30
+  damageToGuardian: 30
   damageBust: {fileID: 2488509483849196198, guid: c4709bfc42dfabd458ac2a22dd8092e8,
     type: 3}
   bloodHit: {fileID: 1483695330}

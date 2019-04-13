@@ -418,7 +418,7 @@ MonoBehaviour:
   weapons:
   - {fileID: 1129742451232748817, guid: 8422993e881f6464286e929145a06e69, type: 3}
   - {fileID: 6558822804593834067, guid: 686929118c928ae44a06b60c85c03ba9, type: 3}
-  dropSuccessRate: 20
+  dropSuccessRate: 40
   healthDrop:
   - {fileID: 1716102062371322596, guid: 18ada2887ce0fb543a03d9dac4648007, type: 3}
   healthDropRate: 20

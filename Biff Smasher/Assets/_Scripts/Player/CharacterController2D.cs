@@ -10,7 +10,7 @@ public class CharacterController2D : MonoBehaviour
     // floats
     public float speed;
     public float moveSpeedZ = 3f;
-    public float jumpForce;                     
+    public float jumpForce;
     public float checkRadius;
     private float moveInput;
     private float attackTimer = 0;
@@ -21,7 +21,7 @@ public class CharacterController2D : MonoBehaviour
     public bool axe = false;
     public bool sword = false;
     public bool ultimate = false;
-      
+
     public bool slashAttack;
     public bool thrustAttack;
     private bool kick;
@@ -32,6 +32,13 @@ public class CharacterController2D : MonoBehaviour
     public bool isDead;
     public bool StopMove;  // pause menu stop character controller
 
+    public int swordDamage;
+    public int axeDamage;
+    public int branchDamage;
+    public int ultimateDamage;
+    public int weaponDamage;
+
+
 
     private Rigidbody2D rb;
     public SpriteRenderer sr;
@@ -39,8 +46,8 @@ public class CharacterController2D : MonoBehaviour
     public LayerMask whatIsGround;
     public Animator animator;
     public AudioSource walkSound;
-    
-    
+
+
 
 
     private void Start()
@@ -54,7 +61,7 @@ public class CharacterController2D : MonoBehaviour
         jump = false;
         facingRight = true;
         animator = gameObject.GetComponent<Animator>();
-        
+
 
     }
 
@@ -74,31 +81,31 @@ public class CharacterController2D : MonoBehaviour
 
         ResetValues();
 
-      //  isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);         // circle collider to check collision with ground.  
+        //  isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);         // circle collider to check collision with ground.  
     }
 
     private void HandleMovement(float horizontal)
     {
-        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))  
+        if (!this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))
         {
             rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         }
-        else if(animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))  // to stop player from moving when attack is pressed
+        else if (animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))  // to stop player from moving when attack is pressed
         {
             rb.velocity = new Vector2(0, 0);
         }
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
-    
+
 
 
     private void HandleAttacks()     // set animations to play when triggered by input keys.
     {
-        if (slashAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))   
+        if (slashAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("SlashAttack"))
         {
             animator.SetTrigger("slashAttack");
-            
+
         }
 
         if (thrustAttack && !this.animator.GetCurrentAnimatorStateInfo(0).IsTag("ThrustAttack"))
@@ -117,7 +124,7 @@ public class CharacterController2D : MonoBehaviour
         {
             animator.SetTrigger("ultAttack");
 
-        }     
+        }
 
     }
 
@@ -126,8 +133,8 @@ public class CharacterController2D : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetButtonDown("Fire1")) && !StopMove)  // primary attack
         {
-            slashAttack = true;     
-        }           
+            slashAttack = true;
+        }
 
         if ((Input.GetKeyDown(KeyCode.Mouse1) || Input.GetButtonDown("Fire2")) && !StopMove)  // secondary attack
         {
@@ -138,7 +145,7 @@ public class CharacterController2D : MonoBehaviour
         {
             ultAttack = true;
             // lower fireball counter
-            UltimatePower.instance.fireballCount --;
+            UltimatePower.instance.fireballCount--;
         }
 
         if ((Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("Fire3")) && !StopMove)  // kick attack
@@ -159,8 +166,8 @@ public class CharacterController2D : MonoBehaviour
 
 
     private void Flip(float horizontal)   // flip direction character is facing when button pressed.
-    {     
-        if ( !StopMove && horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
+    {
+        if (!StopMove && horizontal > 0 && !facingRight || horizontal < 0 && facingRight)
         {
             facingRight = !facingRight;
 
@@ -180,7 +187,7 @@ public class CharacterController2D : MonoBehaviour
         kick = false;
         jump = false;
     }
-    
+
 
     void AnimationControl()
     {
@@ -191,6 +198,7 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             animator.SetLayerWeight(1, 1);
+            weaponDamage = branchDamage;
         }
 
         if (axe == false)                 // when axe object collected set animation layer to axe animations.
@@ -200,6 +208,7 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             animator.SetLayerWeight(2, 2);
+            weaponDamage = axeDamage;
         }
 
         if (sword == false)                 // when sword object collected set animation layer to sword animations.
@@ -209,6 +218,7 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             animator.SetLayerWeight(3, 3);
+            weaponDamage = swordDamage;
         }
 
         if (ultimate == false)                 // when ultiamte object collected set animation layer to ultiamte animations.
@@ -218,6 +228,7 @@ public class CharacterController2D : MonoBehaviour
         else
         {
             animator.SetLayerWeight(4, 4);
+            weaponDamage = ultimateDamage;
         }
     }
 

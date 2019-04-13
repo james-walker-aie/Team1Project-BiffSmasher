@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class playerAttack : MonoBehaviour
 {
-
+    /*
     public int damageToZombie = 10;
     public int damageToMage = 20;
     public int damageToKnight = 30;
     public int damageToGuardian = 30;
-
+    */
 
     public GameObject damageBust;
     public Transform bloodHit;
@@ -31,7 +31,7 @@ public class playerAttack : MonoBehaviour
         {
             if(other.gameObject.GetComponent<ZombieHealth>().isDead == false)
             {
-                other.gameObject.GetComponent<ZombieHealth>().HurtEnemy(damageToZombie);
+                other.gameObject.GetComponent<ZombieHealth>().HurtEnemy(CharacterController2D.instance.weaponDamage);
                 Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
                 hitSound.Play();
             }
@@ -42,9 +42,9 @@ public class playerAttack : MonoBehaviour
 
         if (other.gameObject.tag == "Knight")
         {
-            if(FightZone.wave1 && other.gameObject.GetComponent<KnightHealth>().isDead == false)
+            if(other.gameObject.GetComponent<KnightHealth>().isDead == false)
             {
-                other.gameObject.GetComponent<KnightHealth>().HurtEnemy(damageToKnight);
+                other.gameObject.GetComponent<KnightHealth>().HurtEnemy(CharacterController2D.instance.weaponDamage);
                 Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
                 hitSound.Play();
             }
@@ -54,9 +54,9 @@ public class playerAttack : MonoBehaviour
 
         if (other.gameObject.tag == "Mage")
         {
-            if(FightZone.wave1 && other.gameObject.GetComponent<MageHealth>().isDead == false)
+            if(other.gameObject.GetComponent<MageHealth>().isDead == false)
             {
-                other.gameObject.GetComponent<MageHealth>().HurtEnemy(damageToMage);
+                other.gameObject.GetComponent<MageHealth>().HurtEnemy(CharacterController2D.instance.weaponDamage);
                 Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
                 hitSound.Play();
             }
@@ -65,7 +65,7 @@ public class playerAttack : MonoBehaviour
 
         if (other.gameObject.tag == "Guardian")
         {
-            other.gameObject.GetComponent<GuardianHealth>().HurtEnemy(damageToGuardian);
+            other.gameObject.GetComponent<GuardianHealth>().HurtEnemy(CharacterController2D.instance.weaponDamage);
             Instantiate(damageBust, bloodHit.position, bloodHit.rotation);
             hitSound.Play();
         }
