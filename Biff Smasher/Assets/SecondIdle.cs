@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleBehaviour : StateMachineBehaviour
+public class SecondIdle : StateMachineBehaviour
 {
     private int random;
 
@@ -12,23 +12,22 @@ public class IdleBehaviour : StateMachineBehaviour
 
         if (random == 0)
         {
-            animator.SetTrigger("Attack");
-        }      
+            animator.SetTrigger("deathOrbs");
+        }
         else
         {
-            animator.SetTrigger("Walk");
+            animator.SetTrigger("jumpSlam");
         }
+
     }
+
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
     }
-
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
     }
-
 }
-

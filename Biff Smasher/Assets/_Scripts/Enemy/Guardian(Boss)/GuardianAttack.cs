@@ -35,12 +35,14 @@ public class GuardianAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.gameObject.GetComponent<Health>().HurtPlayer(damageToGive);
+            Instantiate(damageBust, guardianHit.position, guardianHit.rotation);
+            hitSound.Play();
+
             if (Time.time > nextAttack && Health.instance.currentHealth > 0)
             {                
                 nextAttack = Time.time + attackRate;
-                other.gameObject.GetComponent<Health>().HurtPlayer(damageToGive);
-                Instantiate(damageBust, guardianHit.position, guardianHit.rotation);
-                hitSound.Play();
+                
             }            
         }
     }

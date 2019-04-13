@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleBehaviour : StateMachineBehaviour
+public class AttackBehaviour : StateMachineBehaviour
 {
+
     private int random;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -12,18 +13,20 @@ public class IdleBehaviour : StateMachineBehaviour
 
         if (random == 0)
         {
-            animator.SetTrigger("Attack");
-        }      
+            animator.SetTrigger("idle");
+        }
         else
         {
             animator.SetTrigger("Walk");
         }
     }
 
+
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
     }
+
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -31,4 +34,3 @@ public class IdleBehaviour : StateMachineBehaviour
     }
 
 }
-

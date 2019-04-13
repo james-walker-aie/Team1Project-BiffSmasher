@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 2702815193243783940}
   m_Layer: 0
   m_Name: GuardianHit
-  m_TagString: Untagged
+  m_TagString: GuardianDeathOrb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.6266367, y: -0.051570892}
+  m_Offset: {x: -0.8793328, y: -0.051570892}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.2017016, y: 0.8968582}
+  m_Size: {x: 2.7070937, y: 0.8968582}
   m_EdgeRadius: 0
 --- !u!114 &1107718849
 MonoBehaviour:
@@ -430,11 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guardianAttack: {fileID: 1384982955}
   deathOrbAttack: {fileID: 1107718849}
-  moveSpeed: 2
-  canWalk: 0
-  animator: {fileID: 7199632359042791080}
   groundCheck: {fileID: 6115545018025326991}
-  Waypoint: {fileID: 0}
   bossHealthBar: {fileID: 0}
 --- !u!114 &691614621
 MonoBehaviour:
@@ -453,7 +449,6 @@ MonoBehaviour:
   isDead: 0
   powerUp: 0
   dying: 0
-  anim: {fileID: 7199632359042791080}
   destructionDelay: 2
   isBeaten: 0
   healthBar: {fileID: 0}

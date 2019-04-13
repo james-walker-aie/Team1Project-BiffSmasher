@@ -14,23 +14,22 @@ public class GuardianHealth : MonoBehaviour
     public int powerUp;
 
     // reference to 
-    public bool dying = false;
-    public Animator anim;
-    public static ZombieHealth instance;
-
+    public bool dying = false;    
+    
     public float destructionDelay = 2f;
     float destructionTimer;
 
     public bool isBeaten = false;
     public Slider healthBar;
 
-  
+    private Animator animator;  // state mahcine behaviours animator.
+
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
-        anim.GetComponent<Animator>();
+        currentHealth = maxHealth;       
+        animator = GetComponent<Animator>();     // state mahcine behaviours animator.
     }
 
     //Update is called once per frame
@@ -39,28 +38,31 @@ public class GuardianHealth : MonoBehaviour
         Debug.Log(gameObject.name + "  " + currentHealth);
         SetHealthUI();
 
+        if (currentHealth <= 100)
+        {
+            animator.SetTrigger("secondIntro");
+        }
+
         if (currentHealth <= 0)
         {
+            animator.SetTrigger("isDead");
             // for player attack script to edit game manager to know when enemy is dead
             isDead = true;
 
             if (isDead == true)
             {
-                dying = true;
-
-                // anim.SetTrigger("dying");
-                anim.SetTrigger("isDead");
+                dying = true;              
             }
 
             destructionTimer += Time.deltaTime;
 
             if (dying == true && destructionTimer >= destructionDelay)
-            {
-                            
+            {                            
                 OnDestroy();
             }
         }
     }
+
     public void SetHealthUI()
     {
         healthBar.value = currentHealth; //Update Slider's Value To Equal Player's Health

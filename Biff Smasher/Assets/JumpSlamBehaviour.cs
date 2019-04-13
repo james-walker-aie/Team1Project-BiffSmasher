@@ -3,40 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JumpSlamBehaviour : StateMachineBehaviour
-{
-
-    public float timer;
-    public float minTime;
-    public float maxTime;   
+{     
     public float speed;
     public float jumpForce;
 
+   
     private Rigidbody2D rb;
-    private Transform playerPos; 
+    private Transform playerPos;
 
+    private int random;    
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        timer = Random.Range(minTime, maxTime);        
-        rb.GetComponent<Rigidbody2D>();        
+        random = Random.Range(0, 2);
+        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   // get transform of player for guardian to jump towards                      
+        rb = GameObject.FindGameObjectWithTag("Guardian").GetComponent<Rigidbody2D>();     // get rigidbody of the guardian
     }
 
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        rb.velocity = Vector2.up * jumpForce;
+        rb.velocity = Vector2.up * jumpForce;    // add force to make guardian jump
 
-        if (timer <= 0)
-        {
-            animator.SetTrigger("idle");
-        }
-        else
-        {
-            timer -= Time.deltaTime;
-        }
+       if (random == 0)
+       {
+            animator.SetTrigger("secondIdle");
+       }
+       else
+       {
+            animator.SetTrigger("deathOrbs");
+
+       }
         
-        Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y);
+        Vector2 target = new Vector2(playerPos.position.x, animator.transform.position.y); // jump movement of guardian towards player.
         animator.transform.position = Vector2.MoveTowards(animator.transform.position, target, speed * Time.deltaTime);
     }
 
@@ -44,18 +43,5 @@ public class JumpSlamBehaviour : StateMachineBehaviour
     {
 
     }
-
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 
 }

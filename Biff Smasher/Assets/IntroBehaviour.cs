@@ -5,19 +5,23 @@ using UnityEngine;
 public class IntroBehaviour : StateMachineBehaviour
 {
     private int random;
-    
+
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        random = Random.Range(0, 2);
+        random = Random.Range(0, 3);
 
         if (random == 0)
         {
             animator.SetTrigger("idle");
         }
+        if (random == 1)
+        {
+            animator.SetTrigger("Attack");
+        }
         else
         {
-            animator.SetTrigger("jumpSlam");
-        }
+            animator.SetTrigger("Walk");
+        }                
     }
 
    
@@ -32,15 +36,4 @@ public class IntroBehaviour : StateMachineBehaviour
         
     }
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
