@@ -7,7 +7,7 @@ public class GuardianHealth : MonoBehaviour
 {
     // health
     public int currentHealth;
-    public int maxHealth = 200;
+    public int maxHealth = 400;
     public bool isDead;
 
     //power up player
@@ -38,7 +38,7 @@ public class GuardianHealth : MonoBehaviour
         Debug.Log(gameObject.name + "  " + currentHealth);
         SetHealthUI();
 
-        if (currentHealth <= 100)
+        if (currentHealth <= 200)
         {
             animator.SetTrigger("secondIntro");
         }

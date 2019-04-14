@@ -6006,7 +6006,8 @@ MonoBehaviour:
   zone4wall: {fileID: 0}
   playerCam: {fileID: 58666483}
   canPause: 1
-  level1: 0
+  level2: 0
+  level3: 0
   MusicSlider: {fileID: 0}
   SFXSlider: {fileID: 0}
   musicVolume: 1
