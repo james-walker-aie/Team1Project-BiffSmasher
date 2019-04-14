@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     public Text LivesText;
 
     public Slider healthBar;
-
+    /*
     // maybe running score
     public Text scoreText, hiScore;
 
@@ -26,13 +26,24 @@ public class UIManager : MonoBehaviour
     public Text endLevelScore, endCurrentScore;
     // show new high score notice if needed
     public GameObject highScoreNotice;
+    */
+
     // pause menu
     public GameObject pauseScreen;
+
 
     // main menu scene if player quits from level
     public string mainMenuName = "Menu";
     // Prologue scene if player clicks play
     public string PrologueName = "Prologue";
+    // Credits scene if player clicks credits
+    public string CreditsName = "Credits";
+    // Level2 scene if player clicks level2
+    public string Level2Name = "level2";
+    // Level3 scene if player clicks level3
+    public string Level3Name = "level3";
+
+
 
     //Boss health bar
     public Slider boosHealthSlider;
@@ -42,6 +53,8 @@ public class UIManager : MonoBehaviour
     {
         instance = this;
     }
+
+
 
     public void ExitGame()
     {
@@ -64,9 +77,27 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(PrologueName);
         Time.timeScale = 1;
     }
-    
+
     public void Resume()
     {
         GameManager.instance.PauseUnpause();
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(CreditsName);
+        Time.timeScale = 1;
+    }
+
+    public void Level2()
+    {
+        SceneManager.LoadScene(Level2Name);
+        Time.timeScale = 1;
+    }
+
+    public void Level3()
+    {
+        SceneManager.LoadScene(Level3Name);
+        Time.timeScale = 1;
     }
 }

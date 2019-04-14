@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Credit : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
+    [SerializeField] string menu = "Menu";
+
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +19,16 @@ public class Credit : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
+        if (Input.anyKeyDown)
+        {
+            SceneManager.LoadScene(menu);
+        }
     }
 
     void OnBecameInvisible()
     {
+        SceneManager.LoadScene(menu);
         Destroy(gameObject);
-        SceneManager.LoadScene("Menu");  
+        
     }
 }

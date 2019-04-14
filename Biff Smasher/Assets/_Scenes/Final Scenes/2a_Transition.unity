@@ -419,6 +419,7 @@ GameObject:
   - component: {fileID: 326084775}
   - component: {fileID: 326084774}
   - component: {fileID: 326084778}
+  - component: {fileID: 326084779}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -529,6 +530,38 @@ MonoBehaviour:
   timeBetweenText: 3
   canExit: 0
   level1: 3_Dungeon
+--- !u!114 &326084779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326084773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbd725002a3b2547acea8080ca5383e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fightZone1Enemies: 1
+  fightZone2Enemies: 1
+  fightZone3Enemies: 1
+  fightZone4Enemies: 1
+  zone1Trigger: {fileID: 0}
+  zone2Trigger: {fileID: 0}
+  zone3Trigger: {fileID: 0}
+  zone4Trigger: {fileID: 0}
+  zone1wall: {fileID: 0}
+  zone2wall: {fileID: 0}
+  zone3wall: {fileID: 0}
+  zone4wall: {fileID: 0}
+  playerCam: {fileID: 0}
+  canPause: 1
+  level2: 0
+  level3: 0
+  MusicSlider: {fileID: 0}
+  SFXSlider: {fileID: 0}
+  musicVolume: 1
+  sFXVolume: 1
 --- !u!1 &593790902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1035,11 @@ MonoBehaviour:
   isGrounded: 0
   isDead: 0
   StopMove: 0
+  swordDamage: 0
+  axeDamage: 0
+  branchDamage: 0
+  ultimateDamage: 0
+  weaponDamage: 0
   sr: {fileID: 1827971382}
   groundCheck: {fileID: 1734229108}
   whatIsGround:

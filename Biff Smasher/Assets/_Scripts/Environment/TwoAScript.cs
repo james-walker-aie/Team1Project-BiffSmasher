@@ -31,6 +31,10 @@ public class TwoAScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (GameManager.instance.level3 <= 0)
+        {
+            PlayerPrefs.SetInt("level3", 1);
+        }
         // start coroutine while update waits for key press
         StartCoroutine(ShowTextCo());
 

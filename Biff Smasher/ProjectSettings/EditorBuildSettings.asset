@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Final Scenes/3a_End Scene.unity
     guid: 3abf2ab3a6ef1404da58810b6c816c94
+  - enabled: 1
+    path: Assets/_Scenes/Final Scenes/zCredit Scene.unity
+    guid: 89893daeb31da1e4894eeedd2a393003
   m_configObjects: {}

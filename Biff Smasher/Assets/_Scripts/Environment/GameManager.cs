@@ -24,10 +24,9 @@ public class GameManager : MonoBehaviour
     public bool canPause = true;
 
     //level unlocked
-    [SerializeField]
-    private int level1;
-    private int level2;
-    private int level3;
+    public int level2;
+    public int level3;
+    
 
     //Reference To Slider
     public Slider MusicSlider;
@@ -58,7 +57,6 @@ public class GameManager : MonoBehaviour
         SFXSlider.value = sFXVolume; //Update Slider's Value To Equal volume level
 
         // see if level is unlocked
-        level1 = PlayerPrefs.GetInt("level1");
         level2 = PlayerPrefs.GetInt("level2");
         level3 = PlayerPrefs.GetInt("level3");
 

@@ -31,6 +31,10 @@ public class TransitionA : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if (GameManager.instance.level2 <=0)
+        {
+            PlayerPrefs.SetInt("level2", 1);
+        }
         // start coroutine while update waits for key press
         StartCoroutine(ShowTextCo());
 
