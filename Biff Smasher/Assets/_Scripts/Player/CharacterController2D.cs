@@ -68,8 +68,8 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * Time.deltaTime * speed, 0f, 0f); // simple movement
-
+        transform.Translate(Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime, 0f, 0f); // simple movement
+        //Debug.Log(Input.GetAxisRaw("Horizontal"));
         HandleInput();
         AnimationControl();
 
