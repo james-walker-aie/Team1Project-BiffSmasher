@@ -2261,6 +2261,11 @@ PrefabInstance:
       propertyPath: moveSpeedZ
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2403039262808884344, guid: a8ec47b047b2cc748837098c7dead589,
+        type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2403039262808884336, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: healthbar
@@ -2313,7 +2318,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemiesZ2.Array.data[1]
       value: 
-      objectReference: {fileID: 866536331, guid: f79f8e074c5581b4aa585b15c797e216,
+      objectReference: {fileID: 866536331, guid: cc49b36d56a7986418b9498a7f762636,
         type: 3}
     - target: {fileID: 1308956166109125029, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -2351,7 +2356,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemiesZ3.Array.data[1]
       value: 
-      objectReference: {fileID: 866536331, guid: f79f8e074c5581b4aa585b15c797e216,
+      objectReference: {fileID: 866536331, guid: cc49b36d56a7986418b9498a7f762636,
         type: 3}
     - target: {fileID: 4393801228240860048, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
