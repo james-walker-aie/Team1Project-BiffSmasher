@@ -2139,12 +2139,12 @@ PrefabInstance:
     - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: fightZone1Enemies
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: fightZone2Enemies
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -2154,7 +2154,7 @@ PrefabInstance:
     - target: {fileID: 3042498873953713814, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: fightZone4Enemies
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3042498875235741724, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -2286,7 +2286,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemiesZ1.Array.data[1]
       value: 
-      objectReference: {fileID: 866536331, guid: f79f8e074c5581b4aa585b15c797e216,
+      objectReference: {fileID: 8878722601731908480, guid: 6b9f4791a18f6664d87c1e00e58738b2,
         type: 3}
     - target: {fileID: 866989583184026914, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -2377,7 +2377,7 @@ PrefabInstance:
     - target: {fileID: 6597058132798786752, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
       propertyPath: enemiesZ4.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6597058132798786752, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}
@@ -2388,7 +2388,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemiesZ4.Array.data[0]
       value: 
-      objectReference: {fileID: 775797825, guid: 19277b0784017134cb900aa750fc69e0,
+      objectReference: {fileID: 8878722601731908480, guid: 6b9f4791a18f6664d87c1e00e58738b2,
         type: 3}
     - target: {fileID: 6597058132798786752, guid: a8ec47b047b2cc748837098c7dead589,
         type: 3}

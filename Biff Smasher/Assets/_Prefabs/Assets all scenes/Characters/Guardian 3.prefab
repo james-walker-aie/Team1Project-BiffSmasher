@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 6500264493964104985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.08, y: -0.5, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 0}
   m_Children:
   - {fileID: 6443095747376342914}
   - {fileID: 6115545018025326991}
@@ -432,11 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guardianAttack: {fileID: 1384982955}
   deathOrbAttack: {fileID: 1107718849}
-  moveSpeed: 2
-  canWalk: 0
-  animator: {fileID: 7199632359042791080}
   groundCheck: {fileID: 6115545018025326991}
-  Waypoint: {fileID: 0}
   bossHealthBar: {fileID: 8182507678278866668}
 --- !u!114 &691614621
 MonoBehaviour:
@@ -455,7 +451,6 @@ MonoBehaviour:
   isDead: 0
   powerUp: 0
   dying: 0
-  anim: {fileID: 7199632359042791080}
   destructionDelay: 2
   isBeaten: 0
   healthBar: {fileID: 8182507678278866670}

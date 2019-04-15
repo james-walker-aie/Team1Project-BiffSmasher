@@ -8,6 +8,7 @@ public class ZombieHealth : MonoBehaviour
     public int currentHealth;
     public int maxHealth = 50;
     public bool isDead;
+    public AudioSource zomDeath;
 
     //power up player
     public int powerUp;
@@ -50,10 +51,11 @@ public class ZombieHealth : MonoBehaviour
             {
 
                 dying = true;
+                zomDeath.Play();
 
                 // anim.SetTrigger("dying");
                 anim.SetTrigger("isDead");
-
+                Sound();
             }
 
             destructionTimer += Time.deltaTime;
@@ -62,7 +64,7 @@ public class ZombieHealth : MonoBehaviour
             {
 
                 PowerUp();
-               
+
                 Zombie.instance.Drop();
                 Zombie.instance.HealthDrop();
 
@@ -125,5 +127,8 @@ public class ZombieHealth : MonoBehaviour
         currentHealth -= fBdamageToZombie;
     }
 
-
+    public void Sound()
+    {
+        zomDeath.Play();
+    }
 }
