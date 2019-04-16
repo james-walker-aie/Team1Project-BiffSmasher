@@ -72,7 +72,7 @@ Transform:
   m_GameObject: {fileID: 3650698843642210888}
   m_LocalRotation: {x: -0, y: 0.24953501, z: -0, w: 0.9683658}
   m_LocalPosition: {x: 48.72329, y: -2.6950164, z: -7.825387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 6
@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 3650698843849436490}
   m_LocalRotation: {x: -0, y: -0.21447967, z: -0, w: 0.9767285}
   m_LocalPosition: {x: 6.813288, y: -2.6950164, z: -5.455387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 1
@@ -233,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 3650698843859974079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 20.873287, y: -2.1750164, z: -7.085387}
-  m_LocalScale: {x: 1, y: 4, z: 0.1}
+  m_LocalScale: {x: 1, y: 10, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 2
@@ -322,7 +322,7 @@ Transform:
   m_GameObject: {fileID: 3650698844130367528}
   m_LocalRotation: {x: -0, y: -0.21447967, z: -0, w: 0.9767285}
   m_LocalPosition: {x: 78.133286, y: -2.6950164, z: -5.455387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 13
@@ -457,7 +457,7 @@ Transform:
   m_GameObject: {fileID: 3650698844234538614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 37.483288, y: -2.6950164, z: -5.4853873}
-  m_LocalScale: {x: 1, y: 5.11, z: 10}
+  m_LocalScale: {x: 1, y: 12, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 7
@@ -521,7 +521,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemySpawn: {fileID: 3650698845167958793}
-  enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 3650698844234538614}
   zoneWallFront: {fileID: 3650698843642210888}
   zoneWallBehind: {fileID: 3650698845274416263}
@@ -531,6 +530,7 @@ MonoBehaviour:
   w2: 0
   w3: 0
   w4: 0
+  timeBetweenSpawn: 0
 --- !u!61 &3650698844234538612
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ Transform:
   m_GameObject: {fileID: 3650698844256075503}
   m_LocalRotation: {x: -0, y: 0.24953501, z: -0, w: 0.9683658}
   m_LocalPosition: {x: 67.46329, y: -2.6950164, z: -5.285387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 10
@@ -643,7 +643,7 @@ Transform:
   m_GameObject: {fileID: 3650698844323197494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 84.233284, y: -2.6950164, z: -5.4853873}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 12, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 15
@@ -707,7 +707,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemySpawn: {fileID: 3650698844144834955}
-  enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 3650698844323197494}
   zoneWallFront: {fileID: 3650698845127208713}
   zoneWallBehind: {fileID: 3650698844130367528}
@@ -717,6 +716,7 @@ MonoBehaviour:
   w2: 0
   w3: 0
   w4: 0
+  timeBetweenSpawn: 0
 --- !u!61 &3650698844323197492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -772,7 +772,7 @@ Transform:
   m_GameObject: {fileID: 3650698844421262367}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 60.833286, y: -2.6950164, z: -5.4853873}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 12, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 11
@@ -836,7 +836,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemySpawn: {fileID: 3650698845437882410}
-  enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 3650698844421262367}
   zoneWallFront: {fileID: 3650698844256075503}
   zoneWallBehind: {fileID: 3650698844572620302}
@@ -846,6 +845,7 @@ MonoBehaviour:
   w2: 0
   w3: 0
   w4: 0
+  timeBetweenSpawn: 0
 --- !u!61 &3650698844421262365
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ Transform:
   m_GameObject: {fileID: 3650698844572620302}
   m_LocalRotation: {x: -0, y: -0.21447967, z: -0, w: 0.9767285}
   m_LocalPosition: {x: 54.733288, y: -2.6950164, z: -5.455387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 9
@@ -1002,7 +1002,7 @@ Transform:
   m_GameObject: {fileID: 3650698845127208713}
   m_LocalRotation: {x: -0, y: 0.24953501, z: -0, w: 0.9683658}
   m_LocalPosition: {x: 90.86328, y: -2.6950164, z: -5.285387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 14
@@ -1091,7 +1091,7 @@ Transform:
   m_GameObject: {fileID: 3650698845274416263}
   m_LocalRotation: {x: -0, y: -0.21447967, z: -0, w: 0.9767285}
   m_LocalPosition: {x: 31.38329, y: -2.6950164, z: -5.455387}
-  m_LocalScale: {x: 1, y: 4, z: 10}
+  m_LocalScale: {x: 1, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 5
@@ -1226,7 +1226,7 @@ Transform:
   m_GameObject: {fileID: 3650698845484930952}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.933289, y: -2.6950164, z: -5.4853873}
-  m_LocalScale: {x: 1, y: 6, z: 10}
+  m_LocalScale: {x: 1, y: 12, z: 10}
   m_Children: []
   m_Father: {fileID: 1655536716128145979}
   m_RootOrder: 3
@@ -1290,7 +1290,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   enemySpawn: {fileID: 3650698844117426096}
-  enemy: {fileID: 6499830839699898959, guid: 748e935b2b6d14440ac1e31ba9b72660, type: 3}
   fightZoneCollider: {fileID: 3650698845484930952}
   zoneWallFront: {fileID: 3650698843859974079}
   zoneWallBehind: {fileID: 3650698843849436490}
@@ -1300,6 +1299,7 @@ MonoBehaviour:
   w2: 0
   w3: 0
   w4: 0
+  timeBetweenSpawn: 0
 --- !u!61 &3650698845484930959
 BoxCollider2D:
   m_ObjectHideFlags: 0

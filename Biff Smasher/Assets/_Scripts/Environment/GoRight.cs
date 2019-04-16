@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GoRight : MonoBehaviour
 {
     public Image goRight;
+    public Text instruct;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -13,6 +14,7 @@ public class GoRight : MonoBehaviour
         {
             // show go right arrow
             goRight.enabled = true;
+            instruct.enabled = true;
         }
     }
      
@@ -24,6 +26,7 @@ public class GoRight : MonoBehaviour
         {
             // Hide go right arrow
             goRight.enabled = false;
+            instruct.enabled = false;
         }
     }
 }

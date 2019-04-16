@@ -15,7 +15,7 @@ public class HealthPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(health.currentHealth < health.maxHealth)
+        if(CharacterController2D.instance.isDead==false && health.currentHealth < health.maxHealth)
         {
             health.currentHealth = health.currentHealth + healthBonus;
             OnDestroy();
