@@ -57,7 +57,14 @@ public class GuardianHealth : MonoBehaviour
             destructionTimer += Time.deltaTime;
 
             if (dying == true && destructionTimer >= destructionDelay)
-            {                            
+            {
+                if (FightZone.wave4)
+                {
+                    Debug.Log("Guardian beaten");
+
+                    GameManager.instance.fightZone4Enemies--;
+                }
+
                 OnDestroy();
             }
         }
