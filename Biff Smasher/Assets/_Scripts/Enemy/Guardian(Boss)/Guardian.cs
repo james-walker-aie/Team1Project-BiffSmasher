@@ -10,12 +10,16 @@ public class Guardian : MonoBehaviour
 
       
     public Transform groundCheck;
-    public GameObject bossHealthBar;   
+    public GameObject bossHealthBar;
+
+    private void Awake()
+    {
+        bossHealthBar.SetActive(true);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        bossHealthBar.SetActive(false);     
         
     }
 
@@ -25,9 +29,9 @@ public class Guardian : MonoBehaviour
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 2f);
     }
     
-    private void OnTriggerEnter2D(Collider2D col)
+    /*private void OnTriggerEnter2D(Collider2D col)
     {
         bossHealthBar.SetActive(true);        
-    }
+    }*/
   
 }
