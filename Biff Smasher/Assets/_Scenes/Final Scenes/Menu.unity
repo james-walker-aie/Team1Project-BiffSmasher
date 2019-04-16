@@ -795,16 +795,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7388232685238137157, guid: bef8568d64284174b97eaf99c457be9a,
-        type: 3}
-      propertyPath: MusicSlider
-      value: 
-      objectReference: {fileID: 1619462031}
-    - target: {fileID: 7388232685238137157, guid: bef8568d64284174b97eaf99c457be9a,
-        type: 3}
-      propertyPath: SFXSlider
-      value: 
-      objectReference: {fileID: 1464169932}
     - target: {fileID: 7388232685238137154, guid: bef8568d64284174b97eaf99c457be9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -860,6 +850,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7388232685238137157, guid: bef8568d64284174b97eaf99c457be9a,
+        type: 3}
+      propertyPath: MusicSlider
+      value: 
+      objectReference: {fileID: 1619462031}
+    - target: {fileID: 7388232685238137157, guid: bef8568d64284174b97eaf99c457be9a,
+        type: 3}
+      propertyPath: SFXSlider
+      value: 
+      objectReference: {fileID: 1464169932}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bef8568d64284174b97eaf99c457be9a, type: 3}
 --- !u!224 &930146645 stripped
@@ -2600,6 +2600,7 @@ GameObject:
   - component: {fileID: 1625176982}
   - component: {fileID: 1625176981}
   - component: {fileID: 1625176985}
+  - component: {fileID: 1625176986}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2704,6 +2705,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvl2Cover: {fileID: 1272262115}
   lvl3Cover: {fileID: 1671176211}
+--- !u!114 &1625176986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625176980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db12eca8478d9074498205bdd1a57bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1671176211
 GameObject:
   m_ObjectHideFlags: 0

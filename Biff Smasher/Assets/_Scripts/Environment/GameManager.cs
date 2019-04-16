@@ -61,7 +61,11 @@ public class GameManager : MonoBehaviour
         level3 = PlayerPrefs.GetInt("level3");
 
         // unpause player
-        CharacterController2D.instance.StopMove = false;
+        if(CharacterController2D.instance != null)
+        {
+            CharacterController2D.instance.StopMove = false;
+        }
+        
     }
 
     // Update is called once per frame
@@ -151,14 +155,20 @@ public class GameManager : MonoBehaviour
             Debug.Log("PauseMenu Inactive");
             UIManager.instance.pauseScreen.SetActive(false);
             Time.timeScale = 1f;
-            CharacterController2D.instance.StopMove = false;
+            if (CharacterController2D.instance != null)
+            {
+                CharacterController2D.instance.StopMove = false;
+            }
         }
         else
         {
             Debug.Log("PauseMenu active");
             UIManager.instance.pauseScreen.SetActive(true);
             Time.timeScale = 0f;
-             CharacterController2D.instance.StopMove = true;
+            if (CharacterController2D.instance != null)
+            {
+                CharacterController2D.instance.StopMove = true;
+            }
         }
     }
 
