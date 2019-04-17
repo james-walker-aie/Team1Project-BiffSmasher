@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     public static Health instance;
     public float currentHealth;
     public float maxHealth = 100;
-    private bool isDead;
+    public bool isDead;
 
     public Animator anim;
     public float restartDelay = 2f;
