@@ -186,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.21641946, y: 0.57055944}
+  m_Offset: {x: -0.68, y: -0.27}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -287,6 +287,7 @@ MonoBehaviour:
   healthbar: {fileID: 0}
   currentHealth: 0
   maxHealth: 100
+  isDead: 0
   anim: {fileID: 1924047297315347403}
   restartDelay: 2
   dying: 0
@@ -400,10 +401,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5829116746a90c46a797ba9c0c7fedf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToZombie: 10
-  damageToMage: 20
-  damageToKnight: 30
-  damageToGuardian: 30
   damageBust: {fileID: 2488509483849196198, guid: c4709bfc42dfabd458ac2a22dd8092e8,
     type: 3}
   bloodHit: {fileID: 1483695330}

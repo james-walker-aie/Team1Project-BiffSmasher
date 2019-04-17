@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHead : MonoBehaviour
 {
 
-    [SerializeField] Collider2D GuardianBox; 
+   
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +19,17 @@ public class PlayerHead : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D col)
+  
+ 
     {
-        if (other.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player")
         {
-            GuardianBox.gameObject.SetActive(false);
-            GuardianBox.gameObject.SetActive(true);
+      
+            col.transform.position = col.transform.position - Vector3.right * 5;
         }
+
+       
+            
     }
 }
