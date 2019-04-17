@@ -14,7 +14,11 @@ public class Guardian : MonoBehaviour
 
     private void Awake()
     {
-        bossHealthBar.SetActive(true);
+        if(bossHealthBar != null)
+        {
+            bossHealthBar.SetActive(true);
+        }
+       
     }
 
     // Start is called before the first frame update

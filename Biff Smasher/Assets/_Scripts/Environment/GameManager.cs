@@ -50,11 +50,17 @@ public class GameManager : MonoBehaviour
     {
         // get volumelevel
         musicVolume = PlayerPrefs.GetFloat("Volume");
-        MusicSlider.value = musicVolume; //Update Slider's Value To Equal volume level
+        if (MusicSlider != null)
+        {
+            MusicSlider.value = musicVolume; //Update Slider's Value To Equal volume level
+        }
 
         // get SFXvolumelevel
         sFXVolume = PlayerPrefs.GetFloat("SFXVolume");
-        SFXSlider.value = sFXVolume; //Update Slider's Value To Equal volume level
+        if (SFXSlider != null)
+        {
+            SFXSlider.value = sFXVolume; //Update Slider's Value To Equal volume level
+        }
 
         // see if level is unlocked
         level2 = PlayerPrefs.GetInt("level2");
