@@ -62,7 +62,7 @@ public class TransitionA : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Phew, Where are we now?";
+        playerDialogueTextBox.text = "Phew, where are we now?";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -86,7 +86,7 @@ public class TransitionA : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Let me guess, i have to fight my way through.";
+        playerDialogueTextBox.text = "Let me guess, I have to fight my way through.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -110,7 +110,7 @@ public class TransitionA : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Well lets smash through these undead,";
+        playerDialogueTextBox.text = "Well, lets smash through the evil then!";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -124,7 +124,7 @@ public class TransitionA : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "... I've got dinner at 7 and i ain't missing out. ";
+        playerDialogueTextBox.text = "... I've got dinner at 7 and I ain't missing out.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);

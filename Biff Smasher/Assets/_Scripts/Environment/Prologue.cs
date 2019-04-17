@@ -57,7 +57,7 @@ public class Prologue : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "Where am I!!";
+        playerDialogueTextBox.text = "Where am I?!";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -69,7 +69,7 @@ public class Prologue : MonoBehaviour
         playerDialogueTextBox.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         // text for dialogue box
-        orbDialogueTextBox.text = "You're Here with me";
+        orbDialogueTextBox.text = "You're here with me";
         //Show character and dialogue box
         orbDialogueTextBox.gameObject.SetActive(true);
         orb.gameObject.SetActive(true);
@@ -81,7 +81,7 @@ public class Prologue : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "...Why am I here?";
+        playerDialogueTextBox.text = "...Why am I here exactly?";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -93,7 +93,7 @@ public class Prologue : MonoBehaviour
         playerDialogueTextBox.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         // text for dialogue box
-        orbDialogueTextBox.text = "I need your help";
+        orbDialogueTextBox.text = "I need your help, my world has been overun by evil...";
         //Show character and dialogue box
         orbDialogueTextBox.gameObject.SetActive(true);
         orb.gameObject.SetActive(true);
@@ -105,7 +105,7 @@ public class Prologue : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "OK. I'm here to chew bubble gum and kick some arse.";
+        playerDialogueTextBox.text = "Ok. I guess I'm here to chew bubble gum and kick some arse.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -119,7 +119,7 @@ public class Prologue : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "... And i'm all out of bubble gum. ";
+        playerDialogueTextBox.text = "... And i'm all out of bubble gum.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);

@@ -62,7 +62,7 @@ public class TwoAScript : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "I sure hope I dont have to go through that again...";
+        playerDialogueTextBox.text = "I am begining to feel a little sick, are you sure those portals are stable!?";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -74,7 +74,7 @@ public class TwoAScript : MonoBehaviour
         playerDialogueTextBox.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         // text for dialogue box
-        orbDialogueTextBox.text = "Oh... you will...";
+        orbDialogueTextBox.text = "Oh... Um... Let's say it is and leave that at that...";
         //Show character and dialogue box
         orbDialogueTextBox.gameObject.SetActive(true);
         orb.gameObject.SetActive(true);
@@ -86,7 +86,7 @@ public class TwoAScript : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "...Why am I here now?";
+        playerDialogueTextBox.text = "...Something doesn't feel right here... I'm sensing a large presence.";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
@@ -98,7 +98,7 @@ public class TwoAScript : MonoBehaviour
         playerDialogueTextBox.gameObject.SetActive(false);
         player.gameObject.SetActive(false);
         // text for dialogue box
-        orbDialogueTextBox.text = "To help clear the Castle, its rife with ... evil... things";
+        orbDialogueTextBox.text = "To help clear the Castle, and fulfill what you came here to do... you need to kill the Guardian of the Gate.";
         //Show character and dialogue box
         orbDialogueTextBox.gameObject.SetActive(true);
         orb.gameObject.SetActive(true);
@@ -110,7 +110,7 @@ public class TwoAScript : MonoBehaviour
         orbDialogueTextBox.gameObject.SetActive(false);
         orb.gameObject.SetActive(false);
         // text for dialogue box
-        playerDialogueTextBox.text = "OK. So... needless to say, I'm still out of bubble gum... ";
+        playerDialogueTextBox.text = "Ok. So... needless to say, I'm still out of bubble gum... ";
         //Show character and dialogue box
         playerDialogueTextBox.gameObject.SetActive(true);
         player.gameObject.SetActive(true);
